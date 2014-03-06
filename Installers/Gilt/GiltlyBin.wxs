@@ -171,6 +171,9 @@
                     <Component Win64="$(var.Win64Flag)" Id="cmp6FC40C933C459FCB2D26C395B9E58538" Guid="*">
                         <File ProcessorArchitecture="$(var.Platform)" Id="fil9AAA95411F4E57406378104C4E6EC05B" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\js\knockout-sortable.js" />
                     </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmpBE032E1080215CA4C857B4DCCA0ACD64" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="filCD8F269AD99AB8129DB0F36B0A9FC29C" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\js\knockout-sortable.min.js" />
+                    </Component>
                     <Component Win64="$(var.Win64Flag)" Id="cmpCB735E9C09E0B6B33D3529EA2E79E492" Guid="*">
                         <File ProcessorArchitecture="$(var.Platform)" Id="fil881E99E8B153DE7C93476E3CEDDF6799" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\js\knockout.activity.js" />
                     </Component>
@@ -702,6 +705,9 @@
                 <Component Win64="$(var.Win64Flag)" Id="cmp70765D7B6A04E28ACA8F3C529DE27500" Guid="*">
                     <File ProcessorArchitecture="$(var.Platform)" Id="fil7B0583B954F9523C597068C8CA85EE29" KeyPath="yes" Source="$(var.GiltlyPackageDir)\bin\gilt.bacon.pdb" />
                 </Component>
+                <Component Win64="$(var.Win64Flag)" Id="cmpDDA08ABC78C2042E3BFD6CE54905827D" Guid="*">
+                    <File ProcessorArchitecture="$(var.Platform)" Id="fil30DBC48A069B37DE94D5F72CB1A50486" KeyPath="yes" Source="$(var.GiltlyPackageDir)\bin\gilt.bacon.XML" />
+                </Component>
                 <Component Win64="$(var.Win64Flag)" Id="cmpAA1DD708065CF630EDAD772223258538" Guid="*">
                     <File ProcessorArchitecture="$(var.Platform)" Id="filBB80437AE33962865003CA4690A4BE28" KeyPath="yes" Source="$(var.GiltlyPackageDir)\bin\gilt.util.dll" />
                 </Component>
@@ -1001,6 +1007,7 @@
             <ComponentRef Id="cmpC90993667E1337BACCCF22FEE216EDCC" />
             <ComponentRef Id="cmp9C533B9F084EC4FB1379E9108F573758" />
             <ComponentRef Id="cmp6FC40C933C459FCB2D26C395B9E58538" />
+            <ComponentRef Id="cmpBE032E1080215CA4C857B4DCCA0ACD64" />
             <ComponentRef Id="cmpCB735E9C09E0B6B33D3529EA2E79E492" />
             <ComponentRef Id="cmpB61D3D8DD401C3E922889E6CF8595B7C" />
             <ComponentRef Id="cmp172AB392A54477FC47F5A406003F899B" />
@@ -1167,6 +1174,7 @@
             <ComponentRef Id="cmpEEE78E5998294B710AA7FF4B24BC62DE" />
             <ComponentRef Id="cmp3737012CC992D909935746922265C49A" />
             <ComponentRef Id="cmp70765D7B6A04E28ACA8F3C529DE27500" />
+            <ComponentRef Id="cmpDDA08ABC78C2042E3BFD6CE54905827D" />
             <ComponentRef Id="cmpAA1DD708065CF630EDAD772223258538" />
             <ComponentRef Id="cmp739428F36C68928CF98243EE03BD0356" />
             <ComponentRef Id="cmp4343DF257A25B79BBD50CF3F62CFBE68" />
