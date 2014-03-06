@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WixLocalization Culture="en-us" xmlns="http://schemas.microsoft.com/wix/2006/localization" Codepage="1252">
+  <String Id="LANG">1033</String>
+  <String Id="ApplicationName">GiltlyDatabase</String>
+  <String Id="ManufacturerName">Giltly</String>  
+  <String Id="DownGradeMessage">A newer version of [ProductName] is already installed.</String >
+  <String Id="Binaries">Binaries</String>
+  <String Id="ApplicationProgramMenuFolder">Gilt</String>  
+
+  <String Id="DatabaseServer">DB Server Name or IP:</String>
+  <String Id="DatabaseInstance">DB Instance Name:</String>
+  <String Id="SqlServiceAccount">SQL Server Service Account Name</String>  
+  <String Id="SqlUser">User:</String>
+  <String Id="SqlUserPass">Password:</String>
+  <String Id="DatabaseName">Database Name:</String>
+
+  <String Id="Next">Next</String>
+  <String Id="Back">Back</String>
+  <String Id="Cancel">Cancel</String>
+
+</WixLocalization>

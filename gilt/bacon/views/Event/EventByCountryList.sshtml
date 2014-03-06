@@ -1,0 +1,68 @@
+﻿@Master['master.sshtml']
+
+@Section['Content']
+<div class="text-center">
+	<h1 >@Model.Text.Event @Model.Text.By @Model.Text.Country</h1>
+</div>
+<script>
+
+    $(document).ready(function ()
+    {
+        var pagedViewModel = new pageViewModel("@Model.Routes.EVENT_BY_COUNTRY", "EventByCountryDivId",1,5);        
+        pagedViewModel.pagedViewModel.subscribe(function (newValue)
+        {            
+            var countryEventTotal = newValue.EventCount;
+
+            var eventPieChartData = Enumerable.From(newValue.Rows)
+                .Select(function (x) { return { "label": x.CountryCode + " - " + (100 * (x.CountryCount / countryEventTotal)).toFixed(2) + "%", "value": (100 * (x.CountryCount / countryEventTotal)) } })
+                .ToArray();
+            
+            GILTY.D3.PieChart(eventPieChartData, "PieChart", 200, 200, 100);
+
+			var eventByCountryData = {};
+            Enumerable.From(newValue.Rows)
+                .Select(function (x) { 										
+					eventByCountryData[x.CountryCode3] = { "fillKey" : GILTY.D3.ChoroPlethFillKey(x.CountryCount, countryEventTotal) , "numberOfThings": x.CountryCount};
+					return x;
+				}).ToArray();
+			
+            GILTY.D3.ChoroPleth(eventByCountryData, 'EventByCountryChoropleth');
+        });
+        pagedViewModel.bind();
+    });
+</script>
+
+<div class="grid">
+	<div class="row">
+		<div class="span12">
+			<div id="EventByCountryChoropleth" style="height:350px; width:920px" ></div>
+		</div>
+	</div>
+
+	<div class="row" style="padding-top: 50px">
+		<div class="span4 offset1">
+			<div id="EventByCountryDivId" >
+			    <table data-bind="with: pagedViewModel" class="table striped bordered">
+				    <thead>
+					    <tr>
+						    <th>@Model.Text.Country</th>
+						    <th>@Model.Text.Count</th>
+					    </tr>
+				    </thead>
+				    <tbody data-bind="foreach: Rows">
+					    <tr>
+						    <td data-bind="text: $data.CountryCode"></td>
+						    <td data-bind="text: $data.CountryCount"></td>
+					    </tr>
+				    </tbody>
+			    </table>    
+			    @Partial['Pager.sshtml']
+			</div>
+		</div>
+		<div class="span6 offset1">
+			<div id="PieChart" style="display:inline"></div>
+		</div>
+	</div>
+</div>
+
+@EndSection

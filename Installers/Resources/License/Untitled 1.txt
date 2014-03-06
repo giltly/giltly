@@ -1,0 +1,82 @@
+Program
+MSI Product Version
+P4 Label
+Super Installer
+1.0.0.0001
+NA
+
+
+
+Apache
+2.4.4.0
+apache_2.4.4-php-5.5.5-v1.0.0.0000
+Php
+5.5.5.0
+apache_2.4.4-php-5.5.5-v1.0.0.0000
+
+
+
+Core
+13.0.0.5003
+Core_v13.0.0.5003
+ImageServer
+13.0.0.5003
+Core_v13.0.0.5003
+Viewer
+1.0.0.5004
+Viewer_v1.0.0.5004
+Peer Review
+1.0.0.5007
+PeerReview_v1.0.0.5007
+
+
+
+AAF Client
+13.0.0.5004
+AAF_v13.0.0.5004
+AAF Server
+13.0.0.5004
+AAF_v13.0.0.5004
+
+
+
+Aperio Shell Extender
+13.0.0.5002
+Utilities_v13.0.0.5002
+DashBoard
+13.0.0.5002
+Utilities_v13.0.0.5002
+DSStudio
+13.0.0.5002
+Utilities_v13.0.0.5002
+DvdGen
+13.0.0.5002
+Utilities_v13.0.0.5002
+IComp
+13.0.0.5002
+Utilities_v13.0.0.5002
+IDiff
+13.0.0.5002
+Utilities_v13.0.0.5002
+ImageUploader
+13.0.0.5002
+Utilities_v13.0.0.5002
+ImageScope
+[see note]
+[see note]
+Sample Data
+13.0.0.5002
+Utilities_v13.0.0.5002
+Service Manager
+13.0.0.5002
+Utilities_v13.0.0.5002
+UIImporter
+13.0.0.5002
+Utilities_v13.0.0.5002
+
+
+
+
+[ImageScope  note]:  There is no issue with the ImageScope link. However, the “prod” servers were just created  and are in flux. 
+
+The COM clsids are out of whack and I am not wasting the remainder of my Saturday deleting registry entries on a new server just because a folder changed.  

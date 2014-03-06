@@ -1,0 +1,20 @@
+﻿@Master['Master.sshtml']
+
+@Section['Content']          
+<h1>Try It!</h1>
+
+<div>
+<p>We have configured and deployed a fully functional giltly installation for your evaluation.  </p>    
+<p>The demo account is a fully functional system administrator account that cannot modify any data.</p>
+</div>
+<div>
+<p><img src="/images/Windows_Azure_logo.png" /></p>
+</div>
+
+<ul class="unstyled">
+    <li><i class="icon-cloud" style="padding-right:1em"></i><a href="http://giltlydemo.azurewebsites.net" target="_blank">http://giltlydemo.azurewebsites.net</a></li>
+    <li><i class="icon-cloud" style="padding-right:1em"></i>Username: <strong>admin@giltly.com</strong></li>
+    <li><i class="icon-cloud" style="padding-right:1em"></i>Password: <strong>password</strong></li>
+</ul>
+
+@EndSection

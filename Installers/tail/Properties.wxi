@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Include>
+  <!-- Read in the values that were store in the database installer-->
+  <Property Id="DATABASESERVER"       Secure="yes" Value="[ComputerName]">
+    <RegistrySearch Id="DatabaseServerSearch"
+                    Root="HKLM"
+                    Key="$(var.DatabaseApplicationKey)"
+                    Name="DatabaseServer"
+                    Type="raw" />
+  </Property>
+  <Property Id="DATABASEINSTANCE"     Secure="yes" >
+    <RegistrySearch Id="DatabaseInstanceSearch"
+                    Root="HKLM"
+                    Key="$(var.DatabaseApplicationKey)"
+                    Name="DatabaseInstance"
+                    Type="raw" />
+  </Property>
+  
+  <Property Id="DATABASENAME"         Secure="yes" Value="giltdb_test">
+    <RegistrySearch Id="DatabaseNameSearch"
+                    Root="HKLM"
+                    Key="$(var.DatabaseApplicationKey)"
+                    Name="DatabaseName"
+                    Type="raw" />
+  </Property>
+
+  <Property Id="SQLUSER"                 Secure="yes" Value="gilt">
+    <RegistrySearch Id="DatabaseSqlUserSearch"
+                    Root="HKLM"
+                    Key="$(var.DatabaseApplicationKey)"
+                    Name="SqlUser"
+                    Type="raw" />
+  </Property>
+  <Property Id="SQLPASSWORD"             Secure="yes" Value="gilt">
+        <RegistrySearch Id="DatabaseSqlPassSearch"
+                    Root="HKLM"
+                    Key="$(var.DatabaseApplicationKey)"
+                    Name="SqlPassword"
+                    Type="raw" />
+  </Property>
+  <!-- 
+      Default the Snort Dialog Selection Options
+  -->
+  <Property Id="SNORTLOGFOLDER"             Secure="yes" Value="C:\Snort\Log"/>
+  <Property Id="SNORTLOGFILEPREFIX"         Secure="yes" Value="unified2-current.log"/>
+  <Property Id="SNORTCLASSCONFIG"           Secure="yes" Value="C:\snort\etc\classification.config"/>
+  <Property Id="SNORTREFERENCECONFIG"       Secure="yes" Value="C:\snort\etc\reference.config"/>
+  <Property Id="SNORTSIDMSGMAP"             Secure="yes" Value="C:\snort\etc\sid-msg.map"/>
+  <Property Id="SNORTGENMSGMAP"             Secure="yes" Value="C:\snort\etc\gen-msg.map"/>
+
+  <!-- Create the Connection string for a named or unnamed connection -->
+  <Property Id="CONNECTIONSTRING"    Secure="yes" />
+  
+  <CustomAction Id="NoInstanceConnection"    Property="SERVERINST" Value="[ComputerName]" Execute="immediate" />
+  <CustomAction Id="InstanceConnection"      Property="SERVERINST" Value="[DATABASESERVER]\[DATABASEINSTANCE]" Execute="immediate" />
+  <InstallUISequence>
+    <Custom Action="NoInstanceConnection"    After="AppSearch">DATABASEINSTANCE=""</Custom>
+    <Custom Action="InstanceConnection"      After="AppSearch"><![CDATA[DATABASEINSTANCE<>""]]></Custom>
+  </InstallUISequence>
+  <SetProperty Id="CONNECTIONSTRING" Value="Application Name=Gilt Tail;Server=[SERVERINST]; Database=[DATABASENAME]; User Id=[SQLUSER];Password=[SQLPASSWORD];" After="AppSearch" />
+
+  <!-- choose your installation directory -->
+  <Property Id="WIXUI_INSTALLDIR" Value="APPLICATIONROOTDIRECTORY"/>
+  <UIRef Id="WixUI_InstallDir"/>
+
+  <UI Id="WixUI_InstallDir_Tail">
+    <DialogRef Id="TailConfigurationDlg" />
+    <Publish Dialog="LicenseAgreementDlg" Control="Next" Event="NewDialog" Value="TailConfigurationDlg">LicenseAccepted = "1"</Publish>
+    <Publish Dialog="VerifyReadyDlg" Control="Back" Event="NewDialog" Value="TailConfigurationDlg">1</Publish>
+  </UI>
+
+  <!-- force all advertised shortcuts to become regular shortcuts -->
+  <Property Id="DISABLEADVTSHORTCUTS" Value="1"/>
+
+</Include>

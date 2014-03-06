@@ -1,0 +1,57 @@
+﻿@Master['Master.sshtml']
+
+@Section['Content']          
+<div>
+    <h1>Download</h1>
+    <p>Giltly can be online in just minutes. You need a windows computer with: IIS, Sql Server, and .NET 4.5</p>	
+	<p>You can also deploy the ASP.NET and SQL Schema to Azure in just a few clicks.</p>
+	<hr>
+	<p><strong>Default Website Login</strong></p>
+	<ul>
+		<li><strong>Username:</strong>  admin@giltly.com</li>
+		<li><strong>Password:</strong>  password</li>
+	</ul>	
+    <hr>
+    <div class="tile quadro double-vertical ol-transparent bg-white">
+        <div class="tile-content">
+            <div class="panel no-border">
+                <div class="panel-header bg-darkCrimson fg-white"><i class="icon-download"></i> Download</div>
+                <div class="panel-content fg-dark nlp nrp">                    
+                    <p><strong>Current Version</strong> <em>1.0.2</em></p>
+                    <ul >                        
+                        <li>Single Guided MSI Installation
+							<ul>						
+								<li><a href="/Installers/CurrentRelease/Giltly.msi">Giltly.msi - Single BootStrap Installer</a></li>
+							</ul>
+						</li>
+						<li>MSI Manual Installation
+							<ul>
+								<li><a href="/Installers/CurrentRelease/Gilt.msi">Gilt.msi - The ASP.NET wesbite</a></li>
+								<li><a href="/Installers/CurrentRelease/GiltDatabase.msi">GiltDatabase.msi - Database Schema</a></li>
+								<li><a href="/Installers/CurrentRelease/GiltTail.msi">GiltTail.msi - Tailing Service</a></li>
+							</ul>
+						</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>    
+    <div class="tile quadro double-vertical ol-transparent bg-white">
+        <div class="tile-content">
+            <div class="panel no-border">
+                <div class="panel-header bg-darkCrimson fg-white"><i class="icon-support"></i> Install</div>
+                <div class="panel-content fg-dark nlp nrp">                    
+                    <p><strong>Installation Steps - <a href="/Installers/Installation.mp4">Installation Screen Cast</a></p>
+                    <ol>                        
+                        <li>Download Current Release</li>
+						<li>Enter the Snort Installation Path</li>
+						<li>Enter the ASP.NET App Pool User</li>
+						<li>Enter the SQL Server User and Connection String</li>
+						<li>Start the Tailing Service</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>    
+</div>
+@EndSection

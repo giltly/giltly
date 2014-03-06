@@ -1,0 +1,45 @@
+﻿<div class="grid">
+  <div class="row">
+    <div class="span3 offset4">
+      <div id="LoginWindow" class="window flat">
+        <div class="caption">
+          <span class="icon icon-windows"></span>
+          <div class="title">@Model.Text.Login</div>
+        </div>
+        <div class="content">
+          <div id="LoginErrorBox" style="display:none">@Model.Text.Invalid @Model.Text.KeepMeLoggedIn @Model.Text.Or @Model.Text.Password</div>
+          <form method="post" action="@Model.Routes.LOGIN">
+            <fieldset>
+              <div class="input-control text" data-role="input-control">
+                <input type="text" name="Username" placeholder="@Model.Text.Email"/>
+                <button tabindex="-1" class="btn-clear" type="button"></button>
+              </div>
+              <div class="input-control password" data-role="input-control">
+                <input autofocus="" name="Password" type="password" placeholder="@Model.Text.Password"/>
+                <button tabindex="-1" class="btn-reveal" type="button"></button>
+              </div>
+              <div style="float: left">                
+                <label id="LoginLabel" for="RememberMe">@Model.Text.KeepMeLoggedIn</label>
+                <input name="RememberMe" type="checkbox" value="True" />
+              </div>
+              <div id="LoginDiv">
+                <input type="submit" value="@Model.Text.Login" />
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function ()
+  {
+  /* show the error box if the query string has error */
+  if ($.url().param('error'))
+  {
+    $('#LoginErrorBox').show();
+  }
+  });
+</script>

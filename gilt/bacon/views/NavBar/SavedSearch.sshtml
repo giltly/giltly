@@ -1,0 +1,37 @@
+﻿<div class="element">
+  <span class="icon-search"></span>
+  <a class="dropdown-toggle" href="#">@Model.Text.Search</a>
+  <ul class="dropdown-menu span9" id="Ul1" data-role="dropdown">
+    @Each.SavedSearches
+    <li class="SavedSearch">
+      <div class="grid">
+        <div class="row">
+          <div class="spanHalf">
+            <div class="input-control radio" data-role="input-control">
+              <label>                
+                <input type="radio" name="CurrentSearch" class="SavedSearch" checked="checked"/>
+                <span class="check"></span>
+              </label>
+            </div>
+          </div>
+          <div class="span5">@Current.Name</div>
+          <div class="span1">
+            <div class="input-control" >
+              <form action="/Search/Edit/@Current.Id" method="get">
+                <input value="Edit" type="submit"/>
+              </form>
+            </div>
+          </div>
+          <div class="span1">
+            <div class="input-control" >
+              <form action="/Search/Delete/@Current.Id" method="post">
+                <input value="Delete" type="submit"/>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+    @EndEach
+  </ul>
+</div>

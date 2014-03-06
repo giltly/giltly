@@ -1,0 +1,439 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 17, 30.5" name="giltdb">
+  <DataContextMoniker Name="/giltdbDataContext" />
+  <nestedChildShapes>
+    <classShape Id="9b7be484-4c1f-4e7c-97d4-43f46017f231" absoluteBounds="6.25, 13.875, 2, 1.7708968098958309">
+      <DataClassMoniker Name="/giltdbDataContext/Event" />
+      <nestedChildShapes>
+        <elementListCompartment Id="60cf83bc-0270-4c88-90c7-d779ba2cb38d" absoluteBounds="6.2650000005960464, 14.33500000089407, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ebf89002-f203-4b69-b266-5c2e7fffde38" absoluteBounds="9, 25.5, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/giltdbDataContext/Data" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0b19dace-e8d5-499d-87bd-094059974d40" absoluteBounds="9.0150000005960464, 25.96000000089407, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2f323e5c-e56a-4b99-ba84-5513bdf9220f" absoluteBounds="0.75, 17.25, 2, 1.1939925130208309">
+      <DataClassMoniker Name="/giltdbDataContext/Encoding" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9483315d-b84e-4725-8e2d-a3d69ef55bf8" absoluteBounds="0.765, 17.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7111ec08-9aec-4dc9-a14f-0468eb4e2a08" absoluteBounds="0.75, 19.125, 2, 1.1939925130208309">
+      <DataClassMoniker Name="/giltdbDataContext/Detail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4205d096-8045-42ee-ae2e-56aad943822d" absoluteBounds="0.765, 19.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6.34375 : 15.6458968098958); (6.34375 : 26.2892976888021); (9 : 26.2892976888021)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/giltdbDataContext/Event/Event_Data" />
+      <nodes>
+        <classShapeMoniker Id="9b7be484-4c1f-4e7c-97d4-43f46017f231" />
+        <classShapeMoniker Id="ebf89002-f203-4b69-b266-5c2e7fffde38" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="0a879066-0692-4a0f-9bce-74f4b52d70fd" absoluteBounds="9.25, 9.25, 2, 3.1170068359375023">
+      <DataClassMoniker Name="/giltdbDataContext/Flag" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2c3d5305-80d8-43a4-9c8a-703fcaf48213" absoluteBounds="9.2650000005960464, 9.71000000089407, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="12e06633-9e91-4504-9be2-39321e247b6e" absoluteBounds="9, 22.625, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/giltdbDataContext/UDPHeader" />
+      <nestedChildShapes>
+        <elementListCompartment Id="62947f75-9d7b-44ad-8261-a16e3ff80887" absoluteBounds="9.0150000005960464, 23.08500000089407, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6016e072-a034-4a20-9bbe-0d7c0d816e27" absoluteBounds="12, 25, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/giltdbDataContext/GeoIp" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0bfd4ed0-7763-40fd-8b67-05f5219cc40b" absoluteBounds="12.015, 25.46, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2690215f-1bc5-4f8e-a6db-540e1ac570e9" absoluteBounds="9, 27.875, 2, 2.3478011067708309">
+      <DataClassMoniker Name="/giltdbDataContext/ICMPHeader" />
+      <nestedChildShapes>
+        <elementListCompartment Id="563233f7-9879-49b9-b448-a57967ac76fb" absoluteBounds="9.0150000005960464, 28.33500000089407, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="73380335-05e7-436a-bb9f-dd750e476032" absoluteBounds="12, 16.75, 2, 4.0785139973958309">
+      <DataClassMoniker Name="/giltdbDataContext/IPHeader" />
+      <nestedChildShapes>
+        <elementListCompartment Id="536b9add-7f76-4f1e-ae03-226331c3b118" absoluteBounds="12.015000000596046, 17.21000000089407, 1.9700000000000002, 3.518513997395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="99e151dc-7e7e-4dd4-bfd8-3b6ff82bb2e1" absoluteBounds="6.75, 0.875, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/giltdbDataContext/LogEntry" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e9398177-5429-4af5-8251-0b1af97cbc0a" absoluteBounds="6.7650000000000006, 1.335, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="91b7c409-550c-4712-b1c1-1e6d6c3cdb14" absoluteBounds="9.5, 1.375, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/giltdbDataContext/LogHistory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="88f19596-333d-4b7b-b700-e4cb0ad55eb8" absoluteBounds="9.515, 1.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="51a2afd7-e039-4d5c-a370-6260d2829ea3" absoluteBounds="3.5, 3.625, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/giltdbDataContext/ProtocolOption" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f067ff67-d000-40a9-a676-17d77aae2710" absoluteBounds="3.5150000005960464, 4.08500000089407, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="15fa41aa-8982-45c0-9f09-a256c28a280f" absoluteBounds="0.75, 2.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/giltdbDataContext/Protocol" />
+      <nestedChildShapes>
+        <elementListCompartment Id="521caeaf-94bf-429c-bab2-5b049532819e" absoluteBounds="0.76500000059604645, 3.2100000008940697, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3dea0872-d937-45cb-94d9-1b50ea84707a" absoluteBounds="3.5, 11.125, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/giltdbDataContext/Reference" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b24c32df-87c7-4aac-82f9-fe493596fbee" absoluteBounds="3.5150000000000006, 11.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="16207cc8-dee5-47ab-9c92-c14a00ee8061" absoluteBounds="0.75, 11.125, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/giltdbDataContext/ReferenceSystem" />
+      <nestedChildShapes>
+        <elementListCompartment Id="62dfb795-132e-4192-abb4-0e61198877bb" absoluteBounds="0.76499999999999968, 11.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e1fdd3f8-c889-4c6f-aae8-b8993b016554" absoluteBounds="0.75, 6.75, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/giltdbDataContext/Schema" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c7fc3820-4cb8-471d-a7be-212b9e760342" absoluteBounds="0.76500000000000057, 7.2100000000000009, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="32dd8769-ce92-43e8-9568-224e494ae8fe" absoluteBounds="3.5, 17.75, 2, 1.9631982421875023">
+      <DataClassMoniker Name="/giltdbDataContext/Sensor" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3334cfce-7345-47ac-bc69-1656a1f05c63" absoluteBounds="3.5150000005960464, 18.21000000089407, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="dae9545d-9036-40f6-a305-ee0b81050e9b" absoluteBounds="3.5, 1.125, 2, 1.7708968098958344">
+      <DataClassMoniker Name="/giltdbDataContext/Service" />
+      <nestedChildShapes>
+        <elementListCompartment Id="47adaae5-75e7-4df8-bbcb-5d7453f12f22" absoluteBounds="3.5150000005960464, 1.5850000008940697, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="60c62c5e-eb05-47a0-9983-2fc1ecbbf5f7" absoluteBounds="3.5, 13.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/giltdbDataContext/Signature" />
+      <nestedChildShapes>
+        <elementListCompartment Id="578a6016-09a0-44f0-b5c8-d441848ddedc" absoluteBounds="3.5150000005960464, 14.21000000089407, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="caad316b-2c0e-4951-a26e-5c06fc029a8f" absoluteBounds="0.75, 13.875, 2, 1.7708968098958309">
+      <DataClassMoniker Name="/giltdbDataContext/SignatureClassification" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3bad3893-52f8-4e49-9766-93754d86316f" absoluteBounds="0.76500000059604645, 14.33500000089407, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3ff6ee5f-c338-4cef-9c2c-235ecc083ed2" absoluteBounds="6.25, 11.125, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/giltdbDataContext/SignatureReference" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c7ecc398-df68-46e5-9ca1-e0e8da739d7d" absoluteBounds="6.2650000000000006, 11.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="66d0d918-1a3b-439a-b437-6664d4f10642" absoluteBounds="12, 9.125, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/giltdbDataContext/TCPHeader" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9b066edb-c280-48b5-9881-8b457ba3bce5" absoluteBounds="12.015000000596046, 9.58500000089407, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6.3750025 : 15.6458968098958); (6.3750025 : 23.7027498372396); (9 : 23.7027498372396)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/giltdbDataContext/Event/Event_UDPHeader" />
+      <nodes>
+        <classShapeMoniker Id="9b7be484-4c1f-4e7c-97d4-43f46017f231" />
+        <classShapeMoniker Id="12e06633-9e91-4504-9be2-39321e247b6e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.3124975 : 15.6458968098958); (6.3124975 : 29.0489005533854); (9 : 29.0489005533854)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/giltdbDataContext/Event/Event_ICMPHeader" />
+      <nodes>
+        <classShapeMoniker Id="9b7be484-4c1f-4e7c-97d4-43f46017f231" />
+        <classShapeMoniker Id="2690215f-1bc5-4f8e-a6db-540e1ac570e9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.40625125 : 15.6458968098958); (6.40625125 : 20.499208984375); (11.0729166666667 : 20.499208984375 : JumpStart); (11.2395833333333 : 20.499208984375 : JumpEnd); (12 : 20.499208984375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/giltdbDataContext/Event/Event_IPHeader" />
+      <nodes>
+        <classShapeMoniker Id="9b7be484-4c1f-4e7c-97d4-43f46017f231" />
+        <classShapeMoniker Id="73380335-05e7-436a-bb9f-dd750e476032" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.75 : 2.06814697265625); (9.5 : 2.06814697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/giltdbDataContext/LogEntry/LogEntry_LogHistory" />
+      <nodes>
+        <classShapeMoniker Id="99e151dc-7e7e-4dd4-bfd8-3b6ff82bb2e1" />
+        <classShapeMoniker Id="91b7c409-550c-4712-b1c1-1e6d6c3cdb14" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 3.97679768880208); (3.5 : 3.97679768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/giltdbDataContext/Protocol/Protocol_ProtocolOption" />
+      <nodes>
+        <classShapeMoniker Id="15fa41aa-8982-45c0-9f09-a256c28a280f" />
+        <classShapeMoniker Id="51a2afd7-e039-4d5c-a370-6260d2829ea3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 11.8181469726563); (3.5 : 11.8181469726563)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/giltdbDataContext/ReferenceSystem/ReferenceSystem_Reference" />
+      <nodes>
+        <classShapeMoniker Id="16207cc8-dee5-47ab-9c92-c14a00ee8061" />
+        <classShapeMoniker Id="3dea0872-d937-45cb-94d9-1b50ea84707a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 17.751509152494); (5.875 : 17.376509152494); (5.875 : 14.7604484049479); (6.25 : 14.7604484049479)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/giltdbDataContext/Sensor/Sensor_Event" />
+      <nodes>
+        <classShapeMoniker Id="32dd8769-ce92-43e8-9568-224e494ae8fe" />
+        <classShapeMoniker Id="9b7be484-4c1f-4e7c-97d4-43f46017f231" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 19.4190991210938); (3.5 : 19.4190991210938)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/giltdbDataContext/Detail/Detail_Sensor" />
+      <nodes>
+        <classShapeMoniker Id="7111ec08-9aec-4dc9-a14f-0468eb4e2a08" />
+        <classShapeMoniker Id="32dd8769-ce92-43e8-9568-224e494ae8fe" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 18.0969962565104); (3.5 : 18.0969962565104)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/giltdbDataContext/Encoding/Encoding_Sensor" />
+      <nodes>
+        <classShapeMoniker Id="2f323e5c-e56a-4b99-ba84-5513bdf9220f" />
+        <classShapeMoniker Id="32dd8769-ce92-43e8-9568-224e494ae8fe" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 2.75); (1.75 : 1.9374995); (3.5 : 1.9374995)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/giltdbDataContext/Protocol/Protocol_Service" />
+      <nodes>
+        <classShapeMoniker Id="15fa41aa-8982-45c0-9f09-a256c28a280f" />
+        <classShapeMoniker Id="dae9545d-9036-40f6-a305-ee0b81050e9b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 14.255224202474); (6.25 : 14.255224202474)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/giltdbDataContext/Signature/Signature_Event" />
+      <nodes>
+        <classShapeMoniker Id="60c62c5e-eb05-47a0-9983-2fc1ecbbf5f7" />
+        <classShapeMoniker Id="9b7be484-4c1f-4e7c-97d4-43f46017f231" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 14.7604484049479); (3.5 : 14.7604484049479)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/giltdbDataContext/SignatureClassification/SignatureClassification_Signature" />
+      <nodes>
+        <classShapeMoniker Id="caad316b-2c0e-4951-a26e-5c06fc029a8f" />
+        <classShapeMoniker Id="60c62c5e-eb05-47a0-9983-2fc1ecbbf5f7" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 11.8181469726563); (6.25 : 11.8181469726563)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/giltdbDataContext/Reference/Reference_SignatureReference" />
+      <nodes>
+        <classShapeMoniker Id="3dea0872-d937-45cb-94d9-1b50ea84707a" />
+        <classShapeMoniker Id="3ff6ee5f-c338-4cef-9c2c-235ecc083ed2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 13.75); (5.875 : 13.375); (5.875 : 12.1959724589844); (6.25 : 12.1959724589844)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/giltdbDataContext/Signature/Signature_SignatureReference" />
+      <nodes>
+        <classShapeMoniker Id="60c62c5e-eb05-47a0-9983-2fc1ecbbf5f7" />
+        <classShapeMoniker Id="3ff6ee5f-c338-4cef-9c2c-235ecc083ed2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 13.875); (8.625 : 13.5); (8.625 : 12.8093082682292); (11.625 : 12.8093082682292); (12 : 12.4343082682292)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/giltdbDataContext/Event/Event_TCPHeader" />
+      <nodes>
+        <classShapeMoniker Id="9b7be484-4c1f-4e7c-97d4-43f46017f231" />
+        <classShapeMoniker Id="66d0d918-1a3b-439a-b437-6664d4f10642" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.25 : 10.8085034179688); (12 : 10.8085034179688)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/giltdbDataContext/Flag/Flag_TCPHeader" />
+      <nodes>
+        <classShapeMoniker Id="0a879066-0692-4a0f-9bce-74f4b52d70fd" />
+        <classShapeMoniker Id="66d0d918-1a3b-439a-b437-6664d4f10642" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="c72dfaa3-3e4f-4572-bb50-66ca633cf3cd" absoluteBounds="9.25, 17.375, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/giltdbDataContext/GeoLocation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="78f64101-3194-4075-8cef-94fa84394f9e" absoluteBounds="9.2650000005960464, 17.83500000089407, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(11.15625 : 20.1074039713542); (11.15625 : 25.21875); (12 : 25.21875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/giltdbDataContext/GeoLocation/GeoLocation_GeoIp" />
+      <nodes>
+        <classShapeMoniker Id="c72dfaa3-3e4f-4572-bb50-66ca633cf3cd" />
+        <classShapeMoniker Id="6016e072-a034-4a20-9bbe-0d7c0d816e27" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.25 : 18.7412019856771); (12 : 18.7412019856771)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/giltdbDataContext/GeoLocation/GeoLocation_IPHeader" />
+      <nodes>
+        <classShapeMoniker Id="c72dfaa3-3e4f-4572-bb50-66ca633cf3cd" />
+        <classShapeMoniker Id="73380335-05e7-436a-bb9f-dd750e476032" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.25 : 17.9956009928385); (12 : 17.9956009928385)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/giltdbDataContext/GeoLocation/GeoLocation_IPHeader1" />
+      <nodes>
+        <classShapeMoniker Id="c72dfaa3-3e4f-4572-bb50-66ca633cf3cd" />
+        <classShapeMoniker Id="73380335-05e7-436a-bb9f-dd750e476032" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="c7fe671a-c23b-4593-87fd-a3d8c3f159a1" absoluteBounds="6.5, 17.75, 2, 1.9631982421875023">
+      <DataClassMoniker Name="/giltdbDataContext/CountryCode" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8c5a231f-1eaa-483f-8466-883d3f00a321" absoluteBounds="6.5150000005960464, 18.21000000089407, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.5 : 18.7315991210938); (9.25 : 18.7315991210938)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/giltdbDataContext/CountryCode/CountryCode_GeoLocation" />
+      <nodes>
+        <classShapeMoniker Id="c7fe671a-c23b-4593-87fd-a3d8c3f159a1" />
+        <classShapeMoniker Id="c72dfaa3-3e4f-4572-bb50-66ca633cf3cd" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="e79dc067-d586-4b9d-881c-f61585ade8b5" absoluteBounds="3.75, 6.75, 2, 1.3862939453124987">
+      <DataClassMoniker Name="/giltdbDataContext/EventsByCountry" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b4e1f23a-5b13-491c-a46e-2cf7a2439a0b" absoluteBounds="3.7650000000000006, 7.2100000000000009, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fe301748-56da-4c3a-8af4-0d05bf35e1d9" absoluteBounds="6.75, 4.75, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/giltdbDataContext/EventsByIp" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8c339ac8-16cd-4920-b432-ad33439e15f2" absoluteBounds="6.7650000000000006, 5.2100000000000009, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8cc4e1d7-a763-460c-b9b6-996129458330" absoluteBounds="9.25, 13.125, 2, 3.3093082682291683">
+      <DataClassMoniker Name="/giltdbDataContext/Search" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b4a539ca-3991-406a-9ab1-1c68b59d8284" absoluteBounds="9.265, 13.585, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 15.8069482421875); (5.79166666666667 : 15.8069482421875 : JumpStart); (5.95833333333333 : 15.8069482421875 : JumpEnd); (6.22916416666667 : 15.8069482421875 : JumpStart); (6.48958458333333 : 15.8069482421875 : JumpEnd); (9.25 : 15.8069482421875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/giltdbDataContext/Signature/Signature_Search" />
+      <nodes>
+        <classShapeMoniker Id="60c62c5e-eb05-47a0-9983-2fc1ecbbf5f7" />
+        <classShapeMoniker Id="8cc4e1d7-a763-460c-b9b6-996129458330" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 15.6458968098958); (1.75 : 16.2011539713542); (5.79166666666667 : 16.2011539713542 : JumpStart); (5.95833333333333 : 16.2011539713542 : JumpEnd); (6.22916416666667 : 16.2011539713542 : JumpStart); (6.48958458333333 : 16.2011539713542 : JumpEnd); (9.25 : 16.2011539713542)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/giltdbDataContext/SignatureClassification/SignatureClassification_Search" />
+      <nodes>
+        <classShapeMoniker Id="caad316b-2c0e-4951-a26e-5c06fc029a8f" />
+        <classShapeMoniker Id="8cc4e1d7-a763-460c-b9b6-996129458330" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="7f8dd44b-313d-45a7-b429-64be6d27601c" absoluteBounds="12, 13.625, 2, 2.3478011067708309">
+      <DataClassMoniker Name="/giltdbDataContext/User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="19a7765c-fe80-43ec-97b1-800f07bfa8c0" absoluteBounds="12.015, 14.085, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(12 : 14.7989005533854); (11.25 : 14.7989005533854)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/giltdbDataContext/User/User_Search" />
+      <nodes>
+        <classShapeMoniker Id="7f8dd44b-313d-45a7-b429-64be6d27601c" />
+        <classShapeMoniker Id="8cc4e1d7-a763-460c-b9b6-996129458330" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.25 : 14.1494502766927); (12 : 14.1494502766927)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/giltdbDataContext/Search/Search_User" />
+      <nodes>
+        <classShapeMoniker Id="8cc4e1d7-a763-460c-b9b6-996129458330" />
+        <classShapeMoniker Id="7f8dd44b-313d-45a7-b429-64be6d27601c" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="0823844b-244d-4f57-8092-db1962973f69" absoluteBounds="12.75, 0.75, 2, 2.9247054036458309">
+      <DataClassMoniker Name="/giltdbDataContext/NLog" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9b47a3ac-2dbf-486f-b19c-766ebc0783de" absoluteBounds="12.765, 1.2100000000000009, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9f1215b4-300f-4f60-b961-512f7ff545cf" absoluteBounds="6.75, 6.75, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/giltdbDataContext/UniqueDestinationPort" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5f51e11f-de0e-422e-8858-ac066206516c" absoluteBounds="6.7650000000000006, 7.2100000000000009, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a7401653-8849-4a75-bc27-25b9909070f1" absoluteBounds="14.75, 4.75, 2, 1.1939925130208309">
+      <DataClassMoniker Name="/giltdbDataContext/UniqueSourcePort" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1c665a6c-3b45-4b77-a311-e5299c66054d" absoluteBounds="14.765, 5.2100000000000009, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8bcc42b3-2f38-4734-b64c-cd8e78bf20c4" absoluteBounds="12, 6.125, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/giltdbDataContext/Role" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b5eeaee3-5515-4a0b-ade9-b70dc3416596" absoluteBounds="12.015, 6.5850000000000009, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d202953a-fad5-40b2-8954-739d274400a4" absoluteBounds="14.75, 11.125, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/giltdbDataContext/UserRole" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c1d12664-4907-426e-889a-71650b91a8d7" absoluteBounds="14.765, 11.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(14 : 6.81814697265625); (15.75 : 6.81814697265625); (15.75 : 11.125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/giltdbDataContext/Role/Role_UserRole" />
+      <nodes>
+        <classShapeMoniker Id="8bcc42b3-2f38-4734-b64c-cd8e78bf20c4" />
+        <classShapeMoniker Id="d202953a-fad5-40b2-8954-739d274400a4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(14 : 13.625); (14.375 : 13.25); (14.375 : 11.7219962565104); (14.75 : 11.7219962565104)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/giltdbDataContext/User/User_UserRole" />
+      <nodes>
+        <classShapeMoniker Id="7f8dd44b-313d-45a7-b429-64be6d27601c" />
+        <classShapeMoniker Id="d202953a-fad5-40b2-8954-739d274400a4" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="da6124e1-ee77-439f-b52f-b8f5df0545cc" absoluteBounds="12, 22.125, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/giltdbDataContext/UserGroup" />
+      <nestedChildShapes>
+        <elementListCompartment Id="eec50c4c-9dc3-4c92-bda0-7b08310c32c1" absoluteBounds="12.015, 22.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="28fa056e-163f-465f-a71b-ebdadd96bb83" absoluteBounds="14.75, 17.125, 2, 1.193992513020838">
+      <DataClassMoniker Name="/giltdbDataContext/UserUserGroup" />
+      <nestedChildShapes>
+        <elementListCompartment Id="98e8ce3a-259a-4bc1-b87b-6aea8e78a594" absoluteBounds="14.765, 17.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(14 : 15.9728011067708); (14.375 : 16.3478011067708); (14.375 : 17.7219962565104); (14.75 : 17.7219962565104)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/giltdbDataContext/User/User_UserUserGroup" />
+      <nodes>
+        <classShapeMoniker Id="7f8dd44b-313d-45a7-b429-64be6d27601c" />
+        <classShapeMoniker Id="28fa056e-163f-465f-a71b-ebdadd96bb83" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(14 : 22.8181469726563); (15.75 : 22.8181469726563); (15.75 : 18.3189925130208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/giltdbDataContext/UserGroup/UserGroup_UserUserGroup" />
+      <nodes>
+        <classShapeMoniker Id="da6124e1-ee77-439f-b52f-b8f5df0545cc" />
+        <classShapeMoniker Id="28fa056e-163f-465f-a71b-ebdadd96bb83" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="6fa3aa5e-4a81-4fc7-b909-eab8bb094e61" absoluteBounds="14.75, 13.75, 2, 1.9631982421875023">
+      <DataClassMoniker Name="/giltdbDataContext/EventComment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d75b4197-2935-4a40-af0f-866fe4691f62" absoluteBounds="14.765, 14.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.25 : 14.7917004049479); (9 : 14.7917004049479); (9 : 13); (14.2916666666667 : 13 : JumpStart); (14.4583333333333 : 13 : JumpEnd); (15.75 : 13); (15.75 : 13.75)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/giltdbDataContext/Event/Event_EventComment" />
+      <nodes>
+        <classShapeMoniker Id="9b7be484-4c1f-4e7c-97d4-43f46017f231" />
+        <classShapeMoniker Id="6fa3aa5e-4a81-4fc7-b909-eab8bb094e61" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(14 : 14.7315991210938); (14.75 : 14.7315991210938)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/giltdbDataContext/User/User_EventComment" />
+      <nodes>
+        <classShapeMoniker Id="7f8dd44b-313d-45a7-b429-64be6d27601c" />
+        <classShapeMoniker Id="6fa3aa5e-4a81-4fc7-b909-eab8bb094e61" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

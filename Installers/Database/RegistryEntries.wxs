@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <?include Variables.wxi?>
+  <Fragment>
+    <DirectoryRef Id="TARGETDIR">
+      <!-- Set the application install location in the registry -->
+      <Component Id="SetInstallLocation" Guid="*" Win64="$(var.Win64Flag)">
+        <RegistryKey Id="InstallLocationRegRoot" Root="HKLM" Key="$(var.MainCompanyKey)" Action="createAndRemoveOnUninstall">
+          <RegistryValue Id="InstallLocationValue" Type="string" Name="InstallLocation" Value="[INSTALLLOCATION]" Action="write" KeyPath="yes"/>
+        </RegistryKey>
+      </Component>
+      <Component Id="SetDatabaseInstallLocation" Guid="*" Win64="$(var.Win64Flag)">
+        <RegistryKey Id="DatabaseInstallLocationRegRoot" Root="HKLM" Key="$(var.ApplicationKey)" Action="createAndRemoveOnUninstall">
+          <RegistryValue Id="DatabaseInstallLocationValue" Type="string" Name="InstallLocation"  Value="[INSTALLLOCATION]\!(loc.ApplicationName)" Action="write" KeyPath="yes"/>
+          <RegistryValue Id="DatabaseMajorVersionValue"    Type="string" Name="MajorVersion"     Value="!(bind.property.ProductVersion.Major)"     Action="write" KeyPath="no"/>
+          <RegistryValue Id="DatabaseMinorVersionValue"    Type="string" Name="MinorVersion"     Value="!(bind.property.ProductVersion.Minor)"     Action="write" KeyPath="no"/>
+          <RegistryValue Id="DatabaseBuildVersionValue"    Type="string" Name="BuildVersion"     Value="!(bind.property.ProductVersion.Build)"     Action="write" KeyPath="no"/>
+          <RegistryValue Id="DatabaseRevisionVersionValue" Type="string" Name="RevisionVersion"  Value="!(bind.property.ProductVersion.Revision)"  Action="write" KeyPath="no"/>
+
+          <!-- dconfiguration values used by other applications and for saving config settings-->          
+          <RegistryValue Id="DatabaseDATABASESERVERValue"    Type="string" Name="DatabaseServer"     Value="[DATABASESERVER]"   Action="write" KeyPath="no"/>
+          <RegistryValue Id="DatabaseDATABASEINSTANCEValue"  Type="string" Name="DatabaseInstance"   Value="[DATABASEINSTANCE]" Action="write" KeyPath="no"/>
+          <RegistryValue Id="DatabaseDATABASENAMEValue"      Type="string" Name="DatabaseName"       Value="[DATABASENAME]"     Action="write" KeyPath="no"/>
+          <RegistryValue Id="DatabaseSQLUSERValue"           Type="string" Name="SqlUser"            Value="[SQLUSER]"          Action="write" KeyPath="no"/>
+          <RegistryValue Id="DatabaseSQLPASSWORDValue"       Type="string" Name="SqlPassword"        Value="[SQLPASSWORD]"      Action="write" KeyPath="no"/>
+        </RegistryKey>
+      </Component>
+    </DirectoryRef>
+  </Fragment>
+  <Fragment>
+    <ComponentGroup Id="InstallLocationsRegistry">
+      <ComponentRef Id="SetInstallLocation" />
+      <ComponentRef Id="SetDatabaseInstallLocation" />
+    </ComponentGroup>
+  </Fragment>
+</Wix>

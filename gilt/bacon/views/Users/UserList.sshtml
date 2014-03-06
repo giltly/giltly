@@ -1,0 +1,39 @@
+﻿@Master['master.sshtml']
+
+@Section['Content']
+<div class="text-center">
+	<h1 >@Model.Text.User</h1>
+</div>
+<script>
+    $(document).ready(function ()
+    {
+        $(function () { new pageViewModel("/Users/", "UserListDivId").bind(); })
+    });
+</script>
+
+<div id="UserListDivId">    
+    <table data-bind="with: pagedViewModel" class="table striped bordered">		
+        <thead>
+            <tr>
+				<th>@Model.Text.Email</th>
+                <th>@Model.Text.FirstName</th>
+				<th>@Model.Text.LastName</th>
+                <th>@Model.Text.Created @Model.Text.On</th>
+				<th>@Model.Text.Assigned @Model.Text.Role</th>
+            </tr>
+        </thead>
+        <tbody data-bind="foreach: Rows">
+            <tr>
+				<td data-bind="text: $data.Email"></td>
+				<td data-bind="text: $data.FirstName"></td>
+				<td data-bind="text: $data.LastName"></td>
+                <td data-bind="text: $data.CreatedOn"></td>
+				<td><a data-bind="attr: { href: '/Role/Assignment/' + $data.Id}">@Model.Text.Role</a></td>
+            </tr>		
+        </tbody>
+    </table>
+	<form action="@Model.Routes.USER_ADD">
+		<input type="submit" value="@Model.Text.Add"/>
+    </form>
+</div>
+@EndSection

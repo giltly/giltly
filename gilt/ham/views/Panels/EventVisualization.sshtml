@@ -1,0 +1,12 @@
+﻿<div class="panel">
+  <div class="panel-header">
+    Event Visualization
+  </div>
+  <div class="panel-content">
+    <ul>
+      <li>Source/Destination Port</li>      
+      <li>Country</li>
+      <li>IP</li>
+    </ul>    
+  </div>
+</div>

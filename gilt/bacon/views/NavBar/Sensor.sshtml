@@ -1,0 +1,3 @@
+﻿<a class="element" href="@Model.Routes.SENSOR_LIST">
+  <span class="icon-eye"></span>@Model.Text.Sensor
+</a>

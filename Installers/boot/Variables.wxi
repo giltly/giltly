@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Include>
+  <!-- Version and Upgrade related -->
+  <?define MinUpgradeVersion=0.0.0 ?>
+
+  <!--<?define CurrentVersion=!(bind.FileVersion.MainAppEXE) ?>-->
+  <?define CurrentVersion=1.0.0.0 ?>
+
+  <!-- UpgradeGUID should never change for the life of the application -->
+  <?define UpgradeGUID={405E53AF-606F-42BB-A153-DD179E77A642} ?>
+
+  <!-- Registry Keys -->
+  <?define MainCompanyKey=Software\Giltly ?>
+
+  <!-- Product details (company name, language, etc.) -->
+  <?define ManufacturerName=!(loc.ManufacturerName) ?>
+  <?define ApplicationName=!(loc.ApplicationName) ?>
+
+  <!-- Package Directory -->  
+  <?define LicenseDir=..\Resources\License ?>
+  <?define IconDir=..\Resources\Icons ?>
+
+</Include>

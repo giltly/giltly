@@ -1,0 +1,77 @@
+﻿<!--<pre data-bind="text: ko.toJSON($data, null, 2)"></pre>-->
+<table data-bind="with: pagedViewModel" class="table bordered center eventlist">
+  <thead>
+    <tr>
+      <th></th>
+      <th data-bind='click: function (data, event) { $root.setOrder(data, event, "EventId") }'>          
+          <!-- ko if:  $root.columnName() === "EventId" -->
+              <i data-bind="css: $root.sortOrderClass()"></i>
+          <!-- /ko -->
+          <span class="EventId">Id</span>
+      </th>
+      <th data-bind='click: function (data, event) { $root.setOrder(data, event, "Signature.Priority") }'>          
+          <!-- ko if:  $root.columnName() === "Signature.Priority" -->
+              <i data-bind="css: $root.sortOrderClass()"></i>
+          <!-- /ko -->
+          <span class="Signature.Priority">Sev</span>
+      </th>
+      <th data-bind='click: function (data, event) { $root.setOrder(data, event, "SensorId") }'>          
+          <!-- ko if:  $root.columnName() === "SensorId" -->
+              <i data-bind="css: $root.sortOrderClass()"></i>
+          <!-- /ko -->
+          <span class="SensorId">Sen</span>
+      </th>
+      <th></th>
+      <th data-bind='click: function (data, event) { $root.setOrder(data, event, "IpHeader.IpSourceString") }'>          
+          <!-- ko if:  $root.columnName() === "IpHeader.IpSourceString" -->
+              <i data-bind="css: $root.sortOrderClass()"></i>
+          <!-- /ko -->
+          <span class="IpHeader.IpSourceString">@Model.Text.Source @Model.Text.IP</span>
+      </th>      
+      <th></th>
+      <th data-bind='click: function (data, event) { $root.setOrder(data, event, "IpHeader.IpDestinationString") }'>          
+          <!-- ko if:  $root.columnName() === "IpHeader.IpDestinationString" -->
+              <i data-bind="css: $root.sortOrderClass()"></i>
+          <!-- /ko -->
+          <span class="IpHeader.IpDestinationString">@Model.Text.Destination @Model.Text.IP</span>
+      </th>          
+      <th data-bind='click: function (data, event) { $root.setOrder(data, event, "Signature.Name") }'>          
+          <!-- ko if:  $root.columnName() === "Signature.Name" -->
+              <i data-bind="css: $root.sortOrderClass()"></i>
+          <!-- /ko -->
+          <span class="Signature.Name">@Model.Text.Signature</span>
+      </th>  
+      <th data-bind='click: function (data, event) { $root.setOrder(data, event, "TimeStamp") }'>   
+          <!-- ko if:  $root.columnName() === "TimeStamp" -->
+              <i data-bind="css: $root.sortOrderClass()"></i>
+          <!-- /ko -->
+          <span class="TimeStamp">@Model.Text.TimeStamp</span>
+      </th>      
+    </tr>
+  </thead>
+  <tbody data-bind="foreach: Rows, click: GILTY.RowHighLighter.ClickRow ,event: {mouseover: GILTY.RowHighLighter.AddTableRowHighlight}" >    
+    <tr data-bind="click: $root.setSelectedRow, attr : { 'Id': $data.Id}, css : {parent : true} " >      
+      <td>
+          <i class="icon-plus center"></i>        
+      </td>
+      <td data-bind="text: $data.EventId"></td>
+      <td><div data-bind="text: $data.Signature.Priority, css: {priority: true, center: true}" ></div></td>
+      <td data-bind="text: $data.SensorId"></td>
+      <td>
+        <!-- ko if:  $data.GeoLocationSource.CountryCode -->
+        <i data-bind="attr: { 'class': 'famfamfam-flag-' + $data.GeoLocationSource.CountryCode.toLowerCase() }"></i>
+        <!-- /ko -->
+      </td>
+      <td data-bind="text: $data.IpHeader.IpSourceString"/>
+      <td>
+        <!-- ko if:  $data.GeoLocationDestination.CountryCode -->
+        <i data-bind="attr: { 'class': 'famfamfam-flag-' + $data.GeoLocationDestination.CountryCode.toLowerCase() }"></i>
+        <!-- /ko -->
+      </td>
+      <td data-bind="text: $data.IpHeader.IpDestinationString"></td>      
+      <td data-bind="text: $data.Signature.Name"></td>
+      <td data-bind="text: $data.TimeStampLongString" valign='middle'></td>
+    </tr>
+    @Partial['Event/EventDetailExpanded.sshtml']
+  </tbody>
+</table>

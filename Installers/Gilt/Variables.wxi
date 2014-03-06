@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Include>
+
+  <!-- Version and Upgrade related -->
+  <?define MinUpgradeVersion=0.0.0 ?>
+  <?define CurrentVersion=!(bind.FileVersion.MainAppEXE) ?>  
+  <!-- UpgradeGUID should never change for the life of the application -->
+  <?define UpgradeGUID={40B1772F-C6DA-486B-9265-774937B3A6A8} ?>
+
+  <!-- Registry Keys -->
+  <?define MainCompanyKey=Software\Giltly ?>
+  <?define ApplicationKey=$(var.MainCompanyKey)\!(loc.ApplicationName) ?>
+  <?define DatabaseApplicationKey=$(var.MainCompanyKey)\!(loc.DatabaseApplicationName) ?>
+
+
+  <!-- Product details (company name, language, etc.) -->
+  <?define ManufacturerName=!(loc.ManufacturerName) ?>
+  <?define ApplicationName=!(loc.ApplicationName) ?>
+  <?define LanguageCodes=!(loc.LANG) ?>
+  <?define ApplicationProgramMenuFolder=!(loc.ApplicationProgramMenuFolder) ?>
+
+  <!-- Target directories for install -->
+  <?define CompanyInstallDirectory=$(var.ManufacturerName) ?>
+  <?define AppInstallDirectory=$(var.ApplicationName) ?>
+
+  <!-- Package Directory -->
+  <?define GiltlyPackageDir=..\..\gilt\bacon\Package ?>
+
+  <!-- web app login and pass -->
+  <?define WebAppUsername=gilt?>
+  <?define WebAppPassword=gilt?>  
+
+  <!-- Determine if the installer will be 64-bit and set variables accordingly -->
+  <?if $(sys.BUILDARCH)=x64 ?>
+  <?define Platform=x64 ?>
+  <?define Win64Flag=yes ?>
+  <?define PlatformProgramFilesFolder=ProgramFiles64Folder ?>
+  <?else ?>
+  <?define Platform=x86 ?>
+  <?define Win64Flag=no ?>
+  <?define PlatformProgramFilesFolder=ProgramFilesFolder ?>
+  <?endif ?>
+
+</Include>

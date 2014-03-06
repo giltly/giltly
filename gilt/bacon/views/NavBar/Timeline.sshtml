@@ -1,0 +1,3 @@
+﻿<a class="element" href="@Model.Routes.EVENT_TIMELINE">
+	<span class="icon-clock"></span>@Model.Text.Timeline
+</a>

@@ -1,0 +1,23 @@
+﻿<fieldset data-bind="visible: null !== $data.IcmpHeader.ICMPId">
+  <legend>@Model.Text.ICMP @Model.Text.Header</legend>
+  <table class="table striped bordered">
+    <thead>
+      <tr>
+        <th>@Model.Text.Type</th>
+        <th>@Model.Text.Code</th>
+        <th>@Model.Text.Checksum</th>
+        <th>@Model.Text.Id</th>
+        <th>@Model.Text.Sequence</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td data-bind="text: $data.IcmpHeader.Type"></td>
+        <td data-bind="text: $data.IcmpHeader.Code"></td>
+        <td data-bind="text: $data.IcmpHeader.Checksum"></td>
+        <td data-bind="text: $data.IcmpHeader.ICMPId"></td>
+        <td data-bind="text: $data.IcmpHeader.ICMPSequence"></td>
+      </tr>
+    </tbody>
+  </table>
+</fieldset>

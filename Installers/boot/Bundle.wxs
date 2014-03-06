@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"
+     xmlns:bal="http://schemas.microsoft.com/wix/BalExtension">
+  <?include Variables.wxi?>
+  <Bundle
+    Name="$(loc.ApplicationName)"
+    Version="1.0.0.0"
+    Manufacturer="$(var.ManufacturerName)"
+    UpgradeCode="$(var.UpgradeGUID)">
+    <BootstrapperApplicationRef Id="WixStandardBootstrapperApplication.RtfLicense" >
+      <bal:WixStandardBootstrapperApplication
+        LicenseFile="$(var.LicenseDir)\license.rtf"
+        LogoFile="$(var.IconDir)\logo.png"/>
+    </BootstrapperApplicationRef>
+    <Chain>
+      <MsiPackage
+        SourceFile="..\Database\bin\Release\en-us\GiltDatabase.msi"
+        Cache="no"
+        Compressed="yes"
+        DisplayInternalUI="yes"
+        ForcePerMachine="yes"
+        Visible="no"
+        Permanent="no"/>
+
+      <MsiPackage
+        SourceFile="..\tail\bin\Release\en-us\tail_en-us_x86.msi"
+        Cache="no"
+        Compressed="yes"
+        DisplayInternalUI="yes"
+        ForcePerMachine="yes"
+        Visible="no"
+        Permanent="no"/>
+
+      <MsiPackage
+        SourceFile="..\Gilt\bin\Release\en-us\gilt.msi"
+        Cache="no"
+        Compressed="yes"
+        DisplayInternalUI="yes"
+        ForcePerMachine="yes"
+        Visible="no"
+        Permanent="no"/>
+    </Chain>
+  </Bundle>
+</Wix>

@@ -1,0 +1,20 @@
+﻿@Master['master.sshtml']
+
+@Section['Content']
+
+<script>
+  $(document).ready(function ()
+  {
+    $('#SearchTimeRangePickerStart').datetimepicker();
+    $('#SearchTimeRangePickerEnd').datetimepicker();
+    $('.CustomComboBox').combobox();
+    var searchFormVm = new searchFormViewModel("@Model.Routes.SEARCH_ROOT" + "/0", "SearchFormDivId");
+    searchFormVm.bind();
+  });
+</script>
+
+@If.HasIsLoggedIn	
+	@Partial['SearchForm.sshtml']
+@EndIf
+
+@EndSection

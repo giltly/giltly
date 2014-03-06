@@ -1,0 +1,41 @@
+﻿@Master['master.sshtml']
+
+@Section['Content']
+<div class="text-center">
+	<h1 >@Model.Text.Sensor</h1>
+</div>
+<script>
+    $(document).ready(function ()
+    {
+        $(function () { new pageViewModel("/Sensor/", "SensorListDivId").bind(); })
+    });
+</script>
+
+<div id="SensorListDivId">    
+    <table data-bind="with: pagedViewModel" class="table striped bordered">
+        <thead>
+            <tr>
+                <th>@Model.Text.Id</th>
+                <th>@Model.Text.Hostname</th>
+                <th>@Model.Text.Interface</th>
+                <th>@Model.Text.Filter</th>                
+                <th>@Model.Text.Detail</th>   
+                <th>@Model.Text.Encoding</th>   
+                <th>@Model.Text.Event @Model.Text.Count</th>   
+            </tr>
+        </thead>
+        <tbody data-bind="foreach: Rows">
+            <tr>
+                <td data-bind="text: $data.Id"></td>
+                <td data-bind="text: $data.HostName"></td>
+                <td data-bind="text: $data.Interface"></td>
+                <td data-bind="text: $data.Filter"></td>                
+                <td data-bind="text: $data.DetailString"></td>                
+                <td data-bind="text: $data.EncodingString"></td>                
+                <td data-bind="text: $data.EventCount"></td>   
+            </tr>
+        </tbody>
+    </table>
+    
+</div>
+@EndSection

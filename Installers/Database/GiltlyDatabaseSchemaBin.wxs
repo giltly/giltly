@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <?include Variables.wxi?>
+<Fragment>
+        <DirectoryRef Id="APPLICATIONROOTDIRECTORY">
+            <Component Win64="$(var.Win64Flag)" Id="cmpB5F6F128F387C29E868C922F5E34C1E4" Guid="*">
+                <File Id="MainAppExe" KeyPath="yes" ProcessorArchitecture="$(var.Platform)" Source="$(var.GiltlyDatabaseSchemaPackageDir)\Schema.sql" />
+            </Component>
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <ComponentGroup Id="DatabaseSchemaBin">
+            <ComponentRef Id="cmpB5F6F128F387C29E868C922F5E34C1E4" />
+        </ComponentGroup>
+    </Fragment>
+</Wix>

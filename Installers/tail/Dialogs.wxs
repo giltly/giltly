@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+	<Fragment>
+    <UI>
+      <!-- 
+        Control Bound Properties need to be:
+          Indirect = no
+          Text = [XXX]
+        So that commandline parameters for silent install, and "double click" install have defaults and can be overriden from commandline
+      -->
+      <Dialog Id="TailConfigurationDlg" Width="365" Height="278" Title="[ProductName] [Setup]" NoMinimize="yes">
+							<Control Id="SnortLogFolderLabel" Type="Text" X="26" Y="52" Width="106" Height="15" TabSkip="no" Text="!(loc.SnortLogFolder)" />
+							<Control Id="SnortLogFolderPortEdit" Type="Edit" X="26" Y="68" Width="124" Height="15" Property="SNORTLOGFOLDER" Indirect="no" Text="[SNORTLOGFOLDER]" />
+							<Control Id="SnortLogFilePrefixLabel" Type="Text" X="176" Y="49" Width="106" Height="15" TabSkip="no" Text="!(loc.SnortLogFilePrefix)" />
+							<Control Id="SnortLogFilePrefixEdit" Type="Edit" X="176" Y="68" Width="164" Height="15" Property="SNORTLOGFILEPREFIX" Indirect="no" Text="[SNORTLOGFILEPREFIX]" />
+							<Control Id="SnortClassConfigLabel" Type="Text" X="26" Y="92" Width="106" Height="15" TabSkip="no" Text="!(loc.ClassificationConfig)" />
+							<Control Id="SnortClassConfigEdit" Type="Edit" X="26" Y="109" Width="124" Height="15" Property="SNORTCLASSCONFIG" Indirect="no" Text="[SNORTCLASSCONFIG]" />
+							<Control Id="SnortReferenceConfigLabel" Type="Text" X="175" Y="92" Width="106" Height="15" TabSkip="no" Text="!(loc.ReferenceConfig)" />
+							<Control Id="SnortReferenceConfigEdit" Type="Edit" X="176" Y="109" Width="164" Height="15" Property="SNORTREFERENCECONFIG" Indirect="no" Text="[SNORTREFERENCECONFIG]" />
+							<Control Id="SnortSidMsgMapLabel" Type="Text" X="26" Y="136" Width="106" Height="15" TabSkip="no" Text="!(loc.SidMsgMap)" />
+							<Control Id="SnortSidMsgMapEdit" Type="Edit" X="26" Y="154" Width="124" Height="15" Property="SNORTSIDMSGMAP" Indirect="no" Text="[SNORTSIDMSGMAP]" />
+							<Control Id="SnortGenMsgMapLabel" Type="Text" X="176" Y="136" Width="164" Height="15" TabSkip="no" Text="!(loc.GenMsgMap)" />
+							<Control Id="SnortGenMsgMapEdit" Type="Edit" X="176" Y="154" Width="164" Height="15" Property="SNORTGENMSGMAP" Indirect="no" Text="[SNORTGENMSGMAP]" />      	
+							<Control Id="SnortConnectionStringLabel" Type="Text" Height="15" Width="106" X="26" Y="179" Text="!(loc.ConnectionString)" />
+							<Control Id="SnortConnectionStringEdit" Type="Edit" Height="15" Width="314" X="26" Y="196" Property="CONNECTIONSTRING" Indirect="no" Text="[CONNECTIONSTRING]" />      	
+							<Control Id="BottomLine" Type="Line" X="0" Y="241" Width="500" Height="2" />
+							<Control Id="BannerLine" Type="Line" X="0" Y="44" Width="370" Height="2" />
+							<Control Id="Next" Type="PushButton" X="284" Y="252" Width="56" Height="17" Default="yes" Text="!(loc.Next)">
+								<Publish Event="NewDialog" Value="VerifyReadyDlg" Order="1"></Publish>
+							</Control>
+							<Control Id="Cancel" Type="PushButton" X="224" Y="252" Width="56" Height="17" Cancel="yes" Text="!(loc.Cancel)">
+								<Publish Event="SpawnDialog" Value="CancelDlg">1</Publish>
+							</Control>
+						</Dialog>
+    </UI>
+	</Fragment>
+</Wix>

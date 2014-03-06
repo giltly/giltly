@@ -1,0 +1,31 @@
+﻿@Master['master.sshtml']
+
+@Section['Content']
+<div class="text-center">
+    <h1>@Model.Text.Add @Model.Text.User </h1>
+</div>
+
+<form method="post" action="@Model.Routes.USER_CREATE">
+    <fieldset>
+        <div class="input-control text" data-role="input-control">
+            <input type="text" name="Email" placeholder="@Model.Text.Email" />            
+        </div>
+        <div class="input-control text" data-role="input-control">
+            <input type="text" name="Password1" placeholder="@Model.Text.Password" />            
+        </div>
+        <div class="input-control text" data-role="input-control">
+            <input type="text" name="Password2" placeholder="@Model.Text.Password" />            
+        </div>
+        <div class="input-control text" data-role="input-control">
+            <input type="text" name="FirstName" placeholder="@Model.Text.FirstName" />            
+        </div>
+        <div class="input-control text" data-role="input-control">
+            <input type="text" name="LastName" placeholder="@Model.Text.LastName" />            
+        </div>
+        <div>
+            <input type="submit" value="@Model.Text.Submit" />
+        </div>
+    </fieldset>
+</form>
+
+@EndSection

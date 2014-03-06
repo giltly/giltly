@@ -1,0 +1,87 @@
+﻿@Master['master.sshtml']
+
+@Section['Content']
+<div class="text-center">
+	<h1 >@Model.Text.UserGroup</h1>
+</div>
+
+<form data-bind="submit: function (data, event) { SubmitForm(data, event, this); }" id="UserGroupDivId">
+    <div class="grid">
+        <div class="row">
+            <div class="span6">
+                <h3>@Model.Text.Unassigned @Model.Text.UserGroup</h3>
+                <div class="unassigned"
+                     data-bind="sortable: { template: 'userGroupItemTemplate', data: unAssignedItems, afterMove: UserGroupsAssignDropCallBack }"></div>
+            </div>
+            <div class="span6">
+                <h3>@Model.Text.Assigned @Model.Text.UserGroup</h3>
+
+                <div class="assigned" 
+                     data-bind="sortable: { template: 'userGroupItemTemplate', data: assignedItems, afterMove: UserGroupsAssignDropCallBack }"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="span1">
+                <input value="@Model.Text.Submit" type="submit"/>
+            </div>
+        </div>
+    </div>
+</form>
+
+<script id="userGroupItemTemplate" type="text/html">
+    <div class="item">
+            <span data-bind="visible: !$root.isItemSelected($data)">
+            <a href="#" data-bind="text: Description, click: $root.selectedTask"></a>
+        </span>
+        <span data-bind="visibleAndSelect: $root.isItemSelected($data)">            
+        </span>  
+    </div>
+</script>
+
+<script>
+    function SubmitForm(data, event, viewmodel)
+    {        
+        var assignedItems = viewmodel.assignedItems();
+        var unAssignedItems = viewmodel.unAssignedItems();
+        var data = {
+            'UserId': GILTY.Uri.Id,
+            'AssignedItems': assignedItems,
+            'UnAssignedItems': unAssignedItems,
+        };
+        //note:
+        //  JSON.stringify()
+        //  contextType : 'application/json; charset=utf-8'
+        //  dataType: 'json',
+        //
+        // are all required by Nancy for Model Binding
+        //  https://github.com/NancyFx/Nancy/wiki/Model-binding
+        //
+        $.ajax({
+            type: "POST",
+            url: "/UserGroups/AssignUserGroups",
+            data: JSON.stringify(data),
+            contentType: 'application/json; charset=utf-8',
+            dataType: 'json',
+            async: false,
+            success: function (data, textStatus, jqXHR)
+            {
+                location.reload();
+            },
+            error: function (data, textStatus, jqXHR)
+            {
+                location.reload();
+            }
+        });
+    }
+
+    function UserGroupsAssignDropCallBack(arg)
+    {        
+    }
+
+    $(document).ready(function ()
+    {
+        var sideBySideVm = new SideBySideViewModel("/UserGroups/AssignData/" + GILTY.Uri.Id, "UserGroupDivId", UserGroupsAssignDropCallBack, SubmitForm);
+        sideBySideVm.bind();
+    });
+</script>
+@EndSection

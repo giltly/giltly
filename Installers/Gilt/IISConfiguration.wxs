@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"
+	 xmlns:iis="http://schemas.microsoft.com/wix/IIsExtension"
+   xmlns:util="http://schemas.microsoft.com/wix/UtilExtension">
+
+  <Fragment>
+    <?include Variables.wxi ?>
+
+    <iis:WebLog Id="WebLog"
+                Type="IIS"/>
+
+    <iis:WebApplication
+      Id="GiltlyWebApp"
+      AllowSessions="yes"
+      Buffer="yes"
+      ClientDebugging="no"
+      DefaultScript="VBScript"
+      Name="!(loc.GiltlySite)"
+      ScriptTimeout="30"
+      ServerDebugging="no"
+      SessionTimeout="5"
+    />
+
+    <DirectoryRef Id="APPLICATIONROOTDIRECTORY">
+      <!-- Configuring app pool -->
+      <Component Id="IISAppPoolCmp" Guid="" KeyPath="yes">
+        
+				<iis:WebAppPool Id="GiltlyAppPool"
+								Name="!(loc.WebAppPoolName)"								
+                ManagedPipelineMode="Integrated"
+                ManagedRuntimeVersion="v4.0"
+                Identity="applicationPoolIdentity" />                 
+
+        <iis:WebSite Id="GiltlyWebSite"
+                     AutoStart="yes"
+                     ConfigureIfExists="yes"
+                     ConnectionTimeout="30"
+                     Description="!(loc.GiltlySite)"
+                     Directory="APPLICATIONROOTDIRECTORY"
+                     StartOnInstall="yes"
+                     WebLog="WebLog"
+                     WebApplication="GiltlyWebApp">
+
+          <iis:WebAddress Id="WebAddress"
+                          IP="*"
+                          Port="80"
+                          Secure="no"/>        
+        </iis:WebSite>
+
+
+      </Component>
+    </DirectoryRef>
+
+    <ComponentGroup Id="IISConfiguration">
+      <!--<ComponentRef Id="IISVirtualDirCmp" />-->
+      <ComponentRef Id="IISAppPoolCmp" />
+    </ComponentGroup>
+
+  </Fragment>
+</Wix>

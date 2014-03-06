@@ -1,0 +1,17 @@
+﻿<fieldset data-bind="visible: null !== $data.UdpHeader.Length">
+  <legend>@Model.Text.UDP @Model.Text.Header</legend>
+  <table class="table striped bordered">
+    <thead>
+      <tr>
+        <th>@Model.Text.Length</th>
+        <th>@Model.Text.Checksum</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td data-bind="text: $data.UdpHeader.Length"></td>
+        <td data-bind="text: $data.UdpHeader.CheckSum"></td>
+      </tr>
+    </tbody>
+  </table>
+</fieldset>

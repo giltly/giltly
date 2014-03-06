@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Include>
+  <!--default media to single file-->
+  <Media Id="1" Cabinet="$(var.ApplicationName)" EmbedCab="yes" CompressionLevel="mszip"/>
+
+  <!-- Schedules the removal of existing products prior to installing the new version -->
+  <MajorUpgrade Schedule="afterInstallInitialize" DowngradeErrorMessage="!(loc.DownGradeMessage)" />
+
+  <!-- supress the repair option from control panel-->
+  <Property Id='ARPNOREPAIR'>1</Property>
+
+</Include>

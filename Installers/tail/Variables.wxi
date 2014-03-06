@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Include>
+
+  <!-- Version and Upgrade related -->
+  <?define MinUpgradeVersion=0.0.0 ?>
+  <?define CurrentVersion=!(bind.FileVersion.MainAppEXE) ?>
+  <!-- UpgradeGUID should never change for the life of the application -->
+  <?define UpgradeGUID={92C10033-260B-4400-B33D-56A992B048A0} ?>
+
+  <!-- Registry Keys -->
+  <?define MainCompanyKey=Software\Giltly ?>
+  <?define ApplicationKey=$(var.MainCompanyKey)\!(loc.ApplicationName) ?>
+  <?define DatabaseApplicationKey=$(var.MainCompanyKey)\!(loc.DatabaseApplicationName) ?>  
+
+  <!-- Product details (company name, language, etc.) -->
+  <?define ManufacturerName=!(loc.ManufacturerName) ?>
+  <?define ApplicationName=!(loc.ApplicationName) ?>
+  <?define LanguageCodes=!(loc.LANG) ?>
+  <?define ApplicationProgramMenuFolder=!(loc.ApplicationProgramMenuFolder) ?>
+  <?define ApplicationServiceName=!(loc.ApplicationServiceName) ?>
+  <?define ApplicationServiceDisplayName=!(loc.ApplicationServiceDisplayName) ?>
+
+  <!-- Target directories for install -->
+  <?define CompanyInstallDirectory=$(var.ManufacturerName) ?>
+  <?define AppInstallDirectory=$(var.ApplicationName) ?>
+
+  <!-- Package Directory -->
+  <?define TailPackageDir=.\Package\Bin ?>
+  <?define LicenseDir=.\Package\License ?>
+  <?define IconDir=.\Package\Icons ?>
+  
+  <!-- Determine if the installer will be 64-bit and set variables accordingly -->
+  <?if $(sys.BUILDARCH)=x64 ?>
+  <?define Platform=x64 ?>
+  <?define Win64Flag=yes ?>
+  <?define PlatformProgramFilesFolder=ProgramFiles64Folder ?>
+  <?else ?>
+  <?define Platform=x86 ?>
+  <?define Win64Flag=no ?>
+  <?define PlatformProgramFilesFolder=ProgramFilesFolder ?>
+  <?endif ?>
+
+</Include>

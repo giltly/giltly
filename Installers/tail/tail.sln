@@ -1,0 +1,18 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+# SharpDevelop 4.3
+Project("{CFEE4113-1246-4D54-95CB-156813CB8593}") = "tail", "tail.wixproj", "5e48f9e6-f7c1-4b35-a5cc-99bd5cee22f4"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		5e48f9e6-f7c1-4b35-a5cc-99bd5cee22f4.Debug|x86.Build.0 = Debug|x86
+		5e48f9e6-f7c1-4b35-a5cc-99bd5cee22f4.Debug|x86.ActiveCfg = Debug|x86
+		5e48f9e6-f7c1-4b35-a5cc-99bd5cee22f4.Release|x86.Build.0 = Release|x86
+		5e48f9e6-f7c1-4b35-a5cc-99bd5cee22f4.Release|x86.ActiveCfg = Release|x86
+	EndGlobalSection
+EndGlobal

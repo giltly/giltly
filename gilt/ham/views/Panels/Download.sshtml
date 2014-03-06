@@ -1,0 +1,26 @@
+﻿<div class="panel">
+  <div class="panel-header">
+    Simple IDS Log Viewing
+  </div>
+  <div class="offset1 padding10">
+    <h3>
+      <i class="icon-arrow-right-2 on-left-more"></i>Unified2 Log Viewing
+    </h3>
+    <h3>
+      <i class="icon-arrow-right-2 on-left-more"></i>Azure Ready
+    </h3>
+    <h3>
+      <i class="icon-arrow-right-2 on-left-more"></i>ASP.NET Application
+    </h3>
+    <h3>
+      <i class="icon-arrow-right-2 on-left-more"></i>Windows Service
+    </h3>
+  </div>
+  <div>
+    <a href="/Download" class="place-left button bg-darkCrimson bg-hover-yellow fg-white fg-hover-darkTeal bd-darkBrown rounded20" style="width: 100%">
+      <h4 style="margin: 10px 40px">
+        Download <span class="icon-download-2 on-right"></span>
+      </h4>
+    </a>
+  </div>
+</div>

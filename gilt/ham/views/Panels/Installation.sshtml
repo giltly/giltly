@@ -1,0 +1,18 @@
+﻿<div class="panel">
+  <div class="panel-header">
+    Installation
+  </div>
+  <div class="panel-content">
+    <ul>
+      <li>Single MSI guided installation.</li>
+      <li>Service for Parsing Snort Unifed2 Logs in Realtime.</li>      
+      <li>Database and ASP.NET Azure ready</li>
+      <li>        
+        Distributed snort processing.  
+        <ul>
+          <li>Split snort process among servers for scalable event processing.</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>

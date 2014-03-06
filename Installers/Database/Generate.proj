@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\ExtensionPack\4.0\MSBuild.ExtensionPack.tasks"/>
+
+  <PropertyGroup>        
+    <DatabaseSchemaDir>$(MSBuildThisFileDirectory)..\..\gilt\db\gilt.db\Installer</DatabaseSchemaDir>    
+    <WixPath>C:\Program Files (x86)\WiX Toolset v3.8\bin\</WixPath>
+  </PropertyGroup>
+
+  <Target Name="Build">
+    <!-- get the schema file -->
+    <Exec
+			Command="&quot;$(WixPath)heat.exe&quot; file &quot;$(DatabaseSchemaDir)\Schema.sql&quot; -cg DatabaseSchemaBin -ke -gg -sfrag -var var.GiltlyDatabaseSchemaPackageDir -template fragment -t WixHeatFormatter.xslt -srd -ag -dr APPLICATIONROOTDIRECTORY -sreg -out GiltlyDatabaseSchemaBin.wxs"
+			ContinueOnError="false"
+			WorkingDirectory="$(MSBuildThisFileDirectory)" />
+    
+    <!-- get the views file -->
+    <Exec
+			Command="&quot;$(WixPath)heat.exe&quot; file &quot;$(DatabaseSchemaDir)\Views.sql&quot; -cg DatabaseSchemaViewsBin -ke -gg -sfrag -var var.GiltlyDatabaseDataPackageDir -template fragment -t WixHeatFormatter.xslt -srd -ag -dr APPLICATIONROOTDIRECTORY -sreg -out GiltlyDatabaseSchemaViewsBin.wxs"
+			ContinueOnError="false"
+			WorkingDirectory="$(MSBuildThisFileDirectory)" />
+
+    <!-- get the functions file -->
+    <Exec
+			Command="&quot;$(WixPath)heat.exe&quot; file &quot;$(DatabaseSchemaDir)\Functions.sql&quot; -cg DatabaseSchemaFunctionsBin -ke -gg -sfrag -var var.GiltlyDatabaseDataPackageDir -template fragment -t WixHeatFormatter.xslt -srd -ag -dr APPLICATIONROOTDIRECTORY -sreg -out GiltlyDatabaseSchemaFunctionsBin.wxs"
+			ContinueOnError="false"
+			WorkingDirectory="$(MSBuildThisFileDirectory)" />
+
+    <!-- get the data file -->
+    <Exec
+			Command="&quot;$(WixPath)heat.exe&quot; file &quot;$(DatabaseSchemaDir)\Data.sql&quot; -cg DatabaseSchemaDataBin -ke -gg -sfrag -var var.GiltlyDatabaseDataPackageDir -template fragment -t WixHeatFormatter.xslt -srd -ag -dr APPLICATIONROOTDIRECTORY -sreg -out GiltlyDatabaseSchemaDataBin.wxs"
+			ContinueOnError="false"
+			WorkingDirectory="$(MSBuildThisFileDirectory)" />
+
+  </Target>
+</Project>

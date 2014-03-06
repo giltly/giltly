@@ -1,0 +1,39 @@
+﻿<header>
+	<nav class="navigation-bar bg-darkCrimson fg-linen  shadow">
+    <nav class="navigation-bar-content container">
+      <ul class="element-menu">
+        <li>
+          <a href="/" class="element">
+            <span class="icon-lab"></span>Giltly<sup>1.0.2</sup>
+          </a>
+        </li>
+        <li>
+          <a href="/Features" class="element">Features</a>
+        </li>
+        <li>
+          <a href="/Download" class="element">Download</a>
+        </li>
+        <li>
+          <a href="/Source" class="element">Source</a>
+        </li>
+        <li>          
+            <a href="/Demo" class="element">Demo</a>          
+        </li>
+        <li>
+          <a href="mailto:support@giltly.com" target="_top">support@giltly.com</a>
+        </li>
+      </ul>
+      <div class="no-tablet=portrait no-phone">			  
+        <a href="http://www.linkedin.com/pub/tim-dailey/91/272/b28" target="_blank" class="element place-right" title="LinkedIn">
+          <span class="icon-linkedin"/>
+        </a>
+        <a href="https://www.facebook.com/giltly" target="_blank" class="element place-right" title="Facebook">
+          <span class="icon-facebook"/>
+        </a>
+        <a href="https://twitter.com/intent/user?screen_name=giltly" target="_blank" class="element place-right" title="Twitter">
+          <span class="icon-twitter"/>
+        </a>
+      </div>
+		</nav>
+	</nav>
+</header>

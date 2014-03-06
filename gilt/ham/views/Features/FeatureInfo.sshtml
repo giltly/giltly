@@ -1,0 +1,73 @@
+﻿@Master['Master.sshtml']
+
+@Section['Content']          
+<div>
+    <h1>IDS Event Log Viewing and Processing</h1>
+    <p>Giltly was designed to meet the needs of both the end user and the site administrator.</p>
+    <p>After all, we have more important things to do then configure and maintain yet another website...</p>
+    <p>Like finding out who is <strong>G</strong>[u]<strong>ilt</strong>[l]<strong>y</strong> and drinking coffee.</p>
+    
+    <div class="tile triple double-vertical ol-transparent bg-white">
+        <div class="tile-content">
+            <div class="panel no-border">
+                <div class="panel-header bg-darkCrimson fg-white"><i class="icon-search"></i> Search</div>
+                <div class="panel-content fg-dark nlp nrp">                    
+                    <p>Create Personal Searches based on many fields:</p>
+                    <ul >                        
+                        <li>Source and Destination IP</li>
+                        <li>Packet Type: TCP,UDP, ICMP</li>
+                        <li>Source and Destination Port</li>
+                        <li>Signature and Signature Classification</li>
+                        <li>Source and Destination Country</li>                        
+                        <li>Date Range</li>                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tile triple double-vertical ol-transparent bg-white">
+        <div class="tile-content">
+            <div class="panel no-border">
+                <div class="panel-header bg-darkCrimson fg-white"><i class="icon-eye"></i> Report</div>
+                <div class="panel-content fg-dark nlp nrp">                    
+                    <p>Export and share professional reports</p>
+                    <ul>
+                      <li>Source & Destination Port</li>      
+                      <li>Country</li>
+                      <li>IP</li>
+                      <li>Export to PDF</li>
+                    </ul>  
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tile triple double-vertical ol-transparent bg-white">
+        <div class="tile-content">
+            <div class="panel no-border">
+                <div class="panel-header bg-darkCrimson fg-white"><i class="icon-share-2"></i> Share</div>
+                <div class="panel-content fg-dark nlp nrp">                    
+                    <p>Quickly alert the people who need to know</p>
+                    <ul >
+                        <li>Assign Events to Groups or People</li>
+                        <li>Email Events for investigation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tile triple double-vertical ol-transparent bg-white">
+        <div class="tile-content">
+            <div class="panel no-border">
+                <div class="panel-header bg-darkCrimson fg-white"><i class="icon-support"></i> Install</div>
+                <div class="panel-content fg-dark nlp nrp">       
+                    <p>Simple guided MSI GUI installation</p>             
+                    <ul >                        
+                        <li>Requires IIS and Sql Server. Express editions supported.</li>
+                        <li>Can be deployed to Azure [see <a href="/Demo">Live Azure Demo</a>]</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@EndSection

@@ -1,0 +1,35 @@
+﻿<fieldset>
+    <legend data-bind="visible: null !== $data.EventComments && $data.EventComments.length >= 1">@Model.Text.Event @Model.Text.Comment</legend>
+    <table data-bind="visible: null !== $data.EventComments && $data.EventComments.length >= 1" class="table striped bordered eventComment">
+    <thead>
+        <tr>
+        <th>@Model.Text.By</th>
+        <th>@Model.Text.On</th>
+        <th>@Model.Text.Comment</th>
+        </tr>
+    </thead>
+    <tbody data-bind="foreach: $data.EventComments">
+        <tr>
+        <td>
+            <div data-bind="text: $data.CreatedBy"></div>
+        </td>
+        <td>
+            <div data-bind="text: $data.CreatedOnString"></div>
+        </td>
+        <td>
+            <div data-bind="text: $data.Comment, css : { wordwrap : true }"></div>
+        </td>
+        </tr>
+    </tbody>
+    </table>
+</fieldset>
+<div data-bind="attr: {id : 'EventComment_' + $data.Id}, visbile : false" class="dialogs" style="display:none">  
+  <form style="padding-top: 2em">
+    <fieldset>
+      <input type="hidden" name="Id" data-bind="attr:{value: $data.Id}"/>
+      <input value="@Model.Text.Comment" type="text" class="EventComment"/>
+      <input value="@Model.Text.Submit" type="submit" data-bind="click: function(data,event) { GILTY.EventComment.SubmitEventComment('EventComment_' + data.Id, $root); event.preventDefault(); }"/>      
+      <input value="@Model.Text.Cancel" type="button" data-bind="click: function(data,event) { GILTY.EventComment.CloseEventComment('EventComment_' + data.Id) }"/>
+    </fieldset>
+  </form>
+</div>

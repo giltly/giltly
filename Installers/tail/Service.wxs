@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi" xmlns:util="http://schemas.microsoft.com/wix/UtilExtension">
+  <?include Variables.wxi?>
+  <!-- Items that need to be installed and registered that require special processing or need to happen out of sequence -->
+  <Fragment>
+    <DirectoryRef Id="APPLICATIONROOTDIRECTORY">
+
+      <!-- Install the ApService.exe windows service -->
+      <Component Id="ServiceExeComponent"
+                 Guid="{3E24D572-8DD6-4820-B6C2-F737C3C84E01}"
+                 Win64="$(var.Win64Flag)"
+                 SharedDllRefCount="no"
+                 NeverOverwrite="no"
+                 Permanent="no"
+                 Transitive="no"
+                 Location="either">
+
+        <File Id="ServiceExeFile"
+              Name="gilt.tail.service.exe"
+              KeyPath="yes"
+              ProcessorArchitecture="$(var.Platform)"
+              Source="$(var.TailPackageDir)\gilt.tail.service.exe"
+              Vital="yes"/>
+
+        <ServiceInstall Id="ServiceExeInstall"
+                        Name="!(loc.ApplicationServiceName)"
+                        DisplayName="$(var.ApplicationServiceDisplayName)"
+                        Account="LocalSystem"
+                        Start="demand"
+                        ErrorControl="normal"
+                        Vital="yes"
+                        Type="ownProcess"
+                        Interactive="no">
+          <util:ServiceConfig
+            FirstFailureActionType="restart"
+            SecondFailureActionType="restart"
+            ThirdFailureActionType="none"
+          />
+        </ServiceInstall>
+
+        <!--<ServiceControl Id="ServiceExeControl"
+                        Name="!(loc.ApplicationServiceName)"
+                        Start="install"
+                        Stop="both"
+                        Remove="uninstall"
+                        Wait="yes" />-->
+      </Component>
+
+    </DirectoryRef>
+  </Fragment>
+</Wix>

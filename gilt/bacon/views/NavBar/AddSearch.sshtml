@@ -1,0 +1,4 @@
+﻿<a class="element" href="@Model.Routes.SEARCH_ADD_VIEW">
+  <span class="icon-plus-2"></span>
+  @Model.Text.Add @Model.Text.Search
+</a>

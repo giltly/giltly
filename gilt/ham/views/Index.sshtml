@@ -1,0 +1,31 @@
+﻿@Master['Master.sshtml']
+
+@Section['Content']          
+<div>
+    <div class="container">
+        <div class="grid fluid">
+            <div class="row">
+                <div class="tile triple double-vertical ol-transparent bg-white">
+                    @Partial['Panels/Info.sshtml']
+                </div>
+                <div class="offset1 span5 ntm fg-darkBrown">
+                    @Partial['Panels/Download.sshtml']
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="grid fluid padding5">
+            <div class="row">
+                <div class="span6">
+                    @Partial['Panels/Features.sshtml']
+                </div>
+                <div class="span6">
+                    @Partial['Panels/Carousel.sshtml']
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@EndSection

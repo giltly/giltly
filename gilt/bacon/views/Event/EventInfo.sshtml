@@ -1,0 +1,24 @@
+﻿<fieldset>
+    <legend>@Model.Text.Event @Model.Text.Info</legend>
+    <table class="table striped bordered">
+    <thead>
+        <tr>
+        <th>@Model.Text.Type</th>
+        <th>@Model.Text.IP</th>
+        <th>@Model.Text.Port</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+        <td>@Model.Text.Source</td>
+        <td data-bind="text: $data.IpHeader.IpSourceString"></td>
+        <td data-bind="text: ($data.TcpHeader.SourcePort ? $data.TcpHeader.SourcePort : $data.UdpHeader.SourcePort)"></td>
+        </tr>
+        <tr>
+        <td>@Model.Text.Destination</td>
+        <td data-bind="text: $data.IpHeader.IpDestinationString"></td>
+        <td data-bind="text: ($data.TcpHeader.DestinationPort ? $data.TcpHeader.DestinationPort : $data.UdpHeader.DestinationPort)"></td>
+        </tr>              
+    </tbody>
+    </table>
+</fieldset>

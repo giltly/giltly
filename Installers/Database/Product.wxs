@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi" 
+     xmlns:sql="http://schemas.microsoft.com/wix/SqlExtension"
+     xmlns:util="http://schemas.microsoft.com/wix/UtilExtension"
+     xmlns:netfx="http://schemas.microsoft.com/wix/NetFxExtension">
+  <?include Variables.wxi?>
+
+  <Product
+    Id="*"
+    Name="$(var.ApplicationName)"
+    Language="!(loc.LANG)"
+    Version="$(var.CurrentVersion)"
+    Manufacturer="$(var.ManufacturerName)"
+    UpgradeCode="$(var.UpgradeGUID)">
+
+    <Package
+      InstallerVersion="405"
+      InstallPrivileges="elevated"
+      Description="$(var.ApplicationName) $(var.CurrentVersion)"
+      Comments="$(var.ApplicationName) $(var.CurrentVersion)"
+      Manufacturer="$(var.ManufacturerName)"
+      Compressed="yes"
+      InstallScope="perMachine"
+      Platform="$(var.Platform)" />
+
+    <!-- Include Properties -->
+    <?include Properties.wxi?>
+
+    <!-- Include Common Files Listed Below -->
+    <?include Shared.wxi?>
+
+    <!-- Include Features -->
+    <?include Features.wxi?>
+
+  </Product>
+
+</Wix>

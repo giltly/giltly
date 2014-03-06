@@ -1,0 +1,8 @@
+﻿<div class="tile triple-vertical">
+    <div class="tile-content bg-green">
+        <h1 id="EventCountToday" class="EventCountTitle center"></h1>
+    </div>
+    <div class="brand">
+        <span class="name">@Model.Text.Event @Model.Text.Today</span>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+﻿<div class="tile-content">
+  <div class="panel no-border">
+    <div class="panel-header bg-darkCrimson fg-white">Giltly</div>
+    <div class="panel-content fg-dark nlp nrp">
+      <img src="images/logo.png" class="place-left margin10 nlm ntm size2"/>
+        <strong>Giltly</strong> is simplified unified2 log processing on windows.  It integrates with intrusion
+        detection systems like Snort.  It was designed to be easy to install, configure, and use.
+        It provides an easily updatable, open source, network monitoring tool for the windows platform.
+      </div>
+  </div>
+</div>

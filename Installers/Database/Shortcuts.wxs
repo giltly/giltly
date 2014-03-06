@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <?include Variables.wxi?>
+  <Fragment>
+    <!-- Creates the Start menu and Desktop shortcuts -->
+    <DirectoryRef Id="APPLICATIONPROGRAMMENUFOLDER">
+      <Component Id="ApplicationShortcut" Guid="*">
+        <Shortcut Id="ApplicationStartMenuShortcut" Name="$(var.ApplicationName)" Description="$(var.ApplicationName) $(var.CurrentVersion)" Target="[APPLICATIONROOTDIRECTORY]ImageServer.exe" WorkingDirectory="APPLICATIONROOTDIRECTORY" IconIndex="0" />
+        <RemoveFolder Id="ApplicationProgramsFolder" On="uninstall"/>
+        <RegistryValue Root="HKCU" Key="$(var.ApplicationKey)" Name="installed" Type="integer" Value="1" KeyPath="yes"/>
+      </Component>
+    </DirectoryRef>    
+  </Fragment>
+  <Fragment>
+    <ComponentGroup Id="Shortcuts">
+      <ComponentRef Id="ApplicationShortcut" />
+    </ComponentGroup>
+  </Fragment>
+</Wix>
+
+

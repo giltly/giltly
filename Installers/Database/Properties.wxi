@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Include>
+  <!--  DatabaseName -->
+  <Property Id="DATABASESERVER"       Secure="yes" />
+  <SetProperty Id="DATABASESERVER"    Value="[ComputerName]" After="AppSearch" />
+  <Property Id="DATABASEINSTANCE"     Secure="yes" />
+  <Property Id="DATABASENAME"         Secure="yes" Value="giltdb_test"/>
+
+  <Property Id="SQLSERVERSERVICEACCOUNT" Secure="yes" Value="NT Service\MSSQLSERVER"/>
+  <Property Id="SQLUSER"                 Secure="yes" Value="gilt"/>
+  <Property Id="SQLPASSWORD"             Secure="yes" Value="gilt"/>
+
+  <!-- choose your installation directory -->
+  <Property Id="WIXUI_INSTALLDIR" Value="APPLICATIONROOTDIRECTORY"/>
+  <UIRef Id="WixUI_InstallDir"/>
+
+  <UI Id="WixUI_InstallDir_Database">
+    <DialogRef Id="DatabaseConfigurationDlg" />
+    <Publish Dialog="LicenseAgreementDlg" Control="Next" Event="NewDialog" Value="DatabaseConfigurationDlg">LicenseAccepted = "1"</Publish>
+    <Publish Dialog="VerifyReadyDlg" Control="Back" Event="NewDialog" Value="DatabaseConfigurationDlg">1</Publish>
+  </UI>
+
+  <!-- force all advertised shortcuts to become regular shortcuts -->
+  <Property Id="DISABLEADVTSHORTCUTS" Value="1"/>
+
+
+</Include>

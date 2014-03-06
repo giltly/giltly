@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\ExtensionPack\4.0\MSBuild.ExtensionPack.tasks"/>
+
+  <PropertyGroup>    
+    <PackageDir>$(MSBuildThisFileDirectory)..\..\gilt\bacon\Package</PackageDir>
+    <WixPath>C:\Program Files (x86)\WiX Toolset v3.8\bin\</WixPath>
+  </PropertyGroup>
+
+  <Target Name="Build">
+    <!-- run the publish target with the name Package -->
+    <MSBuild
+			Projects="..\..\gilt\bacon\gilt.bacon.csproj"			
+			Properties="DeployOnBuild=true;PublishProfile=Package" />    
+    
+    <!-- Harvest all content of published result -->    
+    <Exec
+			Command="&quot;$(WixPath)heat.exe&quot; dir &quot;$(PackageDir)&quot; -cg GiltlyBin -ke -gg -sfrag -var var.GiltlyPackageDir -template fragment -t WixHeatFormatter.xslt -srd -ag -dr APPLICATIONROOTDIRECTORY -sreg -out GiltlyBin.wxs"
+			ContinueOnError="false"
+			WorkingDirectory="$(MSBuildThisFileDirectory)" />
+
+  </Target>
+</Project>

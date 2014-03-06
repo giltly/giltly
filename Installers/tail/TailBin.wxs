@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <?include Variables.wxi?>
+  <Fragment>
+    <DirectoryRef Id="APPLICATIONROOTDIRECTORY">
+      <Component Win64="$(var.Win64Flag)" Id="cmpEBDC74417A3B71BCAD9B0643DAE02282" Guid="*">
+        <File ProcessorArchitecture="$(var.Platform)" Id="fil96FDC50578C3E6A8E513817B5CCFB0CB" KeyPath="yes" Source="$(var.TailPackageDir)\GeoLiteCity-Blocks.csv" />
+      </Component>
+      <Component Win64="$(var.Win64Flag)" Id="cmpA7F024F9F9D2480880214B1995ED5C7B" Guid="*">
+        <File ProcessorArchitecture="$(var.Platform)" Id="fil5FE71AF7B59FAC4C47C871442A27CA3F" KeyPath="yes" Source="$(var.TailPackageDir)\GeoLiteCity-Location.csv" />
+      </Component>
+      <Component Win64="$(var.Win64Flag)" Id="cmpDEA1E037C708D28FE364C75878EFD6A6" Guid="*">
+        <File ProcessorArchitecture="$(var.Platform)" Id="fil38B56CD009BEBD98FF574DDD529400EE" KeyPath="yes" Source="$(var.TailPackageDir)\gilt.geo.dll" />
+      </Component>
+      <Component Win64="$(var.Win64Flag)" Id="cmp7338321294A6274E0E8A30F767595E29" Guid="*">
+        <File ProcessorArchitecture="$(var.Platform)" Id="filC0E1F74C51A9D060C035D5F7034A60F4" KeyPath="yes" Source="$(var.TailPackageDir)\gilt.geo.xml" />
+      </Component>
+      <Component Win64="$(var.Win64Flag)" Id="cmp0FDCF1FFE9E70B1ED3E918B2020A0A19" Guid="*">
+        <File ProcessorArchitecture="$(var.Platform)" Id="fil7A61C0D9B2781E087CC4B575015ED6EC" KeyPath="yes" Source="$(var.TailPackageDir)\gilt.snort.dll" />
+      </Component>
+      <Component Win64="$(var.Win64Flag)" Id="cmp295F9041A821253DC6741C1CC133E8A3" Guid="*">
+        <File ProcessorArchitecture="$(var.Platform)" Id="filB1C5CB1CF4891A3DAE54E14340FF69BF" KeyPath="yes" Source="$(var.TailPackageDir)\gilt.snort.xml" />
+      </Component>
+      <Component Win64="$(var.Win64Flag)" Id="cmp841ACBB23EDC2DC65CEF060C94BD5E88" Guid="*">
+        <File Id="MainAppExe" KeyPath="yes" ProcessorArchitecture="$(var.Platform)" Source="$(var.TailPackageDir)\gilt.tail.dll" />
+      </Component>
+      <Component Win64="$(var.Win64Flag)" Id="cmp7AF609003E6B93A9671A274FF6FDDDBD" Guid="*">
+        <File ProcessorArchitecture="$(var.Platform)" Id="filE8C5ECADF3E569C9ACE1375C9B86F737" KeyPath="yes" Source="$(var.TailPackageDir)\gilt.tail.service.exe.config" />
+      </Component>
+      <Component Win64="$(var.Win64Flag)" Id="cmp4F4505C364741424294C13B6E460CF0D" Guid="*">
+        <File ProcessorArchitecture="$(var.Platform)" Id="filA0407883C61C9001A5EF6490D425B104" KeyPath="yes" Source="$(var.TailPackageDir)\gilt.tail.service.XML" />
+      </Component>
+      <Component Win64="$(var.Win64Flag)" Id="cmp56C92E7186008CFE5F5ED6A4D4CE21CB" Guid="*">
+        <File ProcessorArchitecture="$(var.Platform)" Id="fil1DB6C753A10429F0B78DA3166984C4C1" KeyPath="yes" Source="$(var.TailPackageDir)\gilt.tail.xml" />
+      </Component>
+      <Component Win64="$(var.Win64Flag)" Id="cmp73A1E2B4395F6C024104674421E3C453" Guid="*">
+        <File ProcessorArchitecture="$(var.Platform)" Id="fil52B6DC984A47108FEFD143281D001CF5" KeyPath="yes" Source="$(var.TailPackageDir)\gilt.unified2.dll" />
+      </Component>
+      <Component Win64="$(var.Win64Flag)" Id="cmpA151833BE7B41E7E524D049ED870C1C3" Guid="*">
+        <File ProcessorArchitecture="$(var.Platform)" Id="filB0A496A6F16DF1E7FC34042DB5AD81E4" KeyPath="yes" Source="$(var.TailPackageDir)\gilt.unified2.xml" />
+      </Component>
+      <Component Win64="$(var.Win64Flag)" Id="cmp92A737BBF2517EA67C903BA93505C11B" Guid="*">
+        <File ProcessorArchitecture="$(var.Platform)" Id="filA3199E8A548570BAB6757F91E5EA4A3F" KeyPath="yes" Source="$(var.TailPackageDir)\gilt.util.dll" />
+      </Component>
+      <Component Win64="$(var.Win64Flag)" Id="cmp1BF2AD306FEDE88D8D17F28BABE79FBA" Guid="*">
+        <File ProcessorArchitecture="$(var.Platform)" Id="fil85BFF6BC4F545EDBC9B4A5E1BEB8AE44" KeyPath="yes" Source="$(var.TailPackageDir)\gilt.util.xml" />
+      </Component>
+      <Component Win64="$(var.Win64Flag)" Id="cmp0599747F852B6437956E79327506035C" Guid="*">
+        <File ProcessorArchitecture="$(var.Platform)" Id="filC39BD757395ED1207D39CF96A75CEB7A" KeyPath="yes" Source="$(var.TailPackageDir)\giltdblinq.dll" />
+      </Component>
+      <Component Win64="$(var.Win64Flag)" Id="cmpCB350DE782C72A63899A2ED11D879846" Guid="*">
+        <File ProcessorArchitecture="$(var.Platform)" Id="fil2ED85B5023CAB56F58C2294C15759D46" KeyPath="yes" Source="$(var.TailPackageDir)\giltdblinq.xml" />
+      </Component>
+      <Component Win64="$(var.Win64Flag)" Id="cmpDA2FF14F9250F78BA6A47A76171939E7" Guid="*">
+        <File ProcessorArchitecture="$(var.Platform)" Id="filDD3F41C9731E8BC28279E1571128446E" KeyPath="yes" Source="$(var.TailPackageDir)\NLog.config" />
+      </Component>
+      <Component Win64="$(var.Win64Flag)" Id="cmpC64ECA245317593760E42F3996F3A079" Guid="*">
+        <File ProcessorArchitecture="$(var.Platform)" Id="fil5299F0448E950048C778AA65A04FB498" KeyPath="yes" Source="$(var.TailPackageDir)\NLog.dll" />
+      </Component>
+      <Component Win64="$(var.Win64Flag)" Id="cmp8D61C0814390925CAF54F11B9A27B6FB" Guid="*">
+        <File ProcessorArchitecture="$(var.Platform)" Id="filC3C46C5FAE44F4926F3D12AEF35EA36F" KeyPath="yes" Source="$(var.TailPackageDir)\NLog.xml" />
+      </Component>
+      <Component Win64="$(var.Win64Flag)" Id="cmp522A4009EC83820CD4CCE7EDB63A8348" Guid="*">
+        <File ProcessorArchitecture="$(var.Platform)" Id="fil8B868490E6E604265617EBC4A39CF68D" KeyPath="yes" Source="$(var.TailPackageDir)\PacketDotNet.dll" />
+      </Component>
+      <Component Win64="$(var.Win64Flag)" Id="cmpFA09E42503E895BF409D60375E82EB20" Guid="*">
+        <File ProcessorArchitecture="$(var.Platform)" Id="fil26E6704CBDABBA75062FE8ECD8350C0F" KeyPath="yes" Source="$(var.TailPackageDir)\PacketDotNet.xml" />
+      </Component>
+    </DirectoryRef>
+  </Fragment>
+  <Fragment>
+    <ComponentGroup Id="TailBin">
+      <ComponentRef Id="cmpEBDC74417A3B71BCAD9B0643DAE02282" />
+      <ComponentRef Id="cmpA7F024F9F9D2480880214B1995ED5C7B" />
+      <ComponentRef Id="cmpDEA1E037C708D28FE364C75878EFD6A6" />
+      <ComponentRef Id="cmp7338321294A6274E0E8A30F767595E29" />
+      <ComponentRef Id="cmp0FDCF1FFE9E70B1ED3E918B2020A0A19" />
+      <ComponentRef Id="cmp295F9041A821253DC6741C1CC133E8A3" />
+      <ComponentRef Id="cmp841ACBB23EDC2DC65CEF060C94BD5E88" />
+      <ComponentRef Id="cmp7AF609003E6B93A9671A274FF6FDDDBD" />
+      <ComponentRef Id="cmp4F4505C364741424294C13B6E460CF0D" />
+      <ComponentRef Id="cmp56C92E7186008CFE5F5ED6A4D4CE21CB" />
+      <ComponentRef Id="cmp73A1E2B4395F6C024104674421E3C453" />
+      <ComponentRef Id="cmpA151833BE7B41E7E524D049ED870C1C3" />
+      <ComponentRef Id="cmp92A737BBF2517EA67C903BA93505C11B" />
+      <ComponentRef Id="cmp1BF2AD306FEDE88D8D17F28BABE79FBA" />
+      <ComponentRef Id="cmp0599747F852B6437956E79327506035C" />
+      <ComponentRef Id="cmpCB350DE782C72A63899A2ED11D879846" />
+      <ComponentRef Id="cmpDA2FF14F9250F78BA6A47A76171939E7" />
+      <ComponentRef Id="cmpC64ECA245317593760E42F3996F3A079" />
+      <ComponentRef Id="cmp8D61C0814390925CAF54F11B9A27B6FB" />
+      <ComponentRef Id="cmp522A4009EC83820CD4CCE7EDB63A8348" />
+      <ComponentRef Id="cmpFA09E42503E895BF409D60375E82EB20" />
+    </ComponentGroup>
+  </Fragment>
+</Wix>

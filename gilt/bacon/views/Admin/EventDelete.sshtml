@@ -1,0 +1,17 @@
+﻿@Master['master.sshtml']
+
+@Section['Content']
+<div class="text-center">
+	<h1 >@Model.Text.Event @Model.Text.Delete</h1>
+</div>
+<div class="text-center">
+	<p class="text-warning">@Model.Text.DeleteWarning</p>
+</div>
+
+<form action="@Model.Routes.ADMIN_EVENT_DELETEEVENTS" method="post">
+  <fieldset>
+	<input value="@Model.Text.Submit" type="submit"/>
+  </fieldset>
+</form>
+
+@EndSection

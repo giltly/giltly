@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Include>
+  <!-- List of all the files being deployed in order of deployment -->
+  <Feature Id="ProductFeature" Title="$(var.ApplicationName) !(loc.Binaries)" Level="1">
+    <ComponentGroupRef Id="TailBin" />
+    <ComponentGroupRef Id="Shortcuts" />
+    <ComponentGroupRef Id="ConfigSearchReplace" />
+    <ComponentRef Id="ServiceExeComponent" />
+    <ComponentGroupRef Id="InstallLocationsRegistry" />    
+  </Feature>
+
+</Include>

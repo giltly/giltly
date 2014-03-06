@@ -1,0 +1,17 @@
+﻿<header class="bg-dark">
+  <div class="navigation-bar dark fixed-top opacity shadow">
+    <div class="navigation-bar-content container">
+      @If.HasIsLoggedIn      
+        @Partial['NavBar/Home.sshtml']
+        @Partial['NavBar/Events.sshtml']
+        @Partial['NavBar/Sensor.sshtml']
+        @Partial['NavBar/Timeline.sshtml']
+        @Partial['NavBar/SavedSearch.sshtml']
+        @Partial['NavBar/AddSearch.sshtml']
+        @Partial['NavBar/Profile.sshtml']
+        @Partial['NavBar/Admin.sshtml']
+        @Partial['NavBar/UserAdmin.sshtml']
+      @EndIf
+    </div>
+  </div>
+</header>

@@ -1,0 +1,240 @@
+﻿.center {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+table.center td { 
+    vertical-align: middle;
+    vertical-align: central;
+}
+
+table.eventlist  {
+    table-layout: fixed;
+}
+
+table.eventlist th:nth-child(1) {
+    width: 3%;
+}
+table.eventlist th:nth-child(2) {
+    width: 5%;
+}
+table.eventlist th:nth-child(3) {
+    width: 6%;
+}
+table.eventlist th:nth-child(4) {
+    width: 6%;
+}
+table.eventlist th:nth-child(5) {
+    width: 5%;
+}
+table.eventlist th:nth-child(6) {
+    width: 13%;
+}
+table.eventlist th:nth-child(7) {
+    width: 5%;
+}
+table.eventlist th:nth-child(8) {
+    width: 13%;
+}
+table.eventlist th:nth-child(9) {
+    width: 23%;
+}
+table.eventlist th:nth-child(10) {
+    width: 12%;
+}
+
+/* Row Highlight Colors */
+.rowhighlight {
+    background-color: #F4FA58 !important;
+}
+
+.rowselected {
+    background-color: #008287 !important;
+}
+/* event priority highlight colors*/
+div.priority {
+    height: 2em;
+    width: 2em;
+    border-radius: 0.5em;
+    -moz-border-radius: 0.5em;
+    text-align: center;
+    vertical-align: central;
+    margin: 0;
+    padding: 0;
+    padding-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+/* priority highlight colors*/
+div.priority-1 {
+    background-color: #D7191C;
+}
+
+div.priority-2 {
+    background-color: #FDAE61;
+}
+
+div.priority-3 {
+    background-color: #ABDDA4;
+}
+
+div.priority-4 {
+    background-color: #2B83BA;
+}
+/* world map*/
+#WorldMapSvg {
+    width: 700px;
+    height: 250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#EventCountTotal, #EventCountYesterday, #EventCountToday {
+    padding-top: 125%;
+}
+
+.metrouicss .tile .tile-content h1.EventCountTitle {
+    text-align: center;
+    line-height: 100px;    
+}
+
+/* very important; align the table cells into the middle*/
+.metro .table th,
+.metro .table td {
+  vertical-align: middle;
+}
+
+/* center the pagination control */
+.PagerControl {
+    width: 620px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.datamaps-legend dl {
+    position: relative;
+    left: 450px;
+}
+
+#LoginWindow {
+    height: 220px;
+}
+#LoginDiv {
+    clear: both;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60px;
+}
+
+#LoginLabel {
+    float: right; 
+    padding-left: 1em
+}
+#LoginErrorBox {
+    color : red;
+}
+
+/* changed form data color*/
+.dirty  { 
+    background-color: yellow;
+}
+
+/* put the toast messages below the nav bar*/
+.metro .notify-wrapper {
+    margin-top:50px;
+}
+
+/* searh form styles */
+
+/* remove metro ui padding for datetimepicker */
+.ui-datepicker table tbody tr td {
+    padding: 0px;
+    border: 1px;
+}
+
+.ui-menu .ui-menu-item a {
+    padding: 0px;
+}
+
+ul.ui-autocomplete {
+    margin: 0px;
+}
+/* search controls */
+.custom-combobox {
+    position: relative;
+    display: inline-block;
+}
+
+.custom-combobox-toggle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin-left: -1px;
+    padding: 0;
+    /* support: IE7 */
+    *height: 1.7em;
+    *top: 0.1em;
+}
+
+.custom-combobox-input {
+    margin: 0;
+    padding: 0.3em;
+}
+
+.metro .spanHalf {
+  width: 30px !important;
+}
+/* bring the radio buttons to the right and shorten the highlight */
+.metro .dropdown-menu li.SavedSearch {
+    margin-left: 2em;
+    width: 90%;
+}
+
+/* timeline styles */
+.timelineDiv {
+    height: 550px; 
+    border: 1px solid #aaa;
+}
+
+/* side by side styles */
+.unassigned {    
+    border: black 1px solid;
+    background-color: #AAA;
+}
+
+.assigned {    
+    border: black 1px solid;
+    background-color: lightgreen;
+}
+
+.ko_container {    
+    min-height: 50px;
+    background-color: #AAA;
+}
+
+.item {
+    background-color: #DDD;
+    cursor: move;
+    text-align: center;
+    padding-bottom: 5px;
+    border: 2px solid red;
+}
+
+.eventDetail {
+    /*background-color: gainsboro;*/
+}
+
+.wordwrap { 
+   white-space: pre-wrap;      /* CSS3 */   
+   white-space: -moz-pre-wrap; /* Firefox */    
+   white-space: -pre-wrap;     /* Opera <7 */   
+   white-space: -o-pre-wrap;   /* Opera 7 */    
+   word-wrap: break-word;      /* IE */
+}
+
+.metro .noBullet {
+    list-style-type: none; 
+    padding:0; 
+    margin:0;
+}

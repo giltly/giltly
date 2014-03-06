@@ -1,0 +1,9 @@
+﻿@Master['Master.sshtml']
+
+@Section['Content']          
+<h1>Please be patient...</h1>
+<h1> Source code coming soon</h1>
+<h1>2nd week of March 2014</h1>
+<h2>Code is being moved from Visual Studio TFS hosting to GitHub.</h2>
+<h2>Giltly is licensed under GPLv3.</h2>
+@EndSection

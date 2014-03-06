@@ -1,0 +1,4 @@
+﻿<a class="element brand" href="@Model.Routes.INDEX">
+  <span class="icon-home"></span>
+  Giltly<sup>0.2</sup>
+</a>

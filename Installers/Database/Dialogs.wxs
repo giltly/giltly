@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Fragment>
+    <UI>
+      <!-- 
+        Control Bound Properties need to be:
+          Indirect = no
+          Text = [XXX]
+        So that commandline parameters for silent install, and "double click" install have defaults and can be overriden from commandline
+      -->
+      <Dialog Id="DatabaseConfigurationDlg" Width="365" Height="278" Title="[ProductName] [Setup]" NoMinimize="yes">
+							<Control Id="DatabaseServerLabel" Type="Text" X="26" Y="54" Width="106" Height="15" TabSkip="no" Text="!(loc.DatabaseServer)" />
+							<Control Id="DatabaseServerEdit" Type="Edit" X="26" Y="70" Width="184" Height="15" Property="DATABASESERVER" Indirect="no" Text="[DATABASESERVER]" />
+							<Control Id="DatabaseInstanceLabel" Type="Text" X="224" Y="52" Width="106" Height="15" TabSkip="no" Text="!(loc.DatabaseInstance)" />
+							<Control Id="DatabaseInstanceEdit" Type="Edit" X="224" Y="71" Width="115" Height="15" Property="DATABASEINSTANCE" Indirect="no" Text="[DATABASEINSTANCE]" />
+              <Control Id="SqlServiceAccountLabel" Type="Text" X="26" Y="87" Width="313" Height="15" TabSkip="no" Text="!(loc.SqlServiceAccount)" />
+              <Control Id="SqlServiceAccountEdit" Type="Edit" X="26" Y="104" Width="313" Height="15" Property="SQLSERVERSERVICEACCOUNT" Indirect="no" Text="[SQLSERVERSERVICEACCOUNT]" />
+							<Control Id="SqlUserLabel" Type="Text" X="26" Y="126" Width="106" Height="15" TabSkip="no" Text="!(loc.SqlUser)" />
+							<Control Id="SqlUserEdit" Type="Edit" X="26" Y="143" Width="313" Height="15" Property="SQLUSER" Indirect="no" Text="[SQLUSER]" />
+							<Control Id="SqlUserPassLabel" Type="Text" X="26" Y="164" Width="106" Height="15" TabSkip="no" Text="!(loc.SqlUserPass)" />
+							<Control Id="SqlUserPassEdit" Type="Edit" X="26" Y="178" Width="313" Height="15" Property="SQLPASSWORD" Indirect="no" Text="[SQLPASSWORD]" />
+							<Control Id="DatabaseNameLabel" Type="Text" X="26" Y="202" Width="106" Height="15" TabSkip="no" Text="!(loc.DatabaseName)" />
+							<Control Id="DatabaseNameEdit" Type="Edit" X="26" Y="219" Width="313" Height="15" Property="DATABASENAME" Indirect="no" Text="[DATABASENAME]" />
+							<Control Id="BottomLine" Type="Line" X="0" Y="241" Width="500" Height="2" />
+							<Control Id="BannerLine" Type="Line" X="0" Y="44" Width="370" Height="2" />
+							<Control Id="Next" Type="PushButton" X="284" Y="252" Width="56" Height="17" Default="yes" Text="!(loc.Next)">
+								<Publish Event="NewDialog" Value="VerifyReadyDlg" Order="1"></Publish>
+							</Control>
+							<Control Id="Cancel" Type="PushButton" X="224" Y="252" Width="56" Height="17" Cancel="yes" Text="!(loc.Cancel)">
+								<Publish Event="SpawnDialog" Value="CancelDlg">1</Publish>
+							</Control>
+						</Dialog>
+    </UI>
+  </Fragment>
+</Wix>

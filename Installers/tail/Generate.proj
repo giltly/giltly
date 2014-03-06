@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\ExtensionPack\4.0\MSBuild.ExtensionPack.tasks"/>
+  
+  <PropertyGroup>
+    <BinDir>$(MSBuildThisFileDirectory)..\..\gilt\tail\gilt.tail.service\bin\Release</BinDir>   
+    <ResourceDir>$(MSBuildThisFileDirectory)..\..\Installers\Resources</ResourceDir>
+    <LicenseDir>$(ResourceDir)\License</LicenseDir>
+    <IconDir>$(ResourceDir)\Icons</IconDir>
+    
+    <PackageDir>$(MSBuildThisFileDirectory)\Package</PackageDir>
+    <PackageBinDir>$(PackageDir)\Bin</PackageBinDir>
+    <PackageLicDir>$(PackageDir)\License</PackageLicDir>
+    <PackageIconDir>$(PackageDir)\Icons</PackageIconDir>
+    <WixPath>C:\Program Files (x86)\WiX Toolset v3.8\bin\</WixPath>
+    <PowerShellPath>C:\Windows\SysWOW64\WindowsPowerShell\v1.0</PowerShellPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <BinFiles Include="$(BinDir)\*.exe"/>
+    <BinFiles Include="$(BinDir)\*.dll"/>
+    <BinFiles Include="$(BinDir)\*.xml"/>
+    <BinFiles Include="$(BinDir)\*.config"/>
+    <BinFiles Include="$(BinDir)\*.csv"/>
+    <LicFiles Include="$(LicenseDir)\*.rtf"/>
+    <IconFiles Include="$(IconDir)\*.*"/>
+
+  </ItemGroup>
+
+  <Target Name="Build">
+    <!--grab the tail binary files into package folder -->
+    <MSBuild.ExtensionPack.FileSystem.Folder TaskAction="RemoveContent" Path="$(PackageBinDir)" ContinueOnError="true"/>
+    <MakeDir Directories="$(PackageDir)"/>
+    <MakeDir Directories="$(PackageBinDir)"/>
+    <MakeDir Directories="$(PackageLicDir)"/>
+    <MakeDir Directories="$(PackageIconDir)"/>
+
+    <Copy
+        SourceFiles="@(BinFiles)"
+        DestinationFiles="@(BinFiles->'$(PackageBinDir)\%(RecursiveDir)%(Filename)%(Extension)')"
+    />
+    <Copy
+        SourceFiles="@(LicFiles)"
+        DestinationFiles="@(LicFiles->'$(PackageLicDir)\%(RecursiveDir)%(Filename)%(Extension)')"
+    />
+    <Copy
+        SourceFiles="@(IconFiles)"
+        DestinationFiles="@(IconFiles->'$(PackageIconDir)\%(RecursiveDir)%(Filename)%(Extension)')"
+    />
+
+    <!-- Harvest all content of published result -->
+    <Exec
+			Command="&quot;$(WixPath)heat.exe&quot; dir &quot;$(PackageBinDir)&quot; -cg TailBin -ke -gg -sfrag -var var.TailPackageDir -template fragment -t WixHeatFormatter.xslt -srd -ag -dr APPLICATIONROOTDIRECTORY -sreg -out TailBin.wxs"
+			ContinueOnError="false"
+			WorkingDirectory="$(MSBuildThisFileDirectory)" />
+
+    <Exec
+			Command="powershell.exe .\StripService.ps1"
+			ContinueOnError="true"
+			WorkingDirectory="$(MSBuildThisFileDirectory)" 
+      />    
+    
+  </Target>
+</Project>

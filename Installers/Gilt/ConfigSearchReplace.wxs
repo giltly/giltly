@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi" xmlns:SystemTools="http://schemas.appsecinc.com/wix/SystemToolsExtension" xmlns:Util="http://schemas.microsoft.com/wix/UtilExtension">
+  <?include Variables.wxi?>
+  <Fragment>
+
+    <DirectoryRef Id="APPLICATIONROOTDIRECTORY">
+      <Component Win64="$(var.Win64Flag)" Id="cmp432f2ad6afca4d339458bbd4386f6aea" Guid="{170784AB-BE7E-40AE-8895-DA7FBE886AD8}">
+        <!--placeholder to allow component to be included-->
+        <CreateFolder/>
+
+        <!-- web.config for ASP.NET-->
+        <Util:XmlFile
+                    Id='WebConfig_CONNECTIONSTRING_UPDATE_ASPNET'
+                    File='[APPLICATIONROOTDIRECTORY]\web.config'
+                    Action='setValue'
+                    Name="value"
+                    Value="[CONNECTIONSTRING]"
+                    ElementPath="//configuration/snort/add[\[]@key='connection-string'[\]]"
+                    SelectionLanguage="XPath"
+                    Sequence="1"
+                    PreserveModifiedDate='yes'/>
+        
+        <!-- web.config for DBLINQ connection -->
+        <Util:XmlFile
+                    Id='WebConfig_CONNECTIONSTRING_UPDATE_DBLINQ'
+                    File='[APPLICATIONROOTDIRECTORY]\bin\web.config'
+                    Action='setValue'
+                    Name="value"
+                    Value="[CONNECTIONSTRING]"
+                    ElementPath="//configuration/snort/add[\[]@key='connection-string'[\]]"
+                    SelectionLanguage="XPath"
+                    Sequence="2"
+                    PreserveModifiedDate='yes'/>        
+
+        <!-- NLog.config -->
+        <Util:XmlFile
+                    Id='NLog_CONNECTIONSTRING_UPDATE'
+                    File='[APPLICATIONROOTDIRECTORY]\bin\NLog.config'
+                    Action='setValue'
+                    ElementPath="//nlog/targets/target[\[]@name='database'[\]]"       
+                    Name="connectionString"
+                    Value="[CONNECTIONSTRING]"
+                    Sequence="3"
+                    SelectionLanguage="XPath"                    
+                    PreserveModifiedDate='yes'/>
+
+      </Component>
+      
+    </DirectoryRef>
+  </Fragment>
+  <Fragment>
+    <ComponentGroup Id="ConfigSearchReplace">
+      <ComponentRef Id="cmp432f2ad6afca4d339458bbd4386f6aea" />
+    </ComponentGroup>
+  </Fragment>
+
+</Wix>

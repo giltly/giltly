@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <?include Variables.wxi?>
+  <Fragment>
+    <DirectoryRef Id="TARGETDIR">
+      <!-- Set the application install location in the registry -->
+      <Component Id="SetInstallLocation" Guid="*" Win64="$(var.Win64Flag)">
+        <RegistryKey Id="InstallLocationRegRoot" Root="HKLM" Key="$(var.MainCompanyKey)" Action="createAndRemoveOnUninstall">
+          <RegistryValue Id="InstallLocationValue" Type="string" Name="InstallLocation" Value="[INSTALLLOCATION]" Action="write" KeyPath="yes"/>
+        </RegistryKey>
+      </Component>
+      <Component Id="SetTailInstallLocation" Guid="*" Win64="$(var.Win64Flag)">
+        <RegistryKey Id="TailInstallLocationRegRoot" Root="HKLM" Key="$(var.ApplicationKey)" Action="createAndRemoveOnUninstall">
+          <RegistryValue Id="TailInstallLocationValue" Type="string" Name="InstallLocation"  Value="[INSTALLLOCATION]\!(loc.ApplicationName)" Action="write" KeyPath="yes"/>
+          <RegistryValue Id="TailMajorVersionValue"    Type="string" Name="MajorVersion"     Value="!(bind.property.ProductVersion.Major)"     Action="write" KeyPath="no"/>
+          <RegistryValue Id="TailMinorVersionValue"    Type="string" Name="MinorVersion"     Value="!(bind.property.ProductVersion.Minor)"     Action="write" KeyPath="no"/>
+          <RegistryValue Id="TailBuildVersionValue"    Type="string" Name="BuildVersion"     Value="!(bind.property.ProductVersion.Build)"     Action="write" KeyPath="no"/>
+          <RegistryValue Id="TailRevisionVersionValue" Type="string" Name="RevisionVersion"  Value="!(bind.property.ProductVersion.Revision)"  Action="write" KeyPath="no"/>
+        </RegistryKey>
+      </Component>
+    </DirectoryRef>
+  </Fragment>
+  <Fragment>
+    <ComponentGroup Id="InstallLocationsRegistry">
+      <ComponentRef Id="SetInstallLocation" />
+      <ComponentRef Id="SetTailInstallLocation" />
+    </ComponentGroup>
+  </Fragment>
+</Wix>

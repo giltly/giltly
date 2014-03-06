@@ -1,0 +1,1244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <?include Variables.wxi?>
+<Fragment>
+        <DirectoryRef Id="APPLICATIONROOTDIRECTORY">
+            <Component Win64="$(var.Win64Flag)" Id="cmpA55ECC2F46ED96041D631BDBC2EBF51E" Guid="*">
+                <File ProcessorArchitecture="$(var.Platform)" Id="fil4F5E804B355BA1257B6B9CA8A8829BCC" KeyPath="yes" Source="$(var.GiltlyPackageDir)\web.config" />
+            </Component>
+            <Directory Id="dirDE0D7DB32DDA39808FD29ADB02E0A285" Name="assets">
+                <Directory Id="dirAF00D163C3FFB4B73D88E76397D9AA4D" Name="css">
+                    <Component Win64="$(var.Win64Flag)" Id="cmpE6A5AC0D702275DC2CE35C1E0E667DEF" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="filE2F178A7D0FE62154964E39C65C26758" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\css\jquery-ui-timepicker-addon.css" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmp1169EC0D6B84156714B50A234487A295" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="filBF1E2222EA05D20AB48086F3076AB062" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\css\jquery.qtip.min.css" />
+                    </Component>
+                </Directory>
+                <Directory Id="dirDF5FB0AB14D0C08C98557D8BCD50DAAF" Name="d3data">
+                    <Component Win64="$(var.Win64Flag)" Id="cmp2FB4768976D2911A2D8B8EC96B5F23B6" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="filBA4FCDCD5C236386C83EA0863F3777A8" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\d3data\datamaps.all.min.js" />
+                    </Component>
+                </Directory>
+                <Directory Id="dir2E256628BC5632D6548D5BD812E42245" Name="flags">
+                    <Component Win64="$(var.Win64Flag)" Id="cmp157D9CDB4C16DFCF71F2AF6AD4B9813F" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="fil5B1629DDAAF2D06EF3D8AE2EBF1A1F53" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\flags\famfamfam-flags.css" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmpD0243CA23FF4828930539ED6AD5BC13B" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="fil30AB6BAA37DFAC254DE4F9E6F1BCF94D" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\flags\famfamfam-flags.png" />
+                    </Component>
+                </Directory>
+                <Directory Id="dir41B0019114634D5F07DB3DC30CE2EC25" Name="jquery-ui">
+                    <Directory Id="dirFC3D5B852C1ACBB2D70A02F600572FA3" Name="css">
+                        <Directory Id="dir8248610F55389C38026799A5B963F12A" Name="ui-darkness">
+                            <Component Win64="$(var.Win64Flag)" Id="cmpDF020D827CA937A39D608659C017474A" Guid="*">
+                                <File ProcessorArchitecture="$(var.Platform)" Id="fil42E2497AB57F34F304055C57DE1F085C" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\jquery-ui\css\ui-darkness\jquery-ui-1.10.3.custom.css" />
+                            </Component>
+                            <Component Win64="$(var.Win64Flag)" Id="cmp3BAA8CA39F764F02E98402AA46A583EE" Guid="*">
+                                <File ProcessorArchitecture="$(var.Platform)" Id="fil769F96D0AF894BE3AFF23620B1811A0C" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\jquery-ui\css\ui-darkness\jquery-ui-1.10.3.custom.min.css" />
+                            </Component>
+                            <Directory Id="dir1FC9F7E695661C2C111D07901FB3E287" Name="images">
+                                <Component Win64="$(var.Win64Flag)" Id="cmp91FE1F664F73FC0C057C9BA2F9DC2455" Guid="*">
+                                    <File ProcessorArchitecture="$(var.Platform)" Id="fil68D590BDF82F594FD90C49A5E0AF0FA7" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\jquery-ui\css\ui-darkness\images\animated-overlay.gif" />
+                                </Component>
+                                <Component Win64="$(var.Win64Flag)" Id="cmp8BF85831F8210E18CEF1EA7A4A9E4EDE" Guid="*">
+                                    <File ProcessorArchitecture="$(var.Platform)" Id="filCF0DEE9C56B796C265141321DB800853" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\jquery-ui\css\ui-darkness\images\ui-bg_flat_30_cccccc_40x100.png" />
+                                </Component>
+                                <Component Win64="$(var.Win64Flag)" Id="cmp36830C62425D65AD37041140B23C5DC5" Guid="*">
+                                    <File ProcessorArchitecture="$(var.Platform)" Id="fil8F7E66B6805CB6CDF88ABCA39A045886" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\jquery-ui\css\ui-darkness\images\ui-bg_flat_50_5c5c5c_40x100.png" />
+                                </Component>
+                                <Component Win64="$(var.Win64Flag)" Id="cmp88EF328181CBE5C7416AA2F866356D8C" Guid="*">
+                                    <File ProcessorArchitecture="$(var.Platform)" Id="filEE80B7706378F14DC6C5160BD849E865" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\jquery-ui\css\ui-darkness\images\ui-bg_glass_20_555555_1x400.png" />
+                                </Component>
+                                <Component Win64="$(var.Win64Flag)" Id="cmpC85C3D4F2577F24457FCA2477D629422" Guid="*">
+                                    <File ProcessorArchitecture="$(var.Platform)" Id="filEF4A2AA27A57AA3FB0B039BCFE40378B" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\jquery-ui\css\ui-darkness\images\ui-bg_glass_40_0078a3_1x400.png" />
+                                </Component>
+                                <Component Win64="$(var.Win64Flag)" Id="cmp80BD213AE379E47E5099E34724579D0F" Guid="*">
+                                    <File ProcessorArchitecture="$(var.Platform)" Id="fil1ECD6B6EBAB9C3D036808207D7C27C69" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\jquery-ui\css\ui-darkness\images\ui-bg_glass_40_ffc73d_1x400.png" />
+                                </Component>
+                                <Component Win64="$(var.Win64Flag)" Id="cmp5DBB85EE56DFC8198DDD83D332D18AA4" Guid="*">
+                                    <File ProcessorArchitecture="$(var.Platform)" Id="fil146920BADF8CE2C266D9A8B2BC9DE4EE" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\jquery-ui\css\ui-darkness\images\ui-bg_gloss-wave_25_333333_500x100.png" />
+                                </Component>
+                                <Component Win64="$(var.Win64Flag)" Id="cmp6971C6EDE48F1331C4B66519C08B2095" Guid="*">
+                                    <File ProcessorArchitecture="$(var.Platform)" Id="fil31B8B34E419B07AC8816EA18B0F9FA39" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\jquery-ui\css\ui-darkness\images\ui-bg_highlight-soft_80_eeeeee_1x100.png" />
+                                </Component>
+                                <Component Win64="$(var.Win64Flag)" Id="cmpB88337DABB65F10496A98289C6BC7299" Guid="*">
+                                    <File ProcessorArchitecture="$(var.Platform)" Id="filDF2CEDF4B1B02A445539DA001EEB197E" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\jquery-ui\css\ui-darkness\images\ui-bg_inset-soft_25_000000_1x100.png" />
+                                </Component>
+                                <Component Win64="$(var.Win64Flag)" Id="cmpC06417A5D28D66BA676A8E7509198538" Guid="*">
+                                    <File ProcessorArchitecture="$(var.Platform)" Id="fil2072152275E09F5D41EF357827DB4C99" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\jquery-ui\css\ui-darkness\images\ui-bg_inset-soft_30_f58400_1x100.png" />
+                                </Component>
+                                <Component Win64="$(var.Win64Flag)" Id="cmp565845EC7F7E626EA1F688CE5F068C7C" Guid="*">
+                                    <File ProcessorArchitecture="$(var.Platform)" Id="fil18514107A3A4AA1254B2C40A36BFA535" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\jquery-ui\css\ui-darkness\images\ui-icons_222222_256x240.png" />
+                                </Component>
+                                <Component Win64="$(var.Win64Flag)" Id="cmpCA3433867A73E21DEA158F4B6DC65DDA" Guid="*">
+                                    <File ProcessorArchitecture="$(var.Platform)" Id="filC84E18A37620C9A221FE3F262E367C7E" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\jquery-ui\css\ui-darkness\images\ui-icons_4b8e0b_256x240.png" />
+                                </Component>
+                                <Component Win64="$(var.Win64Flag)" Id="cmp1D72FAF39BEE011AF8F8212C7BF9AE0D" Guid="*">
+                                    <File ProcessorArchitecture="$(var.Platform)" Id="filE63A11E215ECAD506CFF2A9522946A94" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\jquery-ui\css\ui-darkness\images\ui-icons_a83300_256x240.png" />
+                                </Component>
+                                <Component Win64="$(var.Win64Flag)" Id="cmp21C3BD0727435DF57B03297A1B598B23" Guid="*">
+                                    <File ProcessorArchitecture="$(var.Platform)" Id="fil08FF35119114B6DDF426A262B807BFA9" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\jquery-ui\css\ui-darkness\images\ui-icons_cccccc_256x240.png" />
+                                </Component>
+                                <Component Win64="$(var.Win64Flag)" Id="cmp1F551D29F1854B9761E619A9FC4FC19B" Guid="*">
+                                    <File ProcessorArchitecture="$(var.Platform)" Id="fil87E2A4D9DBE5C537DDF65EB0EF440AF3" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\jquery-ui\css\ui-darkness\images\ui-icons_ffffff_256x240.png" />
+                                </Component>
+                            </Directory>
+                        </Directory>
+                    </Directory>
+                    <Directory Id="dirB1527193C71EE979DC4D0903C7BBF15D" Name="js">
+                        <Component Win64="$(var.Win64Flag)" Id="cmpA2E80AF88582D5EA61672D2EC00795B9" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="fil5E2015AA8126D5D6CFD7AF47930575DC" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\jquery-ui\js\jquery-1.9.1.js" />
+                        </Component>
+                        <Component Win64="$(var.Win64Flag)" Id="cmpA681D2D52E7F2523B109A045C5F66B20" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="filFA73660D3F09650DC454F67ED4D3F229" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\jquery-ui\js\jquery-1.9.1.min.js" />
+                        </Component>
+                        <Component Win64="$(var.Win64Flag)" Id="cmp523A3992433828F221925981CFDB7168" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="filD40D4F4F7B582678859E3033A427D908" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\jquery-ui\js\jquery-ui-1.10.3.custom.min.js" />
+                        </Component>
+                    </Directory>
+                </Directory>
+                <Directory Id="dirA1AC3C51163A03637065D37C4D576CEE" Name="js">
+                    <Component Win64="$(var.Win64Flag)" Id="cmpD61956757E736BC3F6EB52B30A505F69" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="filC81F6301C283A455D4880508371ACE2B" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\js\amplify.min.js" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmp08DA6E86DA0A359A7A59A3022841F4B3" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="fil258DB75D3CBB96FC8B3B96EB8E9E4F76" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\js\d3-timeline.js" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmp3F5FFA8C49A620A7C59502FE46DF9EFD" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="fil3BDB0113E3E9ACA416E9802370E55C4E" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\js\d3-timeline.min.js" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmp0EDFCE44D999247560A09A965E390279" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="filFF99C2F7B72E5EF77423642F6258AD45" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\js\d3.v3.min.js" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmp7D40B45D588900AC40E26F15007937E5" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="filA8C53A4E0774279996C70E208941102F" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\js\html5shiv.js" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmp1235D77A1C88F8A3C6C287B646DF6535" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="filAFF2E881B6AB97452B3F66DA29D6BCE4" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\js\html5shiv.min.js" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmp70F8A65F8CE879F3C217FCC8FCECDF5B" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="fil699A2EE4E2BE85F55148410EE9BE0652" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\js\jquery-1.10.2.min.js" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmp25099CDB899C9914443F8EEF1BD244BA" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="filC6AB3D9BB38880BEE48F412EFAA16330" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\js\jquery-ui-sliderAccess.js" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmp0E22C0DEE7827302E9CAFBCF1884C111" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="fil9E1069F4B39066FFCEA17F38444EB474" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\js\jquery-ui-sliderAccess.min.js" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmp618620D10035CEE22471CFB3E51DD4FF" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="fil79C5D5F5FEF7782BF27C67E2F47FED65" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\js\jquery-ui-timepicker-addon.js" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmpF1B6B9825E615771CD0D441B3E9FE055" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="fil60E804A048816F5121A09439897466E8" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\js\jquery-ui-timepicker-addon.min.js" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmpB046A7191C891CC0150F7BF451516828" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="filD22629E9A251C304EBBCF9AB584B8012" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\js\jquery.cookie.js" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmp59AE11E3FF89627BF8B5FC51C21E5E12" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="filC3DDF84B5E5DFB74AA2BCCDF0FEA29D3" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\js\jquery.cookie.min.js" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmpC804F3D17BD171E9F3DBF402398A73F5" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="filFEB983F1D543EE1F0F66C4FDD9EFF6E7" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\js\jquery.json2html.js" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmp5C9BD978675BCA4BA5DF4A2B01BC02D8" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="fil1AE262E3EC51B6945BA6098D41603F0B" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\js\jquery.json2html.min.js" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmp9875DE7171B5FF0D925FA7090968E5AB" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="fil52FF8B6685EE88AE04C421D2C49F5089" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\js\jquery.linq.js" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmp15B90736CC9255911057228F88167299" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="fil5304AFC350443DAFFD425DEA43F7071F" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\js\jquery.linq.min.js" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmpC2ECEC0884DA03A5667DEED27110A1E8" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="fil195CB7E37ED7CD4F713722829A535B79" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\js\jquery.qtip.min.js" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmpC942F950ACD925937A19729FF414AB42" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="filC1E6B077A5E9BE8D45295060D7026D50" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\js\jquery.validate.unobtrusive.min.js" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmp4FE1298711E2505D557A543EDDAEB06E" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="fil9CD65DEC161F53D4900EAD89E95BF479" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\js\json2html.js" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmp405213165F95CDBD375CB2A45B7C4324" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="filD438C7A0C9B9797A4D8F5D41FE1E8775" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\js\json2html.min.js" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmpC90993667E1337BACCCF22FEE216EDCC" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="filB095E6E026700E769DFA0CB2BC6593C0" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\js\knockout-2.3.0.js" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmp9C533B9F084EC4FB1379E9108F573758" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="filEE807FD42EF982A57429639F807495C7" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\js\knockout-2.3.0.min.js" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmp6FC40C933C459FCB2D26C395B9E58538" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="fil9AAA95411F4E57406378104C4E6EC05B" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\js\knockout-sortable.js" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmpCB735E9C09E0B6B33D3529EA2E79E492" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="fil881E99E8B153DE7C93476E3CEDDF6799" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\js\knockout.activity.js" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmpB61D3D8DD401C3E922889E6CF8595B7C" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="filDD69FE23B71C166B85B6A361514FD9EC" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\js\knockout.activity.min.js" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmp172AB392A54477FC47F5A406003F899B" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="filB60E36CCC6D57F3B859DC8042160FB2D" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\js\knockout.command.js" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmpD0A0051564AC4EAE6525D7F648D1DCB0" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="fil7DB70C28E644262DC06A04B095C574D1" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\js\knockout.command.min.js" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmp7BBFD3C008738846BD4D74D72B7DCB07" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="fil26FE6D22AA2291CAC95673C75885C124" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\js\knockout.dirtyFlag.js" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmpFB79CFB5B2058CA6F66648103B0E0280" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="filA675787C3A1AF07D5DC265E1809A7209" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\js\knockout.dirtyFlag.min.js" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmpE67D5DD27A76F4112C532FBDFB47E7A4" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="filA43D6F66C5650067F788609DA09A2F74" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\js\knockout.mapping.js" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmp731D5734C20C4E72CB6EE94876839CE9" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="fil5FAF04A6543D691393E02E1DBEA3C10A" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\js\knockout.mapping.min.js" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmpDEF243EBDC0A16FA1746D449AF2395F7" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="filDFCF26AB05A7B49F467395D866B7842C" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\js\knockout.simpleGrid.1.3.js" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmp629B44E444B4A856FE3D716257AAAF15" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="filA913F123851ADB771995D33D816D25E1" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\js\knockout.simpleGrid.1.3.min.js" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmp35D4FB9E7EC209CDFA35C18936784D99" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="fil456F8A7B9A4674E3BB669BF79E6193E7" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\js\knockout.validation.js" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmp5F5F9534B821599C4BFBA7D1A2F41568" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="fil694D1E1D5D7A46A1A7B12B39911B9B95" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\js\knockout.validation.min.js" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmp3F653C769678AC526DA52F872ED0BC13" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="fil59829B0158AD7BB3F0D006662AAF605C" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\js\ko.editables.js" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmp38049B6C601CC1166CB6FB41E2227D94" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="fil04B3FCBBBAA377B0064F30F59AA7F6A1" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\js\ko.editables.min.js" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmpD5A931D8705C6E488EE2D664F6CA5720" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="filDA48B338D0AC1EC7F40CBE10811D88AE" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\js\linq.js" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmp71A61E7C8CA0A5219B5737D57DA77931" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="filA4CA5CB40C431636E052108181CBBFA4" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\js\linq.min.js" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmp35DE52E36B56375B2243121F7591794B" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="fil32B79017D1757956380D632F041D33AA" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\js\purl.js" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmp7A46699DC96EBAF337B642A22D2E9740" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="filB060D67CD80A62BBB52F0416288B08DB" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\js\purl.min.js" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmp559C34BBFBC01DD1A956522DD2489AE1" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="fil95731CC8284D9709AC1FBE3094E58A7A" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\js\queue.min.js" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmp404DF5686FA34CA61406954DDDA4A162" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="filA857BD48AD084B1AB33C0C1082113150" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\js\respond.min.js" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmp0AB0313F058CD096EEF02B1D4C268BB9" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="fil5B44F933CB9291BCD6BD4D8A46E66985" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\js\spin.js" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmpDBFE6EA439C681492BA2D1D9882371C1" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="fil2B3A249A22543824CA11CECD1EBC57C6" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\js\spin.min.js" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmpC652C31A8DC4A7BA438227858664E592" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="fil100555E1AEB96D762D7EE3D71BA66960" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\js\topojson.js" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmpAFF1FE161A9E47CED3B70986605E37FF" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="fil21A114066813A9A124C9536F9E10CB97" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\js\topojson.min.js" />
+                    </Component>
+                </Directory>
+                <Directory Id="dir66201E84350CC5B97182A20DD07CC503" Name="metro-ui">
+                    <Directory Id="dir4DFBBB8A0B581F25E0FFC529C07BCF13" Name="css">
+                        <Component Win64="$(var.Win64Flag)" Id="cmpE4C15F5D170EC3A14A594225C87B419A" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="fil860FE85C8F759561FB8944B0C681A63E" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\metro-ui\css\docs.css" />
+                        </Component>
+                        <Component Win64="$(var.Win64Flag)" Id="cmp233727B9B8229373033483543F554151" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="fil78DB351ABD2F2DCEE4184184E2AC55DE" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\metro-ui\css\docs.min.css" />
+                        </Component>
+                        <Component Win64="$(var.Win64Flag)" Id="cmp94BE17144D7AB9E9519C2A770268CEB6" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="fil55EA1316049A35F5DD776997FFBC1F57" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\metro-ui\css\jquery-ui-timepicker-addon.css" />
+                        </Component>
+                        <Component Win64="$(var.Win64Flag)" Id="cmp7BC1465E76C803A42196C37C3009E706" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="fil99D2DFF43716E37C1797B4FCBDEEFA00" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\metro-ui\css\jquery-ui-timepicker-addon.min.css" />
+                        </Component>
+                        <Component Win64="$(var.Win64Flag)" Id="cmpB53D7CBDC56C557292F73FD1BEB67FF3" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="fil937C4C1CBBF90F77177BE28CAF6DF063" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\metro-ui\css\metro-bootstrap-responsive.css" />
+                        </Component>
+                        <Component Win64="$(var.Win64Flag)" Id="cmp66BF5B195365AF211B439EF385A79F2C" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="filCF3E5C993A0C8128E0915AA5B3CE94DE" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\metro-ui\css\metro-bootstrap-responsive.min.css" />
+                        </Component>
+                        <Component Win64="$(var.Win64Flag)" Id="cmp3C253E99B9DCEE4084008AE60DF50E8B" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="filD6CC790389A0F96EEE6EEFE187D83367" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\metro-ui\css\metro-bootstrap.css" />
+                        </Component>
+                        <Component Win64="$(var.Win64Flag)" Id="cmp5DD9DCCE5992D2138267648732E01B86" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="filEEA4940F76C70FAE20FC3B452D8FDED5" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\metro-ui\css\metro-bootstrap.min.css" />
+                        </Component>
+                    </Directory>
+                    <Directory Id="dirE02BA332BB7F089A6B6EA8438A0EF974" Name="fonts">
+                        <Component Win64="$(var.Win64Flag)" Id="cmp025D696F3EEECA15054447BA0D57C061" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="fil915BA444743C6820D4CA62073E7159B0" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\metro-ui\fonts\iconFont.dev.svg" />
+                        </Component>
+                        <Component Win64="$(var.Win64Flag)" Id="cmpF808AB9BB79FC839C780040F2D3E912A" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="fil268BDB4BA99D21C66D4935DA155067C6" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\metro-ui\fonts\iconFont.eot" />
+                        </Component>
+                        <Component Win64="$(var.Win64Flag)" Id="cmpBA9211851064522E211161D1D781AC29" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="fil2F6674EC71C2083C6B9FE9482CB2F08B" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\metro-ui\fonts\iconFont.json" />
+                        </Component>
+                        <Component Win64="$(var.Win64Flag)" Id="cmpE5174D0E9153CD70A37D7D9300AA81CF" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="fil407B45FE73441DF483DA098F2B191EAD" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\metro-ui\fonts\iconFont.svg" />
+                        </Component>
+                        <Component Win64="$(var.Win64Flag)" Id="cmp3E2F763C3FF51860DAA2C05D24891511" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="fil7D0A9B48CD69E4B371F9A6DB777DE24C" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\metro-ui\fonts\iconFont.ttf" />
+                        </Component>
+                        <Component Win64="$(var.Win64Flag)" Id="cmp26C3C76C534E1F675A81692A8608BAD2" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="filCD590D8B5A92B84420625813CD66115A" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\metro-ui\fonts\iconFont.woff" />
+                        </Component>
+                    </Directory>
+                    <Directory Id="dir93A0905D8FB27E1AF34963208D2D82F9" Name="js">
+                        <Component Win64="$(var.Win64Flag)" Id="cmpD6139672969B89076C77FEA85B5F9C4B" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="fil129A8E292082275452F4F5FB02AE2844" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\metro-ui\js\jquery.mousewheel.js" />
+                        </Component>
+                        <Component Win64="$(var.Win64Flag)" Id="cmpA9F327EFCECE800F2CB66A513AB20BD9" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="fil9BBC3472439BDAEBCB8C68F336A39EFD" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\metro-ui\js\jquery.mousewheel.min.js" />
+                        </Component>
+                        <Component Win64="$(var.Win64Flag)" Id="cmp3D1137121F0883F9B05AF63C07E3072A" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="filBCF0FCA877EC54C14E476436B13C99E3" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\metro-ui\js\jquery.widget.min.js" />
+                        </Component>
+                        <Component Win64="$(var.Win64Flag)" Id="cmp7C2555E701F866992708508A6AFDF9B8" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="filD0083C0D96287EE6BF01A25EC2E1D8C4" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\metro-ui\js\metro-accordion.js" />
+                        </Component>
+                        <Component Win64="$(var.Win64Flag)" Id="cmp8DB4A6E042C321FC06ABDBB1208BC329" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="filA9D6A6F350F64E5F0573784A8C7730DD" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\metro-ui\js\metro-accordion.min.js" />
+                        </Component>
+                        <Component Win64="$(var.Win64Flag)" Id="cmp9B15A08362044148239C37353AE8C6A5" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="fil88F82FCF4BFF4D75B30993E41A3DB609" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\metro-ui\js\metro-button-set.js" />
+                        </Component>
+                        <Component Win64="$(var.Win64Flag)" Id="cmpB7B8552BD8DE80641B28D8EF38927B41" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="fil5470C6506F0A1FD73CA768A76FEAF253" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\metro-ui\js\metro-button-set.min.js" />
+                        </Component>
+                        <Component Win64="$(var.Win64Flag)" Id="cmp57DABB9BEB789DEDE8F906F1749A622B" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="filC9376EADB5F3D18965296C04B650B72C" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\metro-ui\js\metro-calendar.js" />
+                        </Component>
+                        <Component Win64="$(var.Win64Flag)" Id="cmp1F136AA6318F7BE020397B5FA31CB0DB" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="fil87AC136A08FA2F8B6D4D11F563F21626" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\metro-ui\js\metro-calendar.min.js" />
+                        </Component>
+                        <Component Win64="$(var.Win64Flag)" Id="cmp98DE971F6217A07977E7494FA01B56C7" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="filA544AF4F4EA80214E360BCAE6BB04790" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\metro-ui\js\metro-carousel.js" />
+                        </Component>
+                        <Component Win64="$(var.Win64Flag)" Id="cmpDE17C5E471D66A663E7E11358F65EEB1" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="fil83BB3148A07E594128AF20E3E705CD34" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\metro-ui\js\metro-carousel.min.js" />
+                        </Component>
+                        <Component Win64="$(var.Win64Flag)" Id="cmp593DD4C53BE9F4774A00CAB4591DDB38" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="filA85A934E6EE373CE5C39DA308025AEA1" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\metro-ui\js\metro-core.js" />
+                        </Component>
+                        <Component Win64="$(var.Win64Flag)" Id="cmp16A961B5DE51F33FCE285263BFB10964" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="fil744382E21BBDFBC750618C9479A1A076" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\metro-ui\js\metro-core.min.js" />
+                        </Component>
+                        <Component Win64="$(var.Win64Flag)" Id="cmp89280EBD83291C0DE4074259464EF48D" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="filDE48317CB3D2FC8A9ED2B03F124D53F1" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\metro-ui\js\metro-countdown.js" />
+                        </Component>
+                        <Component Win64="$(var.Win64Flag)" Id="cmp816182D5DF5952FCB695CD8425907D3D" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="fil80F9EC45111389027F9E25ADB7DC18BA" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\metro-ui\js\metro-countdown.min.js" />
+                        </Component>
+                        <Component Win64="$(var.Win64Flag)" Id="cmpDB338FCD20E4452A7CD4C3904D8A56C1" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="fil63DC02D0DCE650B06C399A36704A081F" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\metro-ui\js\metro-date-format.js" />
+                        </Component>
+                        <Component Win64="$(var.Win64Flag)" Id="cmpAA0EAC7C540348DB9ACFFEEF3FB8513F" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="fil83DDCD9117E63244BB6AEFF3FA5875A2" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\metro-ui\js\metro-date-format.min.js" />
+                        </Component>
+                        <Component Win64="$(var.Win64Flag)" Id="cmpC994750B89B8B1CFBC80F828513E89C5" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="filCA37A65A2256CACFEB4D4C764DA663DB" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\metro-ui\js\metro-datepicker.js" />
+                        </Component>
+                        <Component Win64="$(var.Win64Flag)" Id="cmp9647D0360559952555171723C7177587" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="fil6D6779211D7D963BFF41896A18A0C42B" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\metro-ui\js\metro-datepicker.min.js" />
+                        </Component>
+                        <Component Win64="$(var.Win64Flag)" Id="cmpBB6230DE94B90378301467F7912F1ACC" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="fil59AE4A6F432D1A408A8A0517CFC0FA56" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\metro-ui\js\metro-dialog.js" />
+                        </Component>
+                        <Component Win64="$(var.Win64Flag)" Id="cmp3F0FBD44F8B07BD1427F8838FD1935D4" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="filDE8ECDEAB6F1AC900286BEDAB2818378" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\metro-ui\js\metro-dialog.min.js" />
+                        </Component>
+                        <Component Win64="$(var.Win64Flag)" Id="cmp6A3D3AD1F69827EB5F9D5B583182ABF4" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="fil58F168B73D5AF2F59AEEFECDABFB01E8" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\metro-ui\js\metro-drag-tile.js" />
+                        </Component>
+                        <Component Win64="$(var.Win64Flag)" Id="cmp3508B49DCF47E04FDF082BC3D73F8F5E" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="fil76CEE27B28A09CB7DA4FD99E7AF4D516" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\metro-ui\js\metro-drag-tile.min.js" />
+                        </Component>
+                        <Component Win64="$(var.Win64Flag)" Id="cmp5BEC0F594FA3B2C3397B777D02C2DE44" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="fil8F7EEE629C722F045A37901A9DED0D35" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\metro-ui\js\metro-dropdown.js" />
+                        </Component>
+                        <Component Win64="$(var.Win64Flag)" Id="cmpC572590730107000E44D9BBD7AF7B1DC" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="filAFE4A061D4ED48EFD8E6B3023C7D698C" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\metro-ui\js\metro-dropdown.min.js" />
+                        </Component>
+                        <Component Win64="$(var.Win64Flag)" Id="cmpB54379739ABEA313599FA02E2E3E8AD5" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="filB926C5C4ED7A34110A3C1F9DC9F7AA15" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\metro-ui\js\metro-fluentmenu.js" />
+                        </Component>
+                        <Component Win64="$(var.Win64Flag)" Id="cmp9A0E61FCFFC67F6E3AC6A43F40A199F9" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="fil21E6C59513BA69768659B76E168A3B01" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\metro-ui\js\metro-fluentmenu.min.js" />
+                        </Component>
+                        <Component Win64="$(var.Win64Flag)" Id="cmpEFC6611C864E80D0D1B602190E6578EC" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="fil6A6C1E15F142FD302511F8BB10A8B16E" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\metro-ui\js\metro-hint.js" />
+                        </Component>
+                        <Component Win64="$(var.Win64Flag)" Id="cmp412BE848D6BEC619ADF26638DD8C7DD6" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="fil4FD70B00153D626BAB73F46945551B35" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\metro-ui\js\metro-hint.min.js" />
+                        </Component>
+                        <Component Win64="$(var.Win64Flag)" Id="cmp7EF0DBFE735988E541EC5A017901094C" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="fil0C8B8CBE0D0A489BA793CC0485C3C645" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\metro-ui\js\metro-input-control.js" />
+                        </Component>
+                        <Component Win64="$(var.Win64Flag)" Id="cmp8C64B83B830EAB41D2DF992179142445" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="fil9343D84C2554BF35332B8333E7FB3A80" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\metro-ui\js\metro-input-control.min.js" />
+                        </Component>
+                        <Component Win64="$(var.Win64Flag)" Id="cmp1C444D3260DFB4EE7AD5CCA4454DBCED" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="fil0D7E62A35797F5A91FCE311529C65163" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\metro-ui\js\metro-listview.js" />
+                        </Component>
+                        <Component Win64="$(var.Win64Flag)" Id="cmp5B01C2DE44D49161278FA574C5D6080F" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="filF691A29CF9B88A6E03D56E18BAB36D46" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\metro-ui\js\metro-listview.min.js" />
+                        </Component>
+                        <Component Win64="$(var.Win64Flag)" Id="cmp6975F2DEFFD37EF846C2EA4C6CBBD5EC" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="fil0B7ACE69D28280E497B2AABE277F6F0D" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\metro-ui\js\metro-live-tile.js" />
+                        </Component>
+                        <Component Win64="$(var.Win64Flag)" Id="cmp2D374223682FA2E8A4ED8142C328C5A4" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="fil5F0F2BA8D6A39D26BE3BD247B2A62C70" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\metro-ui\js\metro-live-tile.min.js" />
+                        </Component>
+                        <Component Win64="$(var.Win64Flag)" Id="cmpECF222C2517944B7EAD6AFB97DFDFF2D" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="fil702A3C7B30285C2229C2AF392E657CDE" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\metro-ui\js\metro-loader.js" />
+                        </Component>
+                        <Component Win64="$(var.Win64Flag)" Id="cmp15CAC465967EC8CEAECF813219B0C859" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="fil52E1C588953C97C8910925FE039388EC" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\metro-ui\js\metro-loader.min.js" />
+                        </Component>
+                        <Component Win64="$(var.Win64Flag)" Id="cmp420E7FD84F1A7C06FBC4179050882611" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="fil3178D764EFCAFE10410B833E79A571A8" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\metro-ui\js\metro-notify.js" />
+                        </Component>
+                        <Component Win64="$(var.Win64Flag)" Id="cmpC5ABBE57863F29D9F4C7FFC1D0085321" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="fil4EF8C3915AFEDFF33907CE3435921E07" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\metro-ui\js\metro-notify.min.js" />
+                        </Component>
+                        <Component Win64="$(var.Win64Flag)" Id="cmpF76D369E796E25680414F285B1910197" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="fil109245BFA0DB19B5A5EE270510172D5C" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\metro-ui\js\metro-plugin-template.js" />
+                        </Component>
+                        <Component Win64="$(var.Win64Flag)" Id="cmp46A44813A48A247EAF5522BCF797B07B" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="filC35823F96DC2DD9C2198877AF6D5E6D8" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\metro-ui\js\metro-plugin-template.min.js" />
+                        </Component>
+                        <Component Win64="$(var.Win64Flag)" Id="cmp64EB0B27481274BA59073E984E18B396" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="filA7082EA581C7CF5F7E3F1425E86DD5DB" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\metro-ui\js\metro-progressbar.js" />
+                        </Component>
+                        <Component Win64="$(var.Win64Flag)" Id="cmp11974AB4DCA4311615C3EEF9C154F8DC" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="fil0845642ADF68465ED36C3593032EE56A" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\metro-ui\js\metro-progressbar.min.js" />
+                        </Component>
+                        <Component Win64="$(var.Win64Flag)" Id="cmp99C50D01DDA2621BB5158EE74709AF76" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="fil12C5AEFFADA278011CA27A54FF361B15" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\metro-ui\js\metro-rating.js" />
+                        </Component>
+                        <Component Win64="$(var.Win64Flag)" Id="cmp37EF4603859A51D06EBD5C884B78A3A7" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="filED1BBB2631BC0BC1898C6DEB24F4D174" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\metro-ui\js\metro-rating.min.js" />
+                        </Component>
+                        <Component Win64="$(var.Win64Flag)" Id="cmp3E8CCF0F801404FBA5001FB58488C9E8" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="fil9DCC1CD5B18F97AD36D91FCA05BE1ADA" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\metro-ui\js\metro-slider.js" />
+                        </Component>
+                        <Component Win64="$(var.Win64Flag)" Id="cmp0505358C054059146246282CD2251F24" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="filA552EB66BE73F15F2E40889B0C551EBD" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\metro-ui\js\metro-slider.min.js" />
+                        </Component>
+                        <Component Win64="$(var.Win64Flag)" Id="cmpFA4D84ADF4ED233DCA9CC5F0D24071B7" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="fil0CE805935D8DC730DC475B5033001AF3" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\metro-ui\js\metro-tab-control.js" />
+                        </Component>
+                        <Component Win64="$(var.Win64Flag)" Id="cmp9E31712E112A791F180E8B5BC22432F9" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="fil987B9106F489BBD054E5CD9851696EDE" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\metro-ui\js\metro-tab-control.min.js" />
+                        </Component>
+                        <Component Win64="$(var.Win64Flag)" Id="cmpC406D7813960C61CA1CF1B5156AD47FA" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="filCC8252DE055FA55FC8102EDE2448A6FB" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\metro-ui\js\metro-table.js" />
+                        </Component>
+                        <Component Win64="$(var.Win64Flag)" Id="cmpDF160077DE9B827AC6816A1A22458E12" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="fil67FAC11BD49A028A6BFFAF7E580DC219" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\metro-ui\js\metro-table.min.js" />
+                        </Component>
+                        <Component Win64="$(var.Win64Flag)" Id="cmp2E023C350402B09CEA6B90D797A59C63" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="fil3F39A53E4D188CF6C691A253376B3811" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\metro-ui\js\metro-times.js" />
+                        </Component>
+                        <Component Win64="$(var.Win64Flag)" Id="cmp0D81B11BA160DF5C7D2CD497DBED804F" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="fil0BBDBA88F06EFF49174D68D73FC27C39" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\metro-ui\js\metro-times.min.js" />
+                        </Component>
+                        <Component Win64="$(var.Win64Flag)" Id="cmpA532C75B0CCF8D9AC0C1D47E56BD1948" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="filDB04429917163AC01F4607C20B422919" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\metro-ui\js\metro-touch-handler.js" />
+                        </Component>
+                        <Component Win64="$(var.Win64Flag)" Id="cmp913CCC83075F15D6DA97A6FDC2BDC9DC" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="filB6CCDB1A8FCCBBAB124923C07FFF9303" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\metro-ui\js\metro-touch-handler.min.js" />
+                        </Component>
+                        <Component Win64="$(var.Win64Flag)" Id="cmp03C4EB7B0AFD507B432826117CE5187C" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="filACA0988A197E9CF9BB46BA874D933AD0" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\metro-ui\js\metro-treeview.js" />
+                        </Component>
+                        <Component Win64="$(var.Win64Flag)" Id="cmpD4804E09DFEAB7704D99CBE1B74E4769" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="fil3EF9D3260929470E0ADD1249221F376D" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\metro-ui\js\metro-treeview.min.js" />
+                        </Component>
+                        <Component Win64="$(var.Win64Flag)" Id="cmp2440FC304B1207244D6DB2A4E79183BA" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="filCD57E842CC67D01AC35086A36BF5B8DA" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\metro-ui\js\README.md" />
+                        </Component>
+                    </Directory>
+                </Directory>
+                <Directory Id="dirC250A4AE0DBDDF8D32A7613B44FF96F4" Name="timeline">
+                    <Component Win64="$(var.Win64Flag)" Id="cmp5614F953BE70F260527A47116340179B" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="fil1CBE349047ACB07E9C2AA65F9B6E2079" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\timeline\CHANGES.txt" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmpCE67866AE4495B8FD25F9780CFB720E8" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="filC757A49D490341C3023A2D36AA049141" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\timeline\LICENSE.txt" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmp155BD1E864557F7B5925874A269519E2" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="filE0F6336B5C691C29513E871B953E6AAA" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\timeline\README.txt" />
+                    </Component>
+                    <Directory Id="dir90C9DBF5B47BA973142917E5B91340C0" Name="timeline_ajax">
+                        <Component Win64="$(var.Win64Flag)" Id="cmp1F01D4660855F53830F1F74B0E7E6976" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="filE692E433972A35545451E36725B54353" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\timeline\timeline_ajax\simile-ajax-api.js" />
+                        </Component>
+                        <Component Win64="$(var.Win64Flag)" Id="cmpB08F6272A9686EC710B49E6AF0CB853C" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="fil59F3749C9631C4330BEAB4A80AD249C4" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\timeline\timeline_ajax\simile-ajax-bundle.js" />
+                        </Component>
+                        <Directory Id="dir86555EBE28B2465C4FAF551CBAE53A6C" Name="content">
+                            <Component Win64="$(var.Win64Flag)" Id="cmp6DEBC282805309AB1312D06D73C5A670" Guid="*">
+                                <File ProcessorArchitecture="$(var.Platform)" Id="fil8600ECD420B5FC05FE6AB636FF0503C7" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\timeline\timeline_ajax\content\history.html" />
+                            </Component>
+                        </Directory>
+                        <Directory Id="dir6D9F4195C1651417A2F472A58AC49A6E" Name="images">
+                            <Component Win64="$(var.Win64Flag)" Id="cmp5AF8695DD346811B6C81021D3832EB2B" Guid="*">
+                                <File ProcessorArchitecture="$(var.Platform)" Id="fil9DCEF840A10D0C088E452602ACAC8E45" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\timeline\timeline_ajax\images\bubble-arrow-point-down.png" />
+                            </Component>
+                            <Component Win64="$(var.Win64Flag)" Id="cmpE6AE30BD56137FC05A8516B7E3BB4018" Guid="*">
+                                <File ProcessorArchitecture="$(var.Platform)" Id="filCEED61D6153120B292098C58A82E5B35" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\timeline\timeline_ajax\images\bubble-arrow-point-left.png" />
+                            </Component>
+                            <Component Win64="$(var.Win64Flag)" Id="cmp191430E6D6C9AFDAF27C720407CEF2F0" Guid="*">
+                                <File ProcessorArchitecture="$(var.Platform)" Id="fil9976D18D3FE416374E4F8126F209ACF5" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\timeline\timeline_ajax\images\bubble-arrow-point-right.png" />
+                            </Component>
+                            <Component Win64="$(var.Win64Flag)" Id="cmpF6031B32B98A184AE1D68D78AA99870E" Guid="*">
+                                <File ProcessorArchitecture="$(var.Platform)" Id="fil998BE18C962D4D54097858E79B957065" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\timeline\timeline_ajax\images\bubble-arrow-point-up.png" />
+                            </Component>
+                            <Component Win64="$(var.Win64Flag)" Id="cmpB30E35E09BEC22B26977352429FC2B1F" Guid="*">
+                                <File ProcessorArchitecture="$(var.Platform)" Id="fil20055ABC12F113903B942977D0D417B9" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\timeline\timeline_ajax\images\bubble-bottom-left.png" />
+                            </Component>
+                            <Component Win64="$(var.Win64Flag)" Id="cmp466D1733EFD4C90F71E5E675BFAD7325" Guid="*">
+                                <File ProcessorArchitecture="$(var.Platform)" Id="fil020D410596AD27E83A6D60CCB764FE7F" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\timeline\timeline_ajax\images\bubble-bottom-right.png" />
+                            </Component>
+                            <Component Win64="$(var.Win64Flag)" Id="cmp73A642C6092BF5E295EA42453A90CA5F" Guid="*">
+                                <File ProcessorArchitecture="$(var.Platform)" Id="fil5FE22B70F944C23870FCE73F91134F90" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\timeline\timeline_ajax\images\bubble-bottom.png" />
+                            </Component>
+                            <Component Win64="$(var.Win64Flag)" Id="cmp82C79F1DD3CFC03DA32490A4E0662663" Guid="*">
+                                <File ProcessorArchitecture="$(var.Platform)" Id="fil270516F7A1995BA62D5A72F6F1995171" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\timeline\timeline_ajax\images\bubble-left.png" />
+                            </Component>
+                            <Component Win64="$(var.Win64Flag)" Id="cmp064D79030CC6C42B70149A8D67D88670" Guid="*">
+                                <File ProcessorArchitecture="$(var.Platform)" Id="fil74E5B523356D749FC947D24ECE901DA2" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\timeline\timeline_ajax\images\bubble-right.png" />
+                            </Component>
+                            <Component Win64="$(var.Win64Flag)" Id="cmp6EC618C62B13A6CB0A9FD39FE723BFBD" Guid="*">
+                                <File ProcessorArchitecture="$(var.Platform)" Id="fil6D443626FBF946BDF49597EE3D5D8A0E" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\timeline\timeline_ajax\images\bubble-top-left.png" />
+                            </Component>
+                            <Component Win64="$(var.Win64Flag)" Id="cmp70B55E61B7B547D8504C52BC5B4CA03D" Guid="*">
+                                <File ProcessorArchitecture="$(var.Platform)" Id="filB510CBD8089FEEA7AB597973148CCD36" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\timeline\timeline_ajax\images\bubble-top-right.png" />
+                            </Component>
+                            <Component Win64="$(var.Win64Flag)" Id="cmpDA692581CBAAEE7220CDA779A06C0546" Guid="*">
+                                <File ProcessorArchitecture="$(var.Platform)" Id="filF577E72E1AD6710ABF1AABAEA3604C35" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\timeline\timeline_ajax\images\bubble-top.png" />
+                            </Component>
+                            <Component Win64="$(var.Win64Flag)" Id="cmp5B1829A16E7F4A9320ACA8DC6A3F4745" Guid="*">
+                                <File ProcessorArchitecture="$(var.Platform)" Id="fil235C4AF68166D988CD96E49A3847F5D8" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\timeline\timeline_ajax\images\close-button.png" />
+                            </Component>
+                            <Component Win64="$(var.Win64Flag)" Id="cmp9DB630C12E754B4524A5E3BC70BD63BC" Guid="*">
+                                <File ProcessorArchitecture="$(var.Platform)" Id="fil04F313ACD3007F4B919176C1D974A335" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\timeline\timeline_ajax\images\copy.png" />
+                            </Component>
+                            <Component Win64="$(var.Win64Flag)" Id="cmpB0D704E9CDC3782F35C26944DA8F0A0F" Guid="*">
+                                <File ProcessorArchitecture="$(var.Platform)" Id="filFACC93FB54262DC5253143C154001386" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\timeline\timeline_ajax\images\message-bottom-left.png" />
+                            </Component>
+                            <Component Win64="$(var.Win64Flag)" Id="cmp39182DFABF6545570588D9EBD9C4FF21" Guid="*">
+                                <File ProcessorArchitecture="$(var.Platform)" Id="fil1389C9FFDB3479A9748E2C7FC5F4AE6D" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\timeline\timeline_ajax\images\message-bottom-right.png" />
+                            </Component>
+                            <Component Win64="$(var.Win64Flag)" Id="cmpB5B5F2E8611199A9C5A1F2CE952B59FD" Guid="*">
+                                <File ProcessorArchitecture="$(var.Platform)" Id="fil30230C2F74B631F2473C07A9459AFB8C" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\timeline\timeline_ajax\images\message-left.png" />
+                            </Component>
+                            <Component Win64="$(var.Win64Flag)" Id="cmp09A4A0E9460092A065E68B663D9B1A14" Guid="*">
+                                <File ProcessorArchitecture="$(var.Platform)" Id="filDBB4B774CCE1D8102A01B0B20A7F5EA5" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\timeline\timeline_ajax\images\message-right.png" />
+                            </Component>
+                            <Component Win64="$(var.Win64Flag)" Id="cmpDA1DBF730760AD3E1A24567E5A494AE4" Guid="*">
+                                <File ProcessorArchitecture="$(var.Platform)" Id="fil78BBF023B7D4C9B1BBE26AFB84BBF428" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\timeline\timeline_ajax\images\message-top-left.png" />
+                            </Component>
+                            <Component Win64="$(var.Win64Flag)" Id="cmpBF3010A9AB8ECD7824C29BB02849CFAE" Guid="*">
+                                <File ProcessorArchitecture="$(var.Platform)" Id="filCBD7CC4AD812E9FF2E5303687C9A7282" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\timeline\timeline_ajax\images\message-top-right.png" />
+                            </Component>
+                        </Directory>
+                        <Directory Id="dir684A09B4DF95D8CE744B58EC1DE37DDD" Name="scripts">
+                            <Component Win64="$(var.Win64Flag)" Id="cmp3667560738F85CD68DA0DED8ACE52E47" Guid="*">
+                                <File ProcessorArchitecture="$(var.Platform)" Id="filF975F11D8E76F82E8ADCFD6F76C2F8BE" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\timeline\timeline_ajax\scripts\signal.js" />
+                            </Component>
+                        </Directory>
+                        <Directory Id="dirF3C36CF7F36B186D5281C5BA7C7302B2" Name="styles">
+                            <Component Win64="$(var.Win64Flag)" Id="cmp456979FC4A243B4EF587F4BCC1EFA677" Guid="*">
+                                <File ProcessorArchitecture="$(var.Platform)" Id="filF655DBEF52072ED12BA27F58F2FE5EEB" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\timeline\timeline_ajax\styles\graphics-ie6.css" />
+                            </Component>
+                            <Component Win64="$(var.Win64Flag)" Id="cmpB63044AFC35C69F7057592933E4D68DD" Guid="*">
+                                <File ProcessorArchitecture="$(var.Platform)" Id="fil6C3203397340A6294CDAD6238C28EF69" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\timeline\timeline_ajax\styles\graphics.css" />
+                            </Component>
+                        </Directory>
+                    </Directory>
+                    <Directory Id="dir2D210720CEEB68C7B81D284B33E94EC4" Name="timeline_js">
+                        <Component Win64="$(var.Win64Flag)" Id="cmp52D0265769D206032603DD513A91A7ED" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="filD095C2825124830F5B4B8B0948306FE7" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\timeline\timeline_js\timeline-api.js" />
+                        </Component>
+                        <Component Win64="$(var.Win64Flag)" Id="cmpFF10C171E283D452A6C67E23F78846B5" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="fil736013B60BCB851243402AC37F703D8F" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\timeline\timeline_js\timeline-bundle.css" />
+                        </Component>
+                        <Component Win64="$(var.Win64Flag)" Id="cmp708E2C6235425808F796694B9ACD8A98" Guid="*">
+                            <File ProcessorArchitecture="$(var.Platform)" Id="filD0D768FDF414F4B7B6B6CEC378BD9EB4" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\timeline\timeline_js\timeline-bundle.js" />
+                        </Component>
+                        <Directory Id="dir5619A56B0886DA124F028918D96E3F7E" Name="images">
+                            <Component Win64="$(var.Win64Flag)" Id="cmpCE6136A80420A21945CA5241F6814F5C" Guid="*">
+                                <File ProcessorArchitecture="$(var.Platform)" Id="fil3CEB7D914835BF87D12ACDA92196631D" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\timeline\timeline_js\images\blue-circle.png" />
+                            </Component>
+                            <Component Win64="$(var.Win64Flag)" Id="cmp03CD34EBF04C113A31301D875FAC03F5" Guid="*">
+                                <File ProcessorArchitecture="$(var.Platform)" Id="fil03E7784ADB8244B8F3980120A5A63744" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\timeline\timeline_js\images\bubble-bottom-arrow.png" />
+                            </Component>
+                            <Component Win64="$(var.Win64Flag)" Id="cmpE37BEB08247EA4DFF92D6C2223666D1A" Guid="*">
+                                <File ProcessorArchitecture="$(var.Platform)" Id="filB98C91E6266020289E87C7800431EE2A" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\timeline\timeline_js\images\bubble-bottom-left.png" />
+                            </Component>
+                            <Component Win64="$(var.Win64Flag)" Id="cmpC5B933406BD62C03DA7B0FC2B6D50797" Guid="*">
+                                <File ProcessorArchitecture="$(var.Platform)" Id="fil3CB3C21DA166B429ACD590ADF6C8C6C7" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\timeline\timeline_js\images\bubble-bottom-right.png" />
+                            </Component>
+                            <Component Win64="$(var.Win64Flag)" Id="cmp4AB3AE3D118BB2E9212201FAA0D80F4F" Guid="*">
+                                <File ProcessorArchitecture="$(var.Platform)" Id="filA6A1D0C89E4A58DDFB6F3727110CC85C" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\timeline\timeline_js\images\bubble-bottom.png" />
+                            </Component>
+                            <Component Win64="$(var.Win64Flag)" Id="cmp227167010212D73FC07FA25284B5EDEE" Guid="*">
+                                <File ProcessorArchitecture="$(var.Platform)" Id="filDC28250C599E08EA4205378413D9745D" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\timeline\timeline_js\images\bubble-left-arrow.png" />
+                            </Component>
+                            <Component Win64="$(var.Win64Flag)" Id="cmp92538051B975D53354926D9598331780" Guid="*">
+                                <File ProcessorArchitecture="$(var.Platform)" Id="fil1592BCF87BABA1793D2E72E133054A7E" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\timeline\timeline_js\images\bubble-left.png" />
+                            </Component>
+                            <Component Win64="$(var.Win64Flag)" Id="cmpBB5C55AB38B8DF1F5F2965F39C4AE526" Guid="*">
+                                <File ProcessorArchitecture="$(var.Platform)" Id="fil3E7A767C221A0F7CB3FB1EE612389808" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\timeline\timeline_js\images\bubble-right-arrow.png" />
+                            </Component>
+                            <Component Win64="$(var.Win64Flag)" Id="cmp791CF8F09DCA4172CA0B4D70DFC597E0" Guid="*">
+                                <File ProcessorArchitecture="$(var.Platform)" Id="fil4DF0D7FCC2E806DEDAF091E65C1D072D" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\timeline\timeline_js\images\bubble-right.png" />
+                            </Component>
+                            <Component Win64="$(var.Win64Flag)" Id="cmp17E990516152969D969823D7EF4B1A64" Guid="*">
+                                <File ProcessorArchitecture="$(var.Platform)" Id="fil0B3620F1CED7C271DB3244C346578BCC" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\timeline\timeline_js\images\bubble-top-arrow.png" />
+                            </Component>
+                            <Component Win64="$(var.Win64Flag)" Id="cmp43132C9956863318C874CF1D5DBDD7A2" Guid="*">
+                                <File ProcessorArchitecture="$(var.Platform)" Id="fil5A1801D3BE73A8AB7EFC5802F17BB967" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\timeline\timeline_js\images\bubble-top-left.png" />
+                            </Component>
+                            <Component Win64="$(var.Win64Flag)" Id="cmp9CE69735FE39BED5D1488A8AE64B6332" Guid="*">
+                                <File ProcessorArchitecture="$(var.Platform)" Id="fil36EE8756DE59DDF6DE306A1ACB10415C" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\timeline\timeline_js\images\bubble-top-right.png" />
+                            </Component>
+                            <Component Win64="$(var.Win64Flag)" Id="cmp1313B0460DA1BC06032FBFDEAE11678C" Guid="*">
+                                <File ProcessorArchitecture="$(var.Platform)" Id="fil82534E2559D6DBF537511723AB343F56" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\timeline\timeline_js\images\bubble-top.png" />
+                            </Component>
+                            <Component Win64="$(var.Win64Flag)" Id="cmp168E0C9D467EDD390A751769791FBBD8" Guid="*">
+                                <File ProcessorArchitecture="$(var.Platform)" Id="filFB568DF1A2DA3B36899459289ED97E94" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\timeline\timeline_js\images\close-button.png" />
+                            </Component>
+                            <Component Win64="$(var.Win64Flag)" Id="cmpCFA914BA2D1F931ECE377E14B879CEC8" Guid="*">
+                                <File ProcessorArchitecture="$(var.Platform)" Id="filC897D5706E78E53190B59E7C312427A0" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\timeline\timeline_js\images\copyright-vertical.png" />
+                            </Component>
+                            <Component Win64="$(var.Win64Flag)" Id="cmp5E098B561DF6750F7201EE28CEBD63BE" Guid="*">
+                                <File ProcessorArchitecture="$(var.Platform)" Id="filBFCCF49496C0F73F80B98359614E65E9" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\timeline\timeline_js\images\copyright.png" />
+                            </Component>
+                            <Component Win64="$(var.Win64Flag)" Id="cmp2CC5B6E5299DD80B00C25FA2097BBB47" Guid="*">
+                                <File ProcessorArchitecture="$(var.Platform)" Id="fil08E8A9292151F2CE60D9A9018E1732D6" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\timeline\timeline_js\images\dark-blue-circle.png" />
+                            </Component>
+                            <Component Win64="$(var.Win64Flag)" Id="cmp1A7959099813DEE7ABB119621B616BAC" Guid="*">
+                                <File ProcessorArchitecture="$(var.Platform)" Id="filA0808DC4B38B7D753BD352D26A4F01EF" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\timeline\timeline_js\images\dark-green-circle.png" />
+                            </Component>
+                            <Component Win64="$(var.Win64Flag)" Id="cmpB03F1DE81FC139982382707CD26BE61B" Guid="*">
+                                <File ProcessorArchitecture="$(var.Platform)" Id="fil0C4A6BFDDF5A7ED075D2CB8074976B9B" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\timeline\timeline_js\images\dark-red-circle.png" />
+                            </Component>
+                            <Component Win64="$(var.Win64Flag)" Id="cmp20D7D8BC5AB738563CEE652B73FC3B1F" Guid="*">
+                                <File ProcessorArchitecture="$(var.Platform)" Id="filB7978876EFC37326AAFB3335498A6944" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\timeline\timeline_js\images\dull-blue-circle.png" />
+                            </Component>
+                            <Component Win64="$(var.Win64Flag)" Id="cmpDA0771A02592908815499BABC16F67CF" Guid="*">
+                                <File ProcessorArchitecture="$(var.Platform)" Id="fil87F0EAACEFA64D7EB6879CEFE971C4C0" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\timeline\timeline_js\images\dull-green-circle.png" />
+                            </Component>
+                            <Component Win64="$(var.Win64Flag)" Id="cmp893715C75E3B89B144F87D02A0F6C1EE" Guid="*">
+                                <File ProcessorArchitecture="$(var.Platform)" Id="filC9AB899CA43FC28F3BC98581B8B052DF" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\timeline\timeline_js\images\dull-red-circle.png" />
+                            </Component>
+                            <Component Win64="$(var.Win64Flag)" Id="cmpEE332411C14CF4F398F8948068602267" Guid="*">
+                                <File ProcessorArchitecture="$(var.Platform)" Id="fil753F29B569B9F2E65DB275F004A29AA2" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\timeline\timeline_js\images\gray-circle.png" />
+                            </Component>
+                            <Component Win64="$(var.Win64Flag)" Id="cmp2D1739DD8D6F33ACAC25EF484369EB4D" Guid="*">
+                                <File ProcessorArchitecture="$(var.Platform)" Id="fil25BC5D2E4BFA6BF6764BEA6B36C4E627" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\timeline\timeline_js\images\green-circle.png" />
+                            </Component>
+                            <Component Win64="$(var.Win64Flag)" Id="cmp13FF4263C5D69A4261981773C7331206" Guid="*">
+                                <File ProcessorArchitecture="$(var.Platform)" Id="fil917022CFFCBE23558538786BE9AA9F16" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\timeline\timeline_js\images\message-bottom-left.png" />
+                            </Component>
+                            <Component Win64="$(var.Win64Flag)" Id="cmp0FB5F26170BA03754201F23203B3ED23" Guid="*">
+                                <File ProcessorArchitecture="$(var.Platform)" Id="filC6E9C56E8F83F658A3FFFEAC3701248A" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\timeline\timeline_js\images\message-bottom-right.png" />
+                            </Component>
+                            <Component Win64="$(var.Win64Flag)" Id="cmpA14E946CDDEC80E9A567BAF715D4DF1A" Guid="*">
+                                <File ProcessorArchitecture="$(var.Platform)" Id="fil2494839EAEFA69DFD192AAD78C7D0AE8" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\timeline\timeline_js\images\message-left.png" />
+                            </Component>
+                            <Component Win64="$(var.Win64Flag)" Id="cmp3919A5E9E258AA52BB6E002B8CA23BC4" Guid="*">
+                                <File ProcessorArchitecture="$(var.Platform)" Id="fil722E90C004327A87DE929B37ADC147EE" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\timeline\timeline_js\images\message-right.png" />
+                            </Component>
+                            <Component Win64="$(var.Win64Flag)" Id="cmpFB67921901A719EFD9F12B76A57D00A8" Guid="*">
+                                <File ProcessorArchitecture="$(var.Platform)" Id="fil00C4964F5ADF8D02040DFEF324FBBDF5" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\timeline\timeline_js\images\message-top-left.png" />
+                            </Component>
+                            <Component Win64="$(var.Win64Flag)" Id="cmp60A1F1D24F71A1B76614D167BC0F4348" Guid="*">
+                                <File ProcessorArchitecture="$(var.Platform)" Id="fil9B1522CF4D77B75AF24E4065567C9B52" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\timeline\timeline_js\images\message-top-right.png" />
+                            </Component>
+                            <Component Win64="$(var.Win64Flag)" Id="cmp2E3DCB8B20A0A0B5988D5C53D7766651" Guid="*">
+                                <File ProcessorArchitecture="$(var.Platform)" Id="fil8E8B7558B1718E051837893D60C063FF" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\timeline\timeline_js\images\progress-running.gif" />
+                            </Component>
+                            <Component Win64="$(var.Win64Flag)" Id="cmp7A57980887D742F0941BD2BA7DD22B44" Guid="*">
+                                <File ProcessorArchitecture="$(var.Platform)" Id="fil918F9D0041BAA82F151A6C6D919D08F9" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\timeline\timeline_js\images\red-circle.png" />
+                            </Component>
+                            <Component Win64="$(var.Win64Flag)" Id="cmp2949F964890AF179E8CF0BBF92AD1971" Guid="*">
+                                <File ProcessorArchitecture="$(var.Platform)" Id="fil604A19AB6321B9E657F916574DAA613B" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\timeline\timeline_js\images\top-bubble.png" />
+                            </Component>
+                        </Directory>
+                        <Directory Id="dir8D028F5D8F9DF9E42F34D2D9EB05EE08" Name="scripts">
+                            <Directory Id="dirCD4BBB60EA5099965ACCCEA19EDF51AC" Name="l10n">
+                                <Directory Id="dirCE2224B1DCE19FCAEB20A02449FF75FE" Name="en">
+                                    <Component Win64="$(var.Win64Flag)" Id="cmpF9C1794ACE48AF499FF4342B6D03E434" Guid="*">
+                                        <File ProcessorArchitecture="$(var.Platform)" Id="filE67BC15302994226304EC4FE71672317" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\timeline\timeline_js\scripts\l10n\en\labellers.js" />
+                                    </Component>
+                                    <Component Win64="$(var.Win64Flag)" Id="cmpDFD5FC4A53001B36EA96E1FBD3329180" Guid="*">
+                                        <File ProcessorArchitecture="$(var.Platform)" Id="fil0E1A022C7C6071C4E5BD01F7FC5D1A53" KeyPath="yes" Source="$(var.GiltlyPackageDir)\assets\timeline\timeline_js\scripts\l10n\en\timeline.js" />
+                                    </Component>
+                                </Directory>
+                            </Directory>
+                        </Directory>
+                    </Directory>
+                </Directory>
+            </Directory>
+            <Directory Id="dirF6FBA1E8F13DB8FDDABED8EB2418A358" Name="bin">
+                <Component Win64="$(var.Win64Flag)" Id="cmpEEE78E5998294B710AA7FF4B24BC62DE" Guid="*">
+                    <File ProcessorArchitecture="$(var.Platform)" Id="fil26374BB902C1ABA6FAF0286BCD63287A" KeyPath="yes" Source="$(var.GiltlyPackageDir)\bin\Effortless.Net.Encryption.dll" />
+                </Component>
+                <Component Win64="$(var.Win64Flag)" Id="cmp3737012CC992D909935746922265C49A" Guid="*">
+                    <File Id="MainAppExe" KeyPath="yes" ProcessorArchitecture="$(var.Platform)" Source="$(var.GiltlyPackageDir)\bin\gilt.bacon.dll" />
+                </Component>
+                <Component Win64="$(var.Win64Flag)" Id="cmp70765D7B6A04E28ACA8F3C529DE27500" Guid="*">
+                    <File ProcessorArchitecture="$(var.Platform)" Id="fil7B0583B954F9523C597068C8CA85EE29" KeyPath="yes" Source="$(var.GiltlyPackageDir)\bin\gilt.bacon.pdb" />
+                </Component>
+                <Component Win64="$(var.Win64Flag)" Id="cmpAA1DD708065CF630EDAD772223258538" Guid="*">
+                    <File ProcessorArchitecture="$(var.Platform)" Id="filBB80437AE33962865003CA4690A4BE28" KeyPath="yes" Source="$(var.GiltlyPackageDir)\bin\gilt.util.dll" />
+                </Component>
+                <Component Win64="$(var.Win64Flag)" Id="cmp739428F36C68928CF98243EE03BD0356" Guid="*">
+                    <File ProcessorArchitecture="$(var.Platform)" Id="fil9F2B8C15F0863CD37EA93E771FADC6DA" KeyPath="yes" Source="$(var.GiltlyPackageDir)\bin\gilt.util.pdb" />
+                </Component>
+                <Component Win64="$(var.Win64Flag)" Id="cmp4343DF257A25B79BBD50CF3F62CFBE68" Guid="*">
+                    <File ProcessorArchitecture="$(var.Platform)" Id="filBD2644D3BCB8820669AD98DEB94F20CC" KeyPath="yes" Source="$(var.GiltlyPackageDir)\bin\giltdblinq.dll" />
+                </Component>
+                <Component Win64="$(var.Win64Flag)" Id="cmp4E2E83BA4DF72886962908750E2A1C78" Guid="*">
+                    <File ProcessorArchitecture="$(var.Platform)" Id="fil7CF96D90A7997711A0D6183B168B477B" KeyPath="yes" Source="$(var.GiltlyPackageDir)\bin\giltdblinq.pdb" />
+                </Component>
+                <Component Win64="$(var.Win64Flag)" Id="cmp9A903A7982757275F80AA442C2B3C4BD" Guid="*">
+                    <File ProcessorArchitecture="$(var.Platform)" Id="filCFE5A2D3D36B1382BFE7B08CA3DCE952" KeyPath="yes" Source="$(var.GiltlyPackageDir)\bin\Nancy.Authentication.Forms.dll" />
+                </Component>
+                <Component Win64="$(var.Win64Flag)" Id="cmp4084DD6C3AEA4623D5269652D9E3D2EE" Guid="*">
+                    <File ProcessorArchitecture="$(var.Platform)" Id="fil4CF04D71F35531D0C75FEC3135E853B0" KeyPath="yes" Source="$(var.GiltlyPackageDir)\bin\Nancy.dll" />
+                </Component>
+                <Component Win64="$(var.Win64Flag)" Id="cmp1178C3F4DB7B487DBEBD328D1A403231" Guid="*">
+                    <File ProcessorArchitecture="$(var.Platform)" Id="fil52BCB96FDC799AD365A12D774F3B74BE" KeyPath="yes" Source="$(var.GiltlyPackageDir)\bin\Nancy.Hosting.Aspnet.dll" />
+                </Component>
+                <Component Win64="$(var.Win64Flag)" Id="cmp19B99A01EA097B60A6B168B0AA25F16D" Guid="*">
+                    <File ProcessorArchitecture="$(var.Platform)" Id="fil50582EAEBDBC4ED495FB4A2B35DFF18C" KeyPath="yes" Source="$(var.GiltlyPackageDir)\bin\Newtonsoft.Json.dll" />
+                </Component>
+                <Component Win64="$(var.Win64Flag)" Id="cmp79AE44AAB7C7EA94BEDE91515AAC7876" Guid="*">
+                    <File ProcessorArchitecture="$(var.Platform)" Id="fil74284E72375D860E55D160F637993D15" KeyPath="yes" Source="$(var.GiltlyPackageDir)\bin\NLog.config" />
+                </Component>
+                <Component Win64="$(var.Win64Flag)" Id="cmpF7238B0C7E82BB6999AC76775441F42F" Guid="*">
+                    <File ProcessorArchitecture="$(var.Platform)" Id="fil298533322254AB47F64E53D30F9BE089" KeyPath="yes" Source="$(var.GiltlyPackageDir)\bin\NLog.dll" />
+                </Component>
+                <Component Win64="$(var.Win64Flag)" Id="cmp0FAF350245CFEB5196B9D33619AE5A13" Guid="*">
+                    <File ProcessorArchitecture="$(var.Platform)" Id="filE34E239927FDFD072BF4FDDD04CD341E" KeyPath="yes" Source="$(var.GiltlyPackageDir)\bin\SimileTimeline.dll" />
+                </Component>
+                <Component Win64="$(var.Win64Flag)" Id="cmp41854D51CDAB9F6640DB7C9B3902FB05" Guid="*">
+                    <File ProcessorArchitecture="$(var.Platform)" Id="fil2BF628BA55F43522E4924FB8F2D9AF15" KeyPath="yes" Source="$(var.GiltlyPackageDir)\bin\SimileTimeline.pdb" />
+                </Component>
+                <Component Win64="$(var.Win64Flag)" Id="cmp78D05A4B45311325A553E188E4D0AC7F" Guid="*">
+                    <File ProcessorArchitecture="$(var.Platform)" Id="fil544C2897BD30666C46B73655B0E970DB" KeyPath="yes" Source="$(var.GiltlyPackageDir)\bin\System.Linq.Dynamic.dll" />
+                </Component>
+                <Component Win64="$(var.Win64Flag)" Id="cmpF979F3446D9AB10F22308D86D96DFC7E" Guid="*">
+                    <File ProcessorArchitecture="$(var.Platform)" Id="fil1E1B4CA0DAE685D20910D122DF48F247" KeyPath="yes" Source="$(var.GiltlyPackageDir)\bin\web.config" />
+                </Component>
+                <Directory Id="dir889BC0694302879454DD9C4CBEC85913" Name="es-ES">
+                    <Component Win64="$(var.Win64Flag)" Id="cmp20D3A10E140EB36D9EDC0932902C7FE3" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="fil14088585D17F1190C2E343BC72BDE708" KeyPath="yes" Source="$(var.GiltlyPackageDir)\bin\es-ES\gilt.bacon.resources.dll" />
+                    </Component>
+                </Directory>
+            </Directory>
+            <Directory Id="dir60F9264E721FCC7EBB87A0D46C69D9AD" Name="scripts">
+                <Component Win64="$(var.Win64Flag)" Id="cmp0B65A24930C971C0F5D7C8DAEF3620B5" Guid="*">
+                    <File ProcessorArchitecture="$(var.Platform)" Id="fil2096B6FCF4D1015B46340DB520C2F1A3" KeyPath="yes" Source="$(var.GiltlyPackageDir)\scripts\CustomComboBox.js" />
+                </Component>
+                <Component Win64="$(var.Win64Flag)" Id="cmp1390E5472A650008FCD7B07ECA6B3E4A" Guid="*">
+                    <File ProcessorArchitecture="$(var.Platform)" Id="fil845AD8C537754D96BCE8CAA3B00AF418" KeyPath="yes" Source="$(var.GiltlyPackageDir)\scripts\GraphsAndCharts.js" />
+                </Component>
+                <Component Win64="$(var.Win64Flag)" Id="cmp77522CBC315118C4199CAA85CA6C6EDD" Guid="*">
+                    <File ProcessorArchitecture="$(var.Platform)" Id="filEDF111C44CA3589B057DB9A347082814" KeyPath="yes" Source="$(var.GiltlyPackageDir)\scripts\KoPagedGrid.js" />
+                </Component>
+                <Component Win64="$(var.Win64Flag)" Id="cmp18430009DF5C595B02903FC3A05E5A3C" Guid="*">
+                    <File ProcessorArchitecture="$(var.Platform)" Id="fil75508249C28731B9C21330217A72E6F9" KeyPath="yes" Source="$(var.GiltlyPackageDir)\scripts\KoSearchForm.js" />
+                </Component>
+                <Component Win64="$(var.Win64Flag)" Id="cmp9C1321BB505432DBC8087904EEBF6BF1" Guid="*">
+                    <File ProcessorArchitecture="$(var.Platform)" Id="filCAE88BD35AAA5DFABE0CE838DFD8038A" KeyPath="yes" Source="$(var.GiltlyPackageDir)\scripts\KoSideBySide.js" />
+                </Component>
+                <Component Win64="$(var.Win64Flag)" Id="cmp71DB0CA91494CBC6AD209966939B68F8" Guid="*">
+                    <File ProcessorArchitecture="$(var.Platform)" Id="filDCF39EBD88B8B2809EBC9313CCB0E112" KeyPath="yes" Source="$(var.GiltlyPackageDir)\scripts\Utility.js" />
+                </Component>
+            </Directory>
+            <Directory Id="dir82C2298EDEA4FFF926A8B34F94B20E62" Name="styles">
+                <Component Win64="$(var.Win64Flag)" Id="cmp0CD01C653EFCF635AF1259BCA866E3BC" Guid="*">
+                    <File ProcessorArchitecture="$(var.Platform)" Id="fil112760AF30E70C36DFFA28936815D0FF" KeyPath="yes" Source="$(var.GiltlyPackageDir)\styles\gilty.css" />
+                </Component>
+            </Directory>
+            <Directory Id="dir1877A4D565BE24E2DC814CF3739D176B" Name="views">
+                <Component Win64="$(var.Win64Flag)" Id="cmpB35C2077235A6475C51B2C1CE355C95B" Guid="*">
+                    <File ProcessorArchitecture="$(var.Platform)" Id="fil7AEAA647DD4F8A7A881527A044BA59E2" KeyPath="yes" Source="$(var.GiltlyPackageDir)\views\Index.sshtml" />
+                </Component>
+                <Component Win64="$(var.Win64Flag)" Id="cmp16C62DDCF88D6DFFBEAB1C9F4DE79D2A" Guid="*">
+                    <File ProcessorArchitecture="$(var.Platform)" Id="fil1E38E1F779D402FDF90C604548DF3914" KeyPath="yes" Source="$(var.GiltlyPackageDir)\views\Login.sshtml" />
+                </Component>
+                <Component Win64="$(var.Win64Flag)" Id="cmp98946B407AF9E821C452CAD26EF6D85A" Guid="*">
+                    <File ProcessorArchitecture="$(var.Platform)" Id="filB4C437AA197FF802804BFDF1820D5675" KeyPath="yes" Source="$(var.GiltlyPackageDir)\views\Master.sshtml" />
+                </Component>
+                <Component Win64="$(var.Win64Flag)" Id="cmp61762B18FAA29E80A166F90A132CFAEE" Guid="*">
+                    <File ProcessorArchitecture="$(var.Platform)" Id="fil8071E5084607C36F14865A47AFAE18D6" KeyPath="yes" Source="$(var.GiltlyPackageDir)\views\Pager.sshtml" />
+                </Component>
+                <Directory Id="dir824A912B0A0EDB33735BCCEF5860052E" Name="Admin">
+                    <Component Win64="$(var.Win64Flag)" Id="cmp036DC2DB17A9A85912587F423E37E19A" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="fil50C66AE373742D4AC6EAADD9F0E28565" KeyPath="yes" Source="$(var.GiltlyPackageDir)\views\Admin\EventDelete.sshtml" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmp596870C121D8DD872992A74BD3E9E2ED" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="fil4A607212F4B2EC0179C24297D6C58762" KeyPath="yes" Source="$(var.GiltlyPackageDir)\views\Admin\GeoDelete.sshtml" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmp00E1B06F673E3D260ACDE1A3C1774083" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="filA9483703BE51649F93DE197C7D43FEB0" KeyPath="yes" Source="$(var.GiltlyPackageDir)\views\Admin\LogDelete.sshtml" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmpC2B6E586B0BBC251D6B1094F16CAF7EE" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="filF1EE15BA659B83AFCB3747B5EFBECE20" KeyPath="yes" Source="$(var.GiltlyPackageDir)\views\Admin\ResetData.sshtml" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmp72E806CA9F79D9D3B9D02824CB11974B" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="fil9726EA0882C6C246374E9D744714493A" KeyPath="yes" Source="$(var.GiltlyPackageDir)\views\Admin\SnortDelete.sshtml" />
+                    </Component>
+                </Directory>
+                <Directory Id="dir7D8AE9041DDB8A7DDA79F7F516C0683A" Name="Event">
+                    <Component Win64="$(var.Win64Flag)" Id="cmp4E352C571FB97A427242D119A1B4D5CC" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="fil5213FFE56189AE1FD5DB2BCBC7371933" KeyPath="yes" Source="$(var.GiltlyPackageDir)\views\Event\EventByCountryList.sshtml" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmp00F5E2238222360850C62E62F2B8EBC3" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="fil9AAF88C22084B97CC756FED1C2FB497C" KeyPath="yes" Source="$(var.GiltlyPackageDir)\views\Event\EventByDestinationPortList.sshtml" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmp2F20828ECA2522E15FEC97EBE7D3A6F0" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="fil9E364348069661FDF40328C81D3489CF" KeyPath="yes" Source="$(var.GiltlyPackageDir)\views\Event\EventByIpList.sshtml" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmp64A6375B79E46238A9D12A9503ED70AC" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="filCADE3F5FE08ADB9775B798D4325D5BDA" KeyPath="yes" Source="$(var.GiltlyPackageDir)\views\Event\EventBySourcePortList.sshtml" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmp80200D6E8ED2404027A5869E56707B96" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="filFDC9790528C9E991F6146988E9EB6684" KeyPath="yes" Source="$(var.GiltlyPackageDir)\views\Event\EventComment.sshtml" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmp08D82793C7DB084DF41F66569C1AC533" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="fil0ADA870170FBBC360FEF6E149896E14B" KeyPath="yes" Source="$(var.GiltlyPackageDir)\views\Event\EventData.sshtml" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmpEC50F6EE6BD0E47D4F11DEBC7B126FD3" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="fil707FC6150D73FF9E48D1D3EED4E33DDF" KeyPath="yes" Source="$(var.GiltlyPackageDir)\views\Event\EventDetailExpanded.sshtml" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmpA69154F0A57AFADEB11CEBB91B9FC7BF" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="fil9420AE850E1C5A37198B1C40163F816D" KeyPath="yes" Source="$(var.GiltlyPackageDir)\views\Event\EventICMP.sshtml" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmp5D30016DFCCCFC6C0BA79C7DFE608222" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="filBFEB14E5D3A6778D400997C21D8771BE" KeyPath="yes" Source="$(var.GiltlyPackageDir)\views\Event\EventInfo.sshtml" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmpCE39A8F0DCA29238CDE4FD776B7F53BE" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="filA7E9107F8171F23939B09364FB41BB46" KeyPath="yes" Source="$(var.GiltlyPackageDir)\views\Event\EventList.sshtml" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmp0555BF906D96616770BE1D4CEBAD128F" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="fil5AC950DFB08F8A19DC037F41B3A4685B" KeyPath="yes" Source="$(var.GiltlyPackageDir)\views\Event\EventTCP.sshtml" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmp5DB580AF6908E7181EA473328959C025" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="filD0D23CA5182E75D62A0943E0A30A3237" KeyPath="yes" Source="$(var.GiltlyPackageDir)\views\Event\EventTimeLine.sshtml" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmp83B3C2C74AC84118C23BD621573BCD1C" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="filF53FC8CEDD5DB04AD96ECC268F689A04" KeyPath="yes" Source="$(var.GiltlyPackageDir)\views\Event\EventUDP.sshtml" />
+                    </Component>
+                </Directory>
+                <Directory Id="dirB13926D69E0497BD1E42C82243116D2D" Name="HomeTiles">
+                    <Component Win64="$(var.Win64Flag)" Id="cmp2016789C115A1325F00D9ACAB7DA73CE" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="filED5C4830BCA3222DC552D5D277D2D87D" KeyPath="yes" Source="$(var.GiltlyPackageDir)\views\HomeTiles\EventToday.sshtml" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmp6BCF474A0691D97C9395CC1DB253022D" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="filEB57F680E924CBBC7E1ECD2FDE9B89E7" KeyPath="yes" Source="$(var.GiltlyPackageDir)\views\HomeTiles\EventTotal.sshtml" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmp8C56B3227269609236D54CF69DA4822D" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="fil18BCC48DF0997721AE7107C2CEAEB878" KeyPath="yes" Source="$(var.GiltlyPackageDir)\views\HomeTiles\EventYesterday.sshtml" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmpBE30E176F1F79652DEC445C41C960888" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="fil60B2F85A115EB944EB902EF21E0342E3" KeyPath="yes" Source="$(var.GiltlyPackageDir)\views\HomeTiles\HomeTiles.sshtml" />
+                    </Component>
+                </Directory>
+                <Directory Id="dir3316F1AAC0F1A430EB70A29E851DBBAF" Name="NavBar">
+                    <Component Win64="$(var.Win64Flag)" Id="cmpEFB3D972F27897F84B691577BA354843" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="filC7105164487C1C4D455B09B9DBD02363" KeyPath="yes" Source="$(var.GiltlyPackageDir)\views\NavBar\AddSearch.sshtml" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmpC35739478F937D16D9CAF22B9305FA85" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="fil63297F9CD96D67BFD3339DA53A94DFE8" KeyPath="yes" Source="$(var.GiltlyPackageDir)\views\NavBar\Admin.sshtml" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmp2E4E757AE4261F1642D12D90A601B322" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="filD6DF34D5A92B0682F07EEBFDD1BAE624" KeyPath="yes" Source="$(var.GiltlyPackageDir)\views\NavBar\Events.sshtml" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmp024955B6366E14C119B5013C3792F3D2" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="fil0673B1126916EFC9AD7583A8AED03006" KeyPath="yes" Source="$(var.GiltlyPackageDir)\views\NavBar\Home.sshtml" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmpCFDFBC6B7E4FC8ED6FD8DBA936F5B15B" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="fil2E6A5175E808FDC8D4EFD0C34231C132" KeyPath="yes" Source="$(var.GiltlyPackageDir)\views\NavBar\NavBar.sshtml" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmp7B404BCF18C4D4F05F9C3B9B76F4ED3F" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="fil2EA1608ABD5C5383682662CB4DCAE427" KeyPath="yes" Source="$(var.GiltlyPackageDir)\views\NavBar\Profile.sshtml" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmpF5939D4A831EC9038DB43D00DE728D81" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="fil74F4C0F86095C6D98BE7D666D1449F91" KeyPath="yes" Source="$(var.GiltlyPackageDir)\views\NavBar\SavedSearch.sshtml" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmpF474075542CE12D00B8DC33E54634525" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="filB8134B764BD76D455ADA3DF6218B806A" KeyPath="yes" Source="$(var.GiltlyPackageDir)\views\NavBar\Sensor.sshtml" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmp20785E4F25C184AEB26D6E468079268C" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="fil2C5CB024825DAAB12E77CE173038F273" KeyPath="yes" Source="$(var.GiltlyPackageDir)\views\NavBar\Timeline.sshtml" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmpC6A311B3784F9F687BD2E6768BC818E5" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="fil774318D3A371A7703DB9A2747ED9F8FA" KeyPath="yes" Source="$(var.GiltlyPackageDir)\views\NavBar\UserAdmin.sshtml" />
+                    </Component>
+                </Directory>
+                <Directory Id="dir8924FF171F2558EB5EF768F3E654790C" Name="Roles">
+                    <Component Win64="$(var.Win64Flag)" Id="cmp5889D4CCECAC3BF4AE4A8448FA545407" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="fil87749B00FF9388B7E230BDABC0E300D2" KeyPath="yes" Source="$(var.GiltlyPackageDir)\views\Roles\RoleAssignment.sshtml" />
+                    </Component>
+                </Directory>
+                <Directory Id="dir8F7DC314E8B1923D0C92FE825C3E7993" Name="Search">
+                    <Component Win64="$(var.Win64Flag)" Id="cmp256FBDE9131FDD9C9583A76E30203460" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="fil6AB93101C129C747AE40DCA73CE25D0B" KeyPath="yes" Source="$(var.GiltlyPackageDir)\views\Search\AddSearch.sshtml" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmp9348C7757CDB22E51A5C8F309222D5AD" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="filB1B940EE83BDA3C48A37C250C4D91A4E" KeyPath="yes" Source="$(var.GiltlyPackageDir)\views\Search\EditSearch.sshtml" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmpE1CC15C82CB8FC150DE7552CEA22A249" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="filB6BF3736AC0CD086B87D9A42A8CB43F9" KeyPath="yes" Source="$(var.GiltlyPackageDir)\views\Search\SearchForm.sshtml" />
+                    </Component>
+                </Directory>
+                <Directory Id="dir95FE332724193AD47CBF22E175D17526" Name="Sensor">
+                    <Component Win64="$(var.Win64Flag)" Id="cmpBF053061C9233BE9B2FC6CEB56E090F6" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="fil41CCB1761E07B84CBE7E7A4C872520F4" KeyPath="yes" Source="$(var.GiltlyPackageDir)\views\Sensor\SensorList.sshtml" />
+                    </Component>
+                </Directory>
+                <Directory Id="dirE7E7D37D8759E0B1572D265EF4148D6A" Name="Tables">
+                    <Component Win64="$(var.Win64Flag)" Id="cmp6776D79B6A449188017CBBFDFB263822" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="fil722A6FD937A19A548F6060533F2F060C" KeyPath="yes" Source="$(var.GiltlyPackageDir)\views\Tables\EventDetail.sshtml" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmp81F6AFFA669168BEB98BCE374D64C146" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="filB89581C04313F9BF64D354396E03E3B6" KeyPath="yes" Source="$(var.GiltlyPackageDir)\views\Tables\GeoLocation.sshtml" />
+                    </Component>
+                </Directory>
+                <Directory Id="dirADD3743647AE1B53628D792FF7F6BDDC" Name="Users">
+                    <Component Win64="$(var.Win64Flag)" Id="cmp765F2CFB5FED2055784C7DB1B9302993" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="fil154C065E8D2DF833DAB684E742F2F7C0" KeyPath="yes" Source="$(var.GiltlyPackageDir)\views\Users\ChangePassword.sshtml" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmpD56246B284C2AD09EA04891A371907F9" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="fil3AA0DCB7F2D158257ADA000D1012B4DD" KeyPath="yes" Source="$(var.GiltlyPackageDir)\views\Users\UserAdd.sshtml" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmp2E0913B377290DBA3AFE97C9E896CEF8" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="filB37625C8426C99FA5171228002DECAB8" KeyPath="yes" Source="$(var.GiltlyPackageDir)\views\Users\UserList.sshtml" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmpAA7CF93DEA6D34734583D685D987D468" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="fil68B5E40E74BBA500F66241C16CB28839" KeyPath="yes" Source="$(var.GiltlyPackageDir)\views\Users\UserProfile.sshtml" />
+                    </Component>
+                </Directory>
+                <Directory Id="dir3042B3628CA1C65DCA3D456AA96D0238" Name="UsersGroups">
+                    <Component Win64="$(var.Win64Flag)" Id="cmpD79922B336F3B46140425FC9AEED5C3F" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="filC9DC223DC63C18CCE3D870B9834CE299" KeyPath="yes" Source="$(var.GiltlyPackageDir)\views\UsersGroups\UserGroupAdd.sshtml" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmp68A289521E1E8C18999AC23771D9E4BE" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="filB5A2646A17B1AC26B02D084230C34FDB" KeyPath="yes" Source="$(var.GiltlyPackageDir)\views\UsersGroups\UserGroupAssignment.sshtml" />
+                    </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmpC437B3AB4C50AAAB60955E3DCA42024C" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="filFC6659F0AC82811C7802424D79D52BDB" KeyPath="yes" Source="$(var.GiltlyPackageDir)\views\UsersGroups\UserGroupList.sshtml" />
+                    </Component>
+                </Directory>
+            </Directory>
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <ComponentGroup Id="GiltlyBin">
+            <ComponentRef Id="cmpA55ECC2F46ED96041D631BDBC2EBF51E" />
+            <ComponentRef Id="cmpE6A5AC0D702275DC2CE35C1E0E667DEF" />
+            <ComponentRef Id="cmp1169EC0D6B84156714B50A234487A295" />
+            <ComponentRef Id="cmp2FB4768976D2911A2D8B8EC96B5F23B6" />
+            <ComponentRef Id="cmp157D9CDB4C16DFCF71F2AF6AD4B9813F" />
+            <ComponentRef Id="cmpD0243CA23FF4828930539ED6AD5BC13B" />
+            <ComponentRef Id="cmpDF020D827CA937A39D608659C017474A" />
+            <ComponentRef Id="cmp3BAA8CA39F764F02E98402AA46A583EE" />
+            <ComponentRef Id="cmp91FE1F664F73FC0C057C9BA2F9DC2455" />
+            <ComponentRef Id="cmp8BF85831F8210E18CEF1EA7A4A9E4EDE" />
+            <ComponentRef Id="cmp36830C62425D65AD37041140B23C5DC5" />
+            <ComponentRef Id="cmp88EF328181CBE5C7416AA2F866356D8C" />
+            <ComponentRef Id="cmpC85C3D4F2577F24457FCA2477D629422" />
+            <ComponentRef Id="cmp80BD213AE379E47E5099E34724579D0F" />
+            <ComponentRef Id="cmp5DBB85EE56DFC8198DDD83D332D18AA4" />
+            <ComponentRef Id="cmp6971C6EDE48F1331C4B66519C08B2095" />
+            <ComponentRef Id="cmpB88337DABB65F10496A98289C6BC7299" />
+            <ComponentRef Id="cmpC06417A5D28D66BA676A8E7509198538" />
+            <ComponentRef Id="cmp565845EC7F7E626EA1F688CE5F068C7C" />
+            <ComponentRef Id="cmpCA3433867A73E21DEA158F4B6DC65DDA" />
+            <ComponentRef Id="cmp1D72FAF39BEE011AF8F8212C7BF9AE0D" />
+            <ComponentRef Id="cmp21C3BD0727435DF57B03297A1B598B23" />
+            <ComponentRef Id="cmp1F551D29F1854B9761E619A9FC4FC19B" />
+            <ComponentRef Id="cmpA2E80AF88582D5EA61672D2EC00795B9" />
+            <ComponentRef Id="cmpA681D2D52E7F2523B109A045C5F66B20" />
+            <ComponentRef Id="cmp523A3992433828F221925981CFDB7168" />
+            <ComponentRef Id="cmpD61956757E736BC3F6EB52B30A505F69" />
+            <ComponentRef Id="cmp08DA6E86DA0A359A7A59A3022841F4B3" />
+            <ComponentRef Id="cmp3F5FFA8C49A620A7C59502FE46DF9EFD" />
+            <ComponentRef Id="cmp0EDFCE44D999247560A09A965E390279" />
+            <ComponentRef Id="cmp7D40B45D588900AC40E26F15007937E5" />
+            <ComponentRef Id="cmp1235D77A1C88F8A3C6C287B646DF6535" />
+            <ComponentRef Id="cmp70F8A65F8CE879F3C217FCC8FCECDF5B" />
+            <ComponentRef Id="cmp25099CDB899C9914443F8EEF1BD244BA" />
+            <ComponentRef Id="cmp0E22C0DEE7827302E9CAFBCF1884C111" />
+            <ComponentRef Id="cmp618620D10035CEE22471CFB3E51DD4FF" />
+            <ComponentRef Id="cmpF1B6B9825E615771CD0D441B3E9FE055" />
+            <ComponentRef Id="cmpB046A7191C891CC0150F7BF451516828" />
+            <ComponentRef Id="cmp59AE11E3FF89627BF8B5FC51C21E5E12" />
+            <ComponentRef Id="cmpC804F3D17BD171E9F3DBF402398A73F5" />
+            <ComponentRef Id="cmp5C9BD978675BCA4BA5DF4A2B01BC02D8" />
+            <ComponentRef Id="cmp9875DE7171B5FF0D925FA7090968E5AB" />
+            <ComponentRef Id="cmp15B90736CC9255911057228F88167299" />
+            <ComponentRef Id="cmpC2ECEC0884DA03A5667DEED27110A1E8" />
+            <ComponentRef Id="cmpC942F950ACD925937A19729FF414AB42" />
+            <ComponentRef Id="cmp4FE1298711E2505D557A543EDDAEB06E" />
+            <ComponentRef Id="cmp405213165F95CDBD375CB2A45B7C4324" />
+            <ComponentRef Id="cmpC90993667E1337BACCCF22FEE216EDCC" />
+            <ComponentRef Id="cmp9C533B9F084EC4FB1379E9108F573758" />
+            <ComponentRef Id="cmp6FC40C933C459FCB2D26C395B9E58538" />
+            <ComponentRef Id="cmpCB735E9C09E0B6B33D3529EA2E79E492" />
+            <ComponentRef Id="cmpB61D3D8DD401C3E922889E6CF8595B7C" />
+            <ComponentRef Id="cmp172AB392A54477FC47F5A406003F899B" />
+            <ComponentRef Id="cmpD0A0051564AC4EAE6525D7F648D1DCB0" />
+            <ComponentRef Id="cmp7BBFD3C008738846BD4D74D72B7DCB07" />
+            <ComponentRef Id="cmpFB79CFB5B2058CA6F66648103B0E0280" />
+            <ComponentRef Id="cmpE67D5DD27A76F4112C532FBDFB47E7A4" />
+            <ComponentRef Id="cmp731D5734C20C4E72CB6EE94876839CE9" />
+            <ComponentRef Id="cmpDEF243EBDC0A16FA1746D449AF2395F7" />
+            <ComponentRef Id="cmp629B44E444B4A856FE3D716257AAAF15" />
+            <ComponentRef Id="cmp35D4FB9E7EC209CDFA35C18936784D99" />
+            <ComponentRef Id="cmp5F5F9534B821599C4BFBA7D1A2F41568" />
+            <ComponentRef Id="cmp3F653C769678AC526DA52F872ED0BC13" />
+            <ComponentRef Id="cmp38049B6C601CC1166CB6FB41E2227D94" />
+            <ComponentRef Id="cmpD5A931D8705C6E488EE2D664F6CA5720" />
+            <ComponentRef Id="cmp71A61E7C8CA0A5219B5737D57DA77931" />
+            <ComponentRef Id="cmp35DE52E36B56375B2243121F7591794B" />
+            <ComponentRef Id="cmp7A46699DC96EBAF337B642A22D2E9740" />
+            <ComponentRef Id="cmp559C34BBFBC01DD1A956522DD2489AE1" />
+            <ComponentRef Id="cmp404DF5686FA34CA61406954DDDA4A162" />
+            <ComponentRef Id="cmp0AB0313F058CD096EEF02B1D4C268BB9" />
+            <ComponentRef Id="cmpDBFE6EA439C681492BA2D1D9882371C1" />
+            <ComponentRef Id="cmpC652C31A8DC4A7BA438227858664E592" />
+            <ComponentRef Id="cmpAFF1FE161A9E47CED3B70986605E37FF" />
+            <ComponentRef Id="cmpE4C15F5D170EC3A14A594225C87B419A" />
+            <ComponentRef Id="cmp233727B9B8229373033483543F554151" />
+            <ComponentRef Id="cmp94BE17144D7AB9E9519C2A770268CEB6" />
+            <ComponentRef Id="cmp7BC1465E76C803A42196C37C3009E706" />
+            <ComponentRef Id="cmpB53D7CBDC56C557292F73FD1BEB67FF3" />
+            <ComponentRef Id="cmp66BF5B195365AF211B439EF385A79F2C" />
+            <ComponentRef Id="cmp3C253E99B9DCEE4084008AE60DF50E8B" />
+            <ComponentRef Id="cmp5DD9DCCE5992D2138267648732E01B86" />
+            <ComponentRef Id="cmp025D696F3EEECA15054447BA0D57C061" />
+            <ComponentRef Id="cmpF808AB9BB79FC839C780040F2D3E912A" />
+            <ComponentRef Id="cmpBA9211851064522E211161D1D781AC29" />
+            <ComponentRef Id="cmpE5174D0E9153CD70A37D7D9300AA81CF" />
+            <ComponentRef Id="cmp3E2F763C3FF51860DAA2C05D24891511" />
+            <ComponentRef Id="cmp26C3C76C534E1F675A81692A8608BAD2" />
+            <ComponentRef Id="cmpD6139672969B89076C77FEA85B5F9C4B" />
+            <ComponentRef Id="cmpA9F327EFCECE800F2CB66A513AB20BD9" />
+            <ComponentRef Id="cmp3D1137121F0883F9B05AF63C07E3072A" />
+            <ComponentRef Id="cmp7C2555E701F866992708508A6AFDF9B8" />
+            <ComponentRef Id="cmp8DB4A6E042C321FC06ABDBB1208BC329" />
+            <ComponentRef Id="cmp9B15A08362044148239C37353AE8C6A5" />
+            <ComponentRef Id="cmpB7B8552BD8DE80641B28D8EF38927B41" />
+            <ComponentRef Id="cmp57DABB9BEB789DEDE8F906F1749A622B" />
+            <ComponentRef Id="cmp1F136AA6318F7BE020397B5FA31CB0DB" />
+            <ComponentRef Id="cmp98DE971F6217A07977E7494FA01B56C7" />
+            <ComponentRef Id="cmpDE17C5E471D66A663E7E11358F65EEB1" />
+            <ComponentRef Id="cmp593DD4C53BE9F4774A00CAB4591DDB38" />
+            <ComponentRef Id="cmp16A961B5DE51F33FCE285263BFB10964" />
+            <ComponentRef Id="cmp89280EBD83291C0DE4074259464EF48D" />
+            <ComponentRef Id="cmp816182D5DF5952FCB695CD8425907D3D" />
+            <ComponentRef Id="cmpDB338FCD20E4452A7CD4C3904D8A56C1" />
+            <ComponentRef Id="cmpAA0EAC7C540348DB9ACFFEEF3FB8513F" />
+            <ComponentRef Id="cmpC994750B89B8B1CFBC80F828513E89C5" />
+            <ComponentRef Id="cmp9647D0360559952555171723C7177587" />
+            <ComponentRef Id="cmpBB6230DE94B90378301467F7912F1ACC" />
+            <ComponentRef Id="cmp3F0FBD44F8B07BD1427F8838FD1935D4" />
+            <ComponentRef Id="cmp6A3D3AD1F69827EB5F9D5B583182ABF4" />
+            <ComponentRef Id="cmp3508B49DCF47E04FDF082BC3D73F8F5E" />
+            <ComponentRef Id="cmp5BEC0F594FA3B2C3397B777D02C2DE44" />
+            <ComponentRef Id="cmpC572590730107000E44D9BBD7AF7B1DC" />
+            <ComponentRef Id="cmpB54379739ABEA313599FA02E2E3E8AD5" />
+            <ComponentRef Id="cmp9A0E61FCFFC67F6E3AC6A43F40A199F9" />
+            <ComponentRef Id="cmpEFC6611C864E80D0D1B602190E6578EC" />
+            <ComponentRef Id="cmp412BE848D6BEC619ADF26638DD8C7DD6" />
+            <ComponentRef Id="cmp7EF0DBFE735988E541EC5A017901094C" />
+            <ComponentRef Id="cmp8C64B83B830EAB41D2DF992179142445" />
+            <ComponentRef Id="cmp1C444D3260DFB4EE7AD5CCA4454DBCED" />
+            <ComponentRef Id="cmp5B01C2DE44D49161278FA574C5D6080F" />
+            <ComponentRef Id="cmp6975F2DEFFD37EF846C2EA4C6CBBD5EC" />
+            <ComponentRef Id="cmp2D374223682FA2E8A4ED8142C328C5A4" />
+            <ComponentRef Id="cmpECF222C2517944B7EAD6AFB97DFDFF2D" />
+            <ComponentRef Id="cmp15CAC465967EC8CEAECF813219B0C859" />
+            <ComponentRef Id="cmp420E7FD84F1A7C06FBC4179050882611" />
+            <ComponentRef Id="cmpC5ABBE57863F29D9F4C7FFC1D0085321" />
+            <ComponentRef Id="cmpF76D369E796E25680414F285B1910197" />
+            <ComponentRef Id="cmp46A44813A48A247EAF5522BCF797B07B" />
+            <ComponentRef Id="cmp64EB0B27481274BA59073E984E18B396" />
+            <ComponentRef Id="cmp11974AB4DCA4311615C3EEF9C154F8DC" />
+            <ComponentRef Id="cmp99C50D01DDA2621BB5158EE74709AF76" />
+            <ComponentRef Id="cmp37EF4603859A51D06EBD5C884B78A3A7" />
+            <ComponentRef Id="cmp3E8CCF0F801404FBA5001FB58488C9E8" />
+            <ComponentRef Id="cmp0505358C054059146246282CD2251F24" />
+            <ComponentRef Id="cmpFA4D84ADF4ED233DCA9CC5F0D24071B7" />
+            <ComponentRef Id="cmp9E31712E112A791F180E8B5BC22432F9" />
+            <ComponentRef Id="cmpC406D7813960C61CA1CF1B5156AD47FA" />
+            <ComponentRef Id="cmpDF160077DE9B827AC6816A1A22458E12" />
+            <ComponentRef Id="cmp2E023C350402B09CEA6B90D797A59C63" />
+            <ComponentRef Id="cmp0D81B11BA160DF5C7D2CD497DBED804F" />
+            <ComponentRef Id="cmpA532C75B0CCF8D9AC0C1D47E56BD1948" />
+            <ComponentRef Id="cmp913CCC83075F15D6DA97A6FDC2BDC9DC" />
+            <ComponentRef Id="cmp03C4EB7B0AFD507B432826117CE5187C" />
+            <ComponentRef Id="cmpD4804E09DFEAB7704D99CBE1B74E4769" />
+            <ComponentRef Id="cmp2440FC304B1207244D6DB2A4E79183BA" />
+            <ComponentRef Id="cmp5614F953BE70F260527A47116340179B" />
+            <ComponentRef Id="cmpCE67866AE4495B8FD25F9780CFB720E8" />
+            <ComponentRef Id="cmp155BD1E864557F7B5925874A269519E2" />
+            <ComponentRef Id="cmp1F01D4660855F53830F1F74B0E7E6976" />
+            <ComponentRef Id="cmpB08F6272A9686EC710B49E6AF0CB853C" />
+            <ComponentRef Id="cmp6DEBC282805309AB1312D06D73C5A670" />
+            <ComponentRef Id="cmp5AF8695DD346811B6C81021D3832EB2B" />
+            <ComponentRef Id="cmpE6AE30BD56137FC05A8516B7E3BB4018" />
+            <ComponentRef Id="cmp191430E6D6C9AFDAF27C720407CEF2F0" />
+            <ComponentRef Id="cmpF6031B32B98A184AE1D68D78AA99870E" />
+            <ComponentRef Id="cmpB30E35E09BEC22B26977352429FC2B1F" />
+            <ComponentRef Id="cmp466D1733EFD4C90F71E5E675BFAD7325" />
+            <ComponentRef Id="cmp73A642C6092BF5E295EA42453A90CA5F" />
+            <ComponentRef Id="cmp82C79F1DD3CFC03DA32490A4E0662663" />
+            <ComponentRef Id="cmp064D79030CC6C42B70149A8D67D88670" />
+            <ComponentRef Id="cmp6EC618C62B13A6CB0A9FD39FE723BFBD" />
+            <ComponentRef Id="cmp70B55E61B7B547D8504C52BC5B4CA03D" />
+            <ComponentRef Id="cmpDA692581CBAAEE7220CDA779A06C0546" />
+            <ComponentRef Id="cmp5B1829A16E7F4A9320ACA8DC6A3F4745" />
+            <ComponentRef Id="cmp9DB630C12E754B4524A5E3BC70BD63BC" />
+            <ComponentRef Id="cmpB0D704E9CDC3782F35C26944DA8F0A0F" />
+            <ComponentRef Id="cmp39182DFABF6545570588D9EBD9C4FF21" />
+            <ComponentRef Id="cmpB5B5F2E8611199A9C5A1F2CE952B59FD" />
+            <ComponentRef Id="cmp09A4A0E9460092A065E68B663D9B1A14" />
+            <ComponentRef Id="cmpDA1DBF730760AD3E1A24567E5A494AE4" />
+            <ComponentRef Id="cmpBF3010A9AB8ECD7824C29BB02849CFAE" />
+            <ComponentRef Id="cmp3667560738F85CD68DA0DED8ACE52E47" />
+            <ComponentRef Id="cmp456979FC4A243B4EF587F4BCC1EFA677" />
+            <ComponentRef Id="cmpB63044AFC35C69F7057592933E4D68DD" />
+            <ComponentRef Id="cmp52D0265769D206032603DD513A91A7ED" />
+            <ComponentRef Id="cmpFF10C171E283D452A6C67E23F78846B5" />
+            <ComponentRef Id="cmp708E2C6235425808F796694B9ACD8A98" />
+            <ComponentRef Id="cmpCE6136A80420A21945CA5241F6814F5C" />
+            <ComponentRef Id="cmp03CD34EBF04C113A31301D875FAC03F5" />
+            <ComponentRef Id="cmpE37BEB08247EA4DFF92D6C2223666D1A" />
+            <ComponentRef Id="cmpC5B933406BD62C03DA7B0FC2B6D50797" />
+            <ComponentRef Id="cmp4AB3AE3D118BB2E9212201FAA0D80F4F" />
+            <ComponentRef Id="cmp227167010212D73FC07FA25284B5EDEE" />
+            <ComponentRef Id="cmp92538051B975D53354926D9598331780" />
+            <ComponentRef Id="cmpBB5C55AB38B8DF1F5F2965F39C4AE526" />
+            <ComponentRef Id="cmp791CF8F09DCA4172CA0B4D70DFC597E0" />
+            <ComponentRef Id="cmp17E990516152969D969823D7EF4B1A64" />
+            <ComponentRef Id="cmp43132C9956863318C874CF1D5DBDD7A2" />
+            <ComponentRef Id="cmp9CE69735FE39BED5D1488A8AE64B6332" />
+            <ComponentRef Id="cmp1313B0460DA1BC06032FBFDEAE11678C" />
+            <ComponentRef Id="cmp168E0C9D467EDD390A751769791FBBD8" />
+            <ComponentRef Id="cmpCFA914BA2D1F931ECE377E14B879CEC8" />
+            <ComponentRef Id="cmp5E098B561DF6750F7201EE28CEBD63BE" />
+            <ComponentRef Id="cmp2CC5B6E5299DD80B00C25FA2097BBB47" />
+            <ComponentRef Id="cmp1A7959099813DEE7ABB119621B616BAC" />
+            <ComponentRef Id="cmpB03F1DE81FC139982382707CD26BE61B" />
+            <ComponentRef Id="cmp20D7D8BC5AB738563CEE652B73FC3B1F" />
+            <ComponentRef Id="cmpDA0771A02592908815499BABC16F67CF" />
+            <ComponentRef Id="cmp893715C75E3B89B144F87D02A0F6C1EE" />
+            <ComponentRef Id="cmpEE332411C14CF4F398F8948068602267" />
+            <ComponentRef Id="cmp2D1739DD8D6F33ACAC25EF484369EB4D" />
+            <ComponentRef Id="cmp13FF4263C5D69A4261981773C7331206" />
+            <ComponentRef Id="cmp0FB5F26170BA03754201F23203B3ED23" />
+            <ComponentRef Id="cmpA14E946CDDEC80E9A567BAF715D4DF1A" />
+            <ComponentRef Id="cmp3919A5E9E258AA52BB6E002B8CA23BC4" />
+            <ComponentRef Id="cmpFB67921901A719EFD9F12B76A57D00A8" />
+            <ComponentRef Id="cmp60A1F1D24F71A1B76614D167BC0F4348" />
+            <ComponentRef Id="cmp2E3DCB8B20A0A0B5988D5C53D7766651" />
+            <ComponentRef Id="cmp7A57980887D742F0941BD2BA7DD22B44" />
+            <ComponentRef Id="cmp2949F964890AF179E8CF0BBF92AD1971" />
+            <ComponentRef Id="cmpF9C1794ACE48AF499FF4342B6D03E434" />
+            <ComponentRef Id="cmpDFD5FC4A53001B36EA96E1FBD3329180" />
+            <ComponentRef Id="cmpEEE78E5998294B710AA7FF4B24BC62DE" />
+            <ComponentRef Id="cmp3737012CC992D909935746922265C49A" />
+            <ComponentRef Id="cmp70765D7B6A04E28ACA8F3C529DE27500" />
+            <ComponentRef Id="cmpAA1DD708065CF630EDAD772223258538" />
+            <ComponentRef Id="cmp739428F36C68928CF98243EE03BD0356" />
+            <ComponentRef Id="cmp4343DF257A25B79BBD50CF3F62CFBE68" />
+            <ComponentRef Id="cmp4E2E83BA4DF72886962908750E2A1C78" />
+            <ComponentRef Id="cmp9A903A7982757275F80AA442C2B3C4BD" />
+            <ComponentRef Id="cmp4084DD6C3AEA4623D5269652D9E3D2EE" />
+            <ComponentRef Id="cmp1178C3F4DB7B487DBEBD328D1A403231" />
+            <ComponentRef Id="cmp19B99A01EA097B60A6B168B0AA25F16D" />
+            <ComponentRef Id="cmp79AE44AAB7C7EA94BEDE91515AAC7876" />
+            <ComponentRef Id="cmpF7238B0C7E82BB6999AC76775441F42F" />
+            <ComponentRef Id="cmp0FAF350245CFEB5196B9D33619AE5A13" />
+            <ComponentRef Id="cmp41854D51CDAB9F6640DB7C9B3902FB05" />
+            <ComponentRef Id="cmp78D05A4B45311325A553E188E4D0AC7F" />
+            <ComponentRef Id="cmpF979F3446D9AB10F22308D86D96DFC7E" />
+            <ComponentRef Id="cmp20D3A10E140EB36D9EDC0932902C7FE3" />
+            <ComponentRef Id="cmp0B65A24930C971C0F5D7C8DAEF3620B5" />
+            <ComponentRef Id="cmp1390E5472A650008FCD7B07ECA6B3E4A" />
+            <ComponentRef Id="cmp77522CBC315118C4199CAA85CA6C6EDD" />
+            <ComponentRef Id="cmp18430009DF5C595B02903FC3A05E5A3C" />
+            <ComponentRef Id="cmp9C1321BB505432DBC8087904EEBF6BF1" />
+            <ComponentRef Id="cmp71DB0CA91494CBC6AD209966939B68F8" />
+            <ComponentRef Id="cmp0CD01C653EFCF635AF1259BCA866E3BC" />
+            <ComponentRef Id="cmpB35C2077235A6475C51B2C1CE355C95B" />
+            <ComponentRef Id="cmp16C62DDCF88D6DFFBEAB1C9F4DE79D2A" />
+            <ComponentRef Id="cmp98946B407AF9E821C452CAD26EF6D85A" />
+            <ComponentRef Id="cmp61762B18FAA29E80A166F90A132CFAEE" />
+            <ComponentRef Id="cmp036DC2DB17A9A85912587F423E37E19A" />
+            <ComponentRef Id="cmp596870C121D8DD872992A74BD3E9E2ED" />
+            <ComponentRef Id="cmp00E1B06F673E3D260ACDE1A3C1774083" />
+            <ComponentRef Id="cmpC2B6E586B0BBC251D6B1094F16CAF7EE" />
+            <ComponentRef Id="cmp72E806CA9F79D9D3B9D02824CB11974B" />
+            <ComponentRef Id="cmp4E352C571FB97A427242D119A1B4D5CC" />
+            <ComponentRef Id="cmp00F5E2238222360850C62E62F2B8EBC3" />
+            <ComponentRef Id="cmp2F20828ECA2522E15FEC97EBE7D3A6F0" />
+            <ComponentRef Id="cmp64A6375B79E46238A9D12A9503ED70AC" />
+            <ComponentRef Id="cmp80200D6E8ED2404027A5869E56707B96" />
+            <ComponentRef Id="cmp08D82793C7DB084DF41F66569C1AC533" />
+            <ComponentRef Id="cmpEC50F6EE6BD0E47D4F11DEBC7B126FD3" />
+            <ComponentRef Id="cmpA69154F0A57AFADEB11CEBB91B9FC7BF" />
+            <ComponentRef Id="cmp5D30016DFCCCFC6C0BA79C7DFE608222" />
+            <ComponentRef Id="cmpCE39A8F0DCA29238CDE4FD776B7F53BE" />
+            <ComponentRef Id="cmp0555BF906D96616770BE1D4CEBAD128F" />
+            <ComponentRef Id="cmp5DB580AF6908E7181EA473328959C025" />
+            <ComponentRef Id="cmp83B3C2C74AC84118C23BD621573BCD1C" />
+            <ComponentRef Id="cmp2016789C115A1325F00D9ACAB7DA73CE" />
+            <ComponentRef Id="cmp6BCF474A0691D97C9395CC1DB253022D" />
+            <ComponentRef Id="cmp8C56B3227269609236D54CF69DA4822D" />
+            <ComponentRef Id="cmpBE30E176F1F79652DEC445C41C960888" />
+            <ComponentRef Id="cmpEFB3D972F27897F84B691577BA354843" />
+            <ComponentRef Id="cmpC35739478F937D16D9CAF22B9305FA85" />
+            <ComponentRef Id="cmp2E4E757AE4261F1642D12D90A601B322" />
+            <ComponentRef Id="cmp024955B6366E14C119B5013C3792F3D2" />
+            <ComponentRef Id="cmpCFDFBC6B7E4FC8ED6FD8DBA936F5B15B" />
+            <ComponentRef Id="cmp7B404BCF18C4D4F05F9C3B9B76F4ED3F" />
+            <ComponentRef Id="cmpF5939D4A831EC9038DB43D00DE728D81" />
+            <ComponentRef Id="cmpF474075542CE12D00B8DC33E54634525" />
+            <ComponentRef Id="cmp20785E4F25C184AEB26D6E468079268C" />
+            <ComponentRef Id="cmpC6A311B3784F9F687BD2E6768BC818E5" />
+            <ComponentRef Id="cmp5889D4CCECAC3BF4AE4A8448FA545407" />
+            <ComponentRef Id="cmp256FBDE9131FDD9C9583A76E30203460" />
+            <ComponentRef Id="cmp9348C7757CDB22E51A5C8F309222D5AD" />
+            <ComponentRef Id="cmpE1CC15C82CB8FC150DE7552CEA22A249" />
+            <ComponentRef Id="cmpBF053061C9233BE9B2FC6CEB56E090F6" />
+            <ComponentRef Id="cmp6776D79B6A449188017CBBFDFB263822" />
+            <ComponentRef Id="cmp81F6AFFA669168BEB98BCE374D64C146" />
+            <ComponentRef Id="cmp765F2CFB5FED2055784C7DB1B9302993" />
+            <ComponentRef Id="cmpD56246B284C2AD09EA04891A371907F9" />
+            <ComponentRef Id="cmp2E0913B377290DBA3AFE97C9E896CEF8" />
+            <ComponentRef Id="cmpAA7CF93DEA6D34734583D685D987D468" />
+            <ComponentRef Id="cmpD79922B336F3B46140425FC9AEED5C3F" />
+            <ComponentRef Id="cmp68A289521E1E8C18999AC23771D9E4BE" />
+            <ComponentRef Id="cmpC437B3AB4C50AAAB60955E3DCA42024C" />
+        </ComponentGroup>
+    </Fragment>
+</Wix>

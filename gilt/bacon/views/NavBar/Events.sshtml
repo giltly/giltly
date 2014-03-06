@@ -1,0 +1,22 @@
+﻿<div class="element">
+  <a class="dropdown-toggle" href="#">
+    <span class="icon-lightning"></span>Events
+  </a>
+  <ul class="dropdown-menu" id="base-submenu1" data-role="dropdown">
+    <li>
+      <a href="/Event/List">@Model.Text.All</a>
+    </li>
+    <li>
+      <a href="@Model.Routes.EVENT_BY_IP_LIST">@Model.Text.By @Model.Text.IP</a>
+    </li>
+    <li>
+      <a href="@Model.Routes.EVENT_BY_COUNTRY_LIST">@Model.Text.By @Model.Text.Country</a>
+    </li>
+    <li>
+      <a href="@Model.Routes.EVENT_BY_SOURCEPORT_LIST">@Model.Text.By @Model.Text.Source @Model.Text.Port</a>
+    </li>
+    <li>
+      <a href="@Model.Routes.EVENT_BY_DESTINATIONPORT_LIST">@Model.Text.By @Model.Text.Destination @Model.Text.Port</a>
+    </li>
+  </ul>
+</div>

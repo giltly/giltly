@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi" xmlns:SystemTools="http://schemas.appsecinc.com/wix/SystemToolsExtension" xmlns:Util="http://schemas.microsoft.com/wix/UtilExtension">
+  <?include Variables.wxi?>
+  <Fragment>
+
+    <DirectoryRef Id="APPLICATIONROOTDIRECTORY">
+      <Component Win64="$(var.Win64Flag)" Id="cmp432f2ad6afca4d339458bbd4386f6aea" Guid="{170784AB-BE7E-40AE-8895-DA7FBE886AD8}">
+        <!--placeholder to allow component to be included-->
+        <CreateFolder/>
+
+        <!-- gilt.tail.service.exe.config -->
+        <Util:XmlFile
+                    Id='DataServerExeConfig_CONNSTRING_UPDATE'
+                    File='[APPLICATIONROOTDIRECTORY]\gilt.tail.service.exe.config'
+                    Action='setValue'
+                    Name="value"
+                    Value="[CONNECTIONSTRING]"
+                    ElementPath="//configuration/snort/add[\[]@key='connection-string'[\]]"
+                    SelectionLanguage="XPath"
+                    Sequence="1"
+                    PreserveModifiedDate='yes'/>
+
+        <Util:XmlFile
+                    Id='ExeConfig_SNORTLOGFOLDER'
+                    File='[APPLICATIONROOTDIRECTORY]\gilt.tail.service.exe.config'
+                    Action='setValue'
+                    Name="value"
+                    Value="[SNORTLOGFOLDER]"
+                    ElementPath="//configuration/snort/add[\[]@key='log-folder'[\]]"
+                    SelectionLanguage="XPath"
+                    Sequence="2"
+                    PreserveModifiedDate='yes'/>
+
+        <Util:XmlFile
+                    Id='ExeConfig_SNORTLOGFILEPREFIX'
+                    File='[APPLICATIONROOTDIRECTORY]\gilt.tail.service.exe.config'
+                    Action='setValue'
+                    Name="value"
+                    Value="[SNORTLOGFILEPREFIX]"
+                    ElementPath="//configuration/snort/add[\[]@key='log-prefixname'[\]]"
+                    SelectionLanguage="XPath"
+                    Sequence="3"
+                    PreserveModifiedDate='yes'/>
+
+        <Util:XmlFile
+                    Id='ExeConfig_SNORTCLASSCONFIG'
+                    File='[APPLICATIONROOTDIRECTORY]\gilt.tail.service.exe.config'
+                    Action='setValue'
+                    Name="value"
+                    Value="[SNORTCLASSCONFIG]"
+                    ElementPath="//configuration/snort/add[\[]@key='classification-config'[\]]"
+                    SelectionLanguage="XPath"
+                    Sequence="4"
+                    PreserveModifiedDate='yes'/>
+
+        <Util:XmlFile
+                    Id='ExeConfig_SNORTREFERENCECONFIG'
+                    File='[APPLICATIONROOTDIRECTORY]\gilt.tail.service.exe.config'
+                    Action='setValue'
+                    Name="value"
+                    Value="[SNORTREFERENCECONFIG]"
+                    ElementPath="//configuration/snort/add[\[]@key='reference-config'[\]]"
+                    SelectionLanguage="XPath"
+                    Sequence="5"
+                    PreserveModifiedDate='yes'/>
+
+        <Util:XmlFile
+                    Id='ExeConfig_SNORTSIDMSGMAP'
+                    File='[APPLICATIONROOTDIRECTORY]\gilt.tail.service.exe.config'
+                    Action='setValue'
+                    Name="value"
+                    Value="[SNORTSIDMSGMAP]"
+                    ElementPath="//configuration/snort/add[\[]@key='sid-msg-map'[\]]"
+                    SelectionLanguage="XPath"
+                    Sequence="6"
+                    PreserveModifiedDate='yes'/>
+
+        <Util:XmlFile
+                    Id='ExeConfig_SNORTGENMSGMAP'
+                    File='[APPLICATIONROOTDIRECTORY]\gilt.tail.service.exe.config'
+                    Action='setValue'
+                    Name="value"
+                    Value="[SNORTGENMSGMAP]"
+                    ElementPath="//configuration/snort/add[\[]@key='gen-msg-map'[\]]"
+                    SelectionLanguage="XPath"
+                    Sequence="7"
+                    PreserveModifiedDate='yes'/>
+
+        <!-- END gilt.tail.service.exe.config -->
+      </Component>
+      
+    </DirectoryRef>
+  </Fragment>
+  <Fragment>
+    <ComponentGroup Id="ConfigSearchReplace">
+      <ComponentRef Id="cmp432f2ad6afca4d339458bbd4386f6aea" />
+    </ComponentGroup>
+  </Fragment>
+
+</Wix>

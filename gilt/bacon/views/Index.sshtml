@@ -1,0 +1,20 @@
+﻿@Master['master.sshtml']
+
+@Section['Content']
+
+@If.HasIsLoggedIn
+   @Partial['HomeTiles/HomeTiles.sshtml']
+
+	<script>
+		$(document).ready(function ()
+		{
+			GILTY.HomeTiles.HomeTiles();
+		});
+	</script>
+@EndIf
+
+@IfNot.HasIsLoggedIn
+  @Partial['Login.sshtml']
+@EndIf
+
+@EndSection

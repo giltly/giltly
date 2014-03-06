@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Include>
+  <!-- List of all the files being deployed in order of deployment -->
+  <Feature Id="ProductFeature" Title="$(var.ApplicationName) !(loc.Binaries)" Level="1">
+    <ComponentGroupRef Id="GiltlyBin" />
+    <ComponentGroupRef Id="IISConfiguration" />
+    <ComponentGroupRef Id="ConfigSearchReplace" />    
+    <ComponentGroupRef Id="Shortcuts" />
+  </Feature>
+
+</Include>

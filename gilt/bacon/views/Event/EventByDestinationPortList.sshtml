@@ -1,0 +1,55 @@
+﻿@Master['master.sshtml']
+
+@Section['Content']
+<div class="text-center">
+	<h1 >@Model.Text.Event @Model.Text.By @Model.Text.Destination @Model.Text.Port</h1>
+</div>
+<script>
+    $(document).ready(function ()
+    {
+        var pagedViewModel = new pageViewModel("@Model.Routes.EVENT_BY_DESTINATIONPORT", "EventByDestinationPortDivId");        
+        pagedViewModel.pagedViewModel.subscribe(function (newValue)
+        {            
+            var totalEventTotal = newValue.PortCount;
+
+            var data = Enumerable.From(newValue.Rows)
+                .Select(function (x) { return { "label": x.Port + " - " + (100 * (x.PortCount / totalEventTotal)).toFixed(2) + "%", "value": (100 * (x.PortCount / totalEventTotal)) } })
+                .ToArray();
+                        
+			GILTY.D3.PieChart(data, "PieChart", 250, 250, 100);
+        });
+        pagedViewModel.bind();
+    });
+</script>
+
+<div class="grid">
+	<div class="row" >
+		<div class="span12 offset3">
+			<div id="PieChart" ></div>
+		</div>
+	</div>
+	<div class="row" >
+		<div class="span12">
+			<div id="EventByDestinationPortDivId">
+    
+				<table data-bind="with: pagedViewModel" class="table striped bordered">
+					<thead>
+						<tr>
+							<th>@Model.Text.Port</th>
+							<th>@Model.Text.Count</th>
+						</tr>
+					</thead>
+					<tbody data-bind="foreach: Rows">
+						<tr>
+							<td data-bind="text: $data.Port"></td>
+							<td data-bind="text: $data.PortCount"></td>
+						</tr>
+					</tbody>
+				</table>
+    
+				@Partial['Pager.sshtml']
+			</div>
+		</div>
+	</div>
+</div>
+@EndSection

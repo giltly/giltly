@@ -1,0 +1,65 @@
+﻿@Master['master.sshtml']
+
+@Section['Content']
+
+<div id="UserProfileId" class="UserProfile">
+    <form action="@Model.Routes.USER_PROFILE_UPDATE" method="post" >
+        <fieldset>
+            <legend>Profile</legend>        
+			<lable>Email</lable>
+            <div class="input-control text" data-role="input-control" >
+                <input placeholder="Email" type="text" readonly="readonly" data-bind="value: EditingModel().Email" name="Email"/>                
+            </div>
+			<lable>First Name</lable>
+            <div class="input-control text" data-role="input-control" >
+                <input placeholder="First Name" type="text" data-bind="value: EditingModel().FirstName, changedCss: 'dirty'" name="FirstName"/>                            
+            </div>
+			<lable>Last Name</lable>
+            <div class="input-control text" data-role="input-control" >
+                <input placeholder="Last Name" type="text" data-bind="value: EditingModel().LastName, changedCss: 'dirty'"  name="LastName"/>                  
+            </div>
+            <input value="Submit" type="submit" data-bind="enable: EditingModel().hasChanges">
+            <input type="button" value="Reset" data-bind="click:  $root.Cancel, enable: EditingModel().hasChanges"/>
+        </fieldset>
+    </form>
+</div>
+
+<script>
+    $(document).ready(function ()
+    {
+        function UserModel(email, firstName, lastName)
+        {
+            var self = this;
+            self.Email = ko.observable(email);
+            self.FirstName = ko.observable(firstName);
+            self.LastName = ko.observable(lastName);
+            return self;
+        }
+        var userProfileModel = new UserModel('@Model.UserModel.UserProxy.Email', '@Model.UserModel.UserProxy.FirstName', '@Model.UserModel.UserProxy.LastName');
+
+        var userProfileVm = function ()
+        {
+            var self = this;
+            self.EditingModel = ko.observable();
+
+            self.Edit = function (userModel)
+            {
+                //enable ko.editables before edit itself.
+                ko.editable(userModel); 
+                userModel.beginEdit();
+                self.EditingModel(userModel);
+            };
+
+            self.Cancel = function ()
+            {
+                self.EditingModel().rollback();
+                self.Edit(userProfileModel);
+            };
+        };        
+        var userProfileVm = new userProfileVm();
+        userProfileVm.Edit(userProfileModel);
+        ko.applyBindings(userProfileVm, document.getElementById('UserProfileId'));        
+    });
+</script>
+
+@EndSection

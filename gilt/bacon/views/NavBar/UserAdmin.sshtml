@@ -1,0 +1,16 @@
+﻿@If.HasIsAdminUser
+<div class="element place-right">
+  <a class="dropdown-toggle" href="#">
+    <i class="icon-accessibility"></i>
+  </a>
+
+  <ul class="dropdown-menu" id="base-submenu1" data-role="dropdown">
+    <li>
+      <a href="@Model.Routes.USER_LIST">@Model.Text.User</a>
+    </li>
+    <li>
+      <a href="@Model.Routes.USERGROUP_LIST">@Model.Text.User @Model.Text.Group</a>
+    </li>
+  </ul>
+</div>
+@EndIf

@@ -1,0 +1,87 @@
+﻿@Master['master.sshtml']
+
+@Section['Content']
+<div class="text-center">
+	<h1 >@Model.Text.Role</h1>
+</div>
+
+<form data-bind="submit: function (data, event) { SubmitForm(data, event, this); }" id="RoleAssignmentDivId">
+    <div class="grid">
+        <div class="row">
+            <div class="span6">
+                <h3>@Model.Text.Unassigned @Model.Text.Role</h3>
+                <div class="unassigned"
+                     data-bind="sortable: { template: 'roleItemTemplate', data: unAssignedItems, afterMove: RoleAssignDropCallBack }"></div>
+            </div>
+            <div class="span6">
+                <h3>@Model.Text.Assigned @Model.Text.Role</h3>
+
+                <div class="assigned" 
+                     data-bind="sortable: { template: 'roleItemTemplate', data: assignedItems, afterMove: RoleAssignDropCallBack }"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="span1">
+                <input value="@Model.Text.Submit" type="submit"/>
+            </div>
+        </div>
+    </div>
+</form>
+
+<script id="roleItemTemplate" type="text/html">
+    <div class="item">
+            <span data-bind="visible: !$root.isItemSelected($data)">
+            <a href="#" data-bind="text: Description, click: $root.selectedTask"></a>
+        </span>
+        <span data-bind="visibleAndSelect: $root.isItemSelected($data)">            
+        </span>  
+    </div>
+</script>
+
+<script>
+    function SubmitForm(data, event, viewmodel)
+    {        
+        var assignedItems = viewmodel.assignedItems();
+        var unAssignedItems = viewmodel.unAssignedItems();
+        var data = {
+            'UserId': GILTY.Uri.Id,
+            'AssignedItems': assignedItems,
+            'UnAssignedItems': unAssignedItems,
+        };
+        //note:
+        //  JSON.stringify()
+        //  contextType : 'application/json; charset=utf-8'
+        //  dataType: 'json',
+        //
+        // are all required by Nancy for Model Binding
+        //  https://github.com/NancyFx/Nancy/wiki/Model-binding
+        //
+        $.ajax({
+            type: "POST",
+            url: "@Model.Routes.ROLE_ASSIGN_ROLES",
+            data: JSON.stringify(data),
+            contentType: 'application/json; charset=utf-8',
+            dataType: 'json',
+            async: false,
+            success: function (data, textStatus, jqXHR)
+            {
+                location.reload();
+            },
+            error: function (data, textStatus, jqXHR)
+            {
+                location.reload();
+            }
+        });
+    }
+
+    function RoleAssignDropCallBack(arg)
+    {        
+    }
+
+    $(document).ready(function ()
+    {
+        var sideBySideVm = new SideBySideViewModel("/Role/AssignData/" + GILTY.Uri.Id, "RoleAssignmentDivId", RoleAssignDropCallBack, SubmitForm);
+        sideBySideVm.bind();
+    });
+</script>
+@EndSection

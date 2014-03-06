@@ -1,0 +1,29 @@
+﻿<fieldset data-bind="visible: null !== $data.TcpHeader.CheckSum">
+  <legend>@Model.Text.TCP @Model.Text.Header</legend>
+  <table class="table bordered">
+    <thead>
+      <tr>
+        <th>@Model.Text.Sequence</th>
+        <th>ACK</th>
+        <th>Offset</th>
+        <th>Reserved</th>
+        <th>Flags</th>
+        <th>Window</th>
+        <th>@Model.Text.CheckSum</th>
+        <th>Urgent</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td data-bind="text: $data.TcpHeader.Sequence"></td>
+        <td data-bind="text: $data.TcpHeader.ACK"></td>
+        <td data-bind="text: $data.TcpHeader.Offset"></td>
+        <td data-bind="text: $data.TcpHeader.Reserved"></td>
+        <td data-bind="text: $data.TcpHeader.Flags"></td>
+        <td data-bind="text: $data.TcpHeader.Window"></td>
+        <td data-bind="text: $data.TcpHeader.CheckSum"></td>
+        <td data-bind="text: $data.TcpHeader.Urgent"></td>
+      </tr>
+    </tbody>
+  </table>
+</fieldset>

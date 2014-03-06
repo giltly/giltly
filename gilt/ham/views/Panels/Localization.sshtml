@@ -1,0 +1,15 @@
+﻿<div class="panel">
+  <div class="panel-header">
+    Localization
+  </div>
+  <div class="panel-content">
+    <ul>
+      <li>Fully localized:
+        <ul>
+          <li>En-US</li>
+          <li>Es-ES</li>          
+        </ul>      
+      </li>
+    </ul>
+  </div>
+</div>

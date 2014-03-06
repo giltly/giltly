@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Include>
+  <!-- 
+    items that are shared amongst all installers
+    includes things like logos, icons, etc.       
+  -->
+
+  <!-- The license file -->
+  <WixVariable Id="WixUILicenseRtf" Value="$(var.LicenseDir)\LICENSE.rtf" />
+  <!-- The icon file -->
+  <Icon Id="product.ico" SourceFile="$(var.IconDir)\product.ico"/>
+  <!-- Banner Bitmap 493 by 58 pixels -->
+  <WixVariable Id="WixUIBannerBmp" Value="$(var.IconDir)\banner.bmp" />
+  <!-- Dialog Bitmap 493 by 312 pixels -->
+  <WixVariable Id="WixUIDialogBmp" Value="$(var.IconDir)\dialog.bmp" />
+  <!-- Exclamation Icon 32 by 32 pixels-->
+  <WixVariable Id="WixUIExclamationIco" Value="$(var.IconDir)\exclamation.ico" />
+  <!-- Info Icon 16 by 16 pixels-->
+  <WixVariable Id="WixUIInfoIco" Value="$(var.IconDir)\setup.ico" />
+  <!-- New Folder Icon 16 by 16 pixels-->
+  <WixVariable Id="WixUINewIco" Value="$(var.IconDir)\folder_new.ico" />
+  <!-- Up Folder Icon 16 by 16 pixels-->
+  <WixVariable Id="WixUIUpIco" Value="$(var.IconDir)\folder.ico" />   
+  
+  <!--default media to single file-->
+  <Media Id="1" Cabinet="$(var.ApplicationName)" EmbedCab="yes"/>
+
+  <!-- Schedules the removal of existing products prior to installing the new version -->
+  <MajorUpgrade Schedule="afterInstallInitialize" DowngradeErrorMessage="!(loc.DownGradeMessage)" />
+
+  <!-- supress the repair option from control panel-->
+  <Property Id='ARPNOREPAIR'>1</Property>
+
+</Include>

@@ -1,0 +1,16 @@
+﻿      <div class="element place-right">
+        <a class="dropdown-toggle" href="#">
+          <i class="icon-user-3"></i>
+        </a>
+        <ul class="dropdown-menu" id="base-submenu1" data-role="dropdown">
+          <li>
+            <a href="@Model.Routes.USER_PROFILE">@Model.Text.Edit @Model.Text.Profile</a>
+          </li>
+          <li>
+            <a href="@Model.Routes.USER_CHANGEPASSWORD">Change @Model.Text.Password</a>
+          </li>
+          <li>
+            <a href="@Model.Routes.LOGOUT">@Model.Text.Logout</a>
+          </li>
+        </ul>
+      </div>

@@ -1,0 +1,59 @@
+﻿<form action="/Search/Update" method="post" id="SearchFormDivId">
+  <fieldset>
+    <legend>@Model.Text.Search</legend>
+    <div class="grid">
+      <div class="row">
+        <div class="span12">
+          <lable>@Model.Text.Name</lable>
+          <div class="input-control text" data-role="input-control" >
+            <!-- Hidden Id Input; When Present Will Do Update, Else Add -->
+            <input type="hidden" data-bind="value: $root.Id" name="Id"/>
+            <input placeholder="Name" type="text" data-bind="value: $root.Name" name="Name"/>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span6">
+          <lable>@Model.Text.Source @Model.Text.IP</lable>
+          <div class="input-control select">
+            <select class="CustomComboBox" data-bind="options: $root.SourceIps" name="SourceIpString" ></select>
+          </div>
+          <lable>@Model.Text.Destination @Model.Text.IP</lable>
+          <div class="input-control select">
+            <select class="CustomComboBox" data-bind="options: $root.DestinationIps" name="DestinationIpString"></select>
+          </div>
+          <lable>@Model.Text.Signature @Model.Text.Classification</lable>
+          <div class="input-control select">
+            <select class="CustomComboBox" data-bind="options: $root.SignatureClassifications" name="SignatureClassification"></select>
+          </div>
+          <lable>@Model.Text.Signature</lable>
+          <div class="input-control select">
+            <select class="CustomComboBox" data-bind="options: $root.Signatures" name="Signature"></select>
+          </div>
+          <input value="@Model.Text.Submit" type="submit"/>
+        </div>
+
+        <div class="span6">
+          <lable>@Model.Text.Packet @Model.Text.Type</lable>
+          <div class="input-control select">
+            <select class="CustomComboBox" data-bind="options: $root.PacketTypes" name="PacketType"></select>
+          </div>
+          <lable>@Model.Text.Source @Model.Text.Port</lable>
+          <div class="input-control select">
+            <select class="CustomComboBox" data-bind="options: $root.SourcePorts" name="SourcePort"></select>
+          </div>
+          <lable>@Model.Text.Destination @Model.Text.Port</lable>
+          <div class="input-control select">
+            <select class="CustomComboBox" data-bind="options: $root.DestinationPorts" name="DestinationPort"></select>
+          </div>
+          <lable>@Model.Text.Date &amp; @Model.Text.Time</lable>
+          <div class="input-control select">
+            <input id="SearchTimeRangePickerStart" class="Datepicker" type="text" value="" name="StartSearch"/>
+            <input id="SearchTimeRangePickerEnd" class="Datepicker" type="text" value="" name="EndSearch"/>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </fieldset>
+</form>

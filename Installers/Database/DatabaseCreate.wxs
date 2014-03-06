@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"
+     xmlns:util="http://schemas.microsoft.com/wix/UtilExtension"
+     xmlns:SqlUtil="http://schemas.microsoft.com/wix/SqlExtension">
+  <?include Variables.wxi?>
+  <Fragment>
+    <DirectoryRef Id="APPLICATIONROOTDIRECTORY">
+      <Component Win64="$(var.Win64Flag)" Id="CreateUserComponent" Guid="{5DCF275F-8505-4955-8F70-989F71D2E678}">
+        <CreateFolder>
+          <Permission User="Everyone" 
+                      GenericAll="yes"
+                      ChangePermission="no" 
+                      TakeOwnership="no" 
+                      GenericExecute ="no" 
+                      Read="yes" 
+                      GenericWrite ="no" 
+                      GenericRead ="yes" 
+                      ReadPermission ="yes"
+                      SpecificRightsAll ="yes" />
+
+          <util:PermissionEx User ="[SQLSERVERSERVICEACCOUNT]"
+                             GenericAll ="yes"
+                             ChangePermission ="yes"
+                             TakeOwnership ="yes"
+                             GenericExecute ="yes"
+                             Read="yes"
+                             GenericWrite ="yes"
+                             GenericRead ="yes"
+                             ReadPermission ="yes" />
+
+
+
+          <!--<util:PermissionEx User ="NT Service\MSSQLSERVER" 
+                             GenericAll ="yes"
+                             ChangePermission ="yes" 
+                             TakeOwnership ="yes" 
+                             GenericExecute ="yes" 
+                             Read="yes" 
+                             GenericWrite ="yes" 
+                             GenericRead ="yes" 
+                             ReadPermission ="yes" />-->
+        </CreateFolder>       
+        <!-- Create a [new] window user that will be able to login to the database-->
+        <util:User
+            Id='SQLUser'
+            CreateUser='yes'
+            LogonAsService='yes'
+            Name='[SQLUSER]'
+            Password='[SQLPASSWORD]'
+            PasswordExpired='no'
+            PasswordNeverExpires='yes' />
+      </Component>
+    </DirectoryRef>
+
+    <DirectoryRef Id="APPLICATIONROOTDIRECTORY">
+      <Component Win64="$(var.Win64Flag)" Id="DatabaseCreateComponent" Guid="{07DD0CD7-4624-40E0-A0A7-BC91A6348B4E}">
+        <CreateFolder/>        
+        <!--
+            create connection to master
+        -->
+        <SqlUtil:SqlDatabase
+              Id="MasterDatabaseAttach"
+              Database="master"
+              Server="[DATABASESERVER]"
+              Instance="[DATABASEINSTANCE]"
+              CreateOnInstall="no"
+              DropOnUninstall="no"
+              ContinueOnError="no"
+              ConfirmOverwrite="yes">
+          <!--
+            attach the database if it does not already exist
+          -->
+          <SqlUtil:SqlString
+            Id="SqlDatabaseAttach"
+            ContinueOnError="no"
+            ExecuteOnInstall="yes"
+            Sequence="1"
+            SQL="IF (DB_ID('[DATABASENAME]') IS NULL) CREATE DATABASE [DATABASENAME]  ON (NAME='[DATABASENAME]_datfile',FILENAME = '[APPLICATIONROOTDIRECTORY]$(var.MdfName)',SIZE=512), (NAME='[DATABASENAME]_logfile', FILENAME = '[APPLICATIONROOTDIRECTORY]$(var.LdfName)', SIZE=512);" />
+        </SqlUtil:SqlDatabase>
+      </Component>
+    </DirectoryRef>
+
+    <DirectoryRef Id="APPLICATIONROOTDIRECTORY">
+      <Component Win64="$(var.Win64Flag)" Id="DatabaseInsertComponent" Guid="{8070EC92-4365-4F4C-AE0A-7E3EA700B527}">
+        <CreateFolder/>
+        <!--
+            create connection to master
+        -->
+        <SqlUtil:SqlDatabase
+              Id="DatabaseSchemaInsert"
+              Database="[DATABASENAME]"
+              Server="[DATABASESERVER]"
+              Instance="[DATABASEINSTANCE]"
+              CreateOnInstall="no"
+              DropOnUninstall="no"
+              ContinueOnError="no"
+              ConfirmOverwrite="yes">
+          
+          <!-- Create the Schema -->
+          <SqlUtil:SqlScript
+            Id='SchemaCreate'
+            ContinueOnError='no'
+            ExecuteOnUninstall='no'
+            ExecuteOnReinstall='yes'
+            BinaryKey='Schema'
+            ExecuteOnInstall='yes'
+            Sequence='1'/>
+          <SqlUtil:SqlScript
+            Id='ViewsCreate'
+            ContinueOnError='no'
+            ExecuteOnUninstall='no'
+            ExecuteOnReinstall='yes'
+            BinaryKey='Views'
+            ExecuteOnInstall='yes'
+            Sequence='2'/>
+          <SqlUtil:SqlScript
+            Id='FunctionsCreate'
+            ContinueOnError='no'
+            ExecuteOnUninstall='no'
+            ExecuteOnReinstall='yes'
+            BinaryKey='Functions'
+            ExecuteOnInstall='yes'
+            Sequence='3'/>
+          <!-- Insert the data-->
+          <SqlUtil:SqlScript
+            Id='DataCreate'
+            ContinueOnError='no'
+            ExecuteOnUninstall='no'
+            ExecuteOnReinstall='yes'
+            BinaryKey='Data'
+            ExecuteOnInstall='yes'
+            Sequence='4'/>
+
+        </SqlUtil:SqlDatabase>
+      </Component>
+    </DirectoryRef>
+    
+    <Binary Id='Schema' SourceFile='$(var.GiltlyDatabaseSchemaPackageDir)\schema.sql' />
+    <Binary Id='Data' SourceFile='$(var.GiltlyDatabaseDataPackageDir)\data.sql' />
+    <Binary Id='Views' SourceFile='$(var.GiltlyDatabaseDataPackageDir)\Views.sql' />
+    <Binary Id='Functions' SourceFile='$(var.GiltlyDatabaseDataPackageDir)\Functions.sql' />
+
+  </Fragment>
+</Wix>

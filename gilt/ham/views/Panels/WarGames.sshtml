@@ -1,0 +1,8 @@
+﻿<div class="panel">
+  <div class="panel-header">
+    War Games
+  </div>
+  <div class="panel-content">
+    <img class="poloroid bd-darkMagenta shadow" src="/images/features/wargames.jpg" alt="War Games" />
+  </div>
+</div>

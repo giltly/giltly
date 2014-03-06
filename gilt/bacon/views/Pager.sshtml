@@ -1,0 +1,5 @@
+﻿<div class="PagerControl">
+	<div class="pagination" id="pager">
+	</div>
+	<!--<select data-bind="options: availablePageSize, optionsText: $data, value: selectedPageSize"></select>-->		
+</div>

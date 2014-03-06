@@ -1,0 +1,39 @@
+﻿@Partial['Tables/GeoLocation.sshtml']
+
+<div class="tiles">
+    @Partial['HomeTiles/EventTotal.sshtml']
+    @Partial['HomeTiles/EventToday.sshtml']
+    @Partial['HomeTiles/EventYesterday.sshtml']
+
+    <div class="tile quadro triple-vertical bg-white">
+		<div class="tile-content">
+			<div class="tab-control" data-role="tab-control">
+				<ul class="tabs">
+					<li class="active"><a href="#_destinationPort">@Model.Text.Destination</a></li>
+                    <li ><a href="#_sourcePort">@Model.Text.Source</a></li>					
+                    <li ><a href="#_ip">@Model.Text.IP</a></li>					
+                    <li ><a href="#_country">@Model.Text.Country</a></li>					
+				</ul>
+     
+				<div class="frames">
+					<div class="frame" id="_destinationPort">
+                        <span class="name">@Model.Text.Event @Model.Text.By @Model.Text.Destination @Model.Text.Port</span>
+                        <table id="EventUniqueDestinationPort" class="table striped bordered"></table>
+					</div>
+					<div class="frame" id="_sourcePort">
+                        <span class="name">@Model.Text.Event @Model.Text.By @Model.Text.Source @Model.Text.Port</span>
+                        <table id="EventUniqueSourcePort" class="table striped bordered"></table>
+					</div>						
+                    <div class="frame" id="_ip">
+                        <span class="name">@Model.Text.Event @Model.Text.By @Model.Text.IP</span>
+                        <table id="EventUniqueIp" class="table striped bordered"></table>
+                    </div>						
+                    <div class="frame" id="_country">
+                        <span class="name">@Model.Text.Event @Model.Text.By @Model.Text.Country</span>
+                        <table id="EventUniqueCountry" class="table striped bordered"></table>
+                    </div>						
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

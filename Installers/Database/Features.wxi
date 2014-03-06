@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Include>
+  <!-- List of all the files being deployed in order of deployment -->
+  <Feature Id="ProductFeature" Title="$(var.ApplicationName) !(loc.Binaries)" Level="1">
+    <ComponentRef Id="CreateUserComponent" />    
+    <ComponentGroupRef Id="DatabaseSchemaBin" />
+    <ComponentGroupRef Id="DatabaseSchemaDataBin" />
+    <ComponentGroupRef Id="DatabaseSchemaFunctionsBin" />
+    <ComponentGroupRef Id="DatabaseSchemaViewsBin" />    
+    <ComponentRef Id="DatabaseCreateComponent" />
+    <ComponentRef Id="DatabaseInsertComponent" />    
+    <ComponentGroupRef Id="InstallLocationsRegistry" />
+    <ComponentGroupRef Id="Shortcuts" />
+  </Feature>
+
+</Include>

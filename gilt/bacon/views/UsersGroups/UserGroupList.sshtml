@@ -1,0 +1,35 @@
+﻿@Master['master.sshtml']
+
+@Section['Content']
+<div class="text-center">
+	<h1 >@Model.Text.UserGroup</h1>
+</div>
+<script>
+    $(document).ready(function ()
+    {
+        $(function () { new pageViewModel("/UserGroups/", "UserGroupListDivId").bind(); })
+    });
+</script>
+
+<div id="UserGroupListDivId">    
+    <table data-bind="with: pagedViewModel" class="table striped bordered">		
+        <thead>
+            <tr>
+				<th>@Model.Text.Name</th>
+                <th>@Model.Text.Description</th>
+				<th>@Model.Text.Assigned @Model.Text.UserGroup</th>
+            </tr>
+        </thead>
+        <tbody data-bind="foreach: Rows">
+            <tr>
+				<td data-bind="text: $data.Name"></td>
+				<td data-bind="text: $data.Description"></td>
+				<td><a data-bind="attr: { href: '/UserGroups/Assignment/' + $data.Id}">@Model.Text.UserGroup</a></td>
+            </tr>		
+        </tbody>
+    </table>
+	<form action="@Model.Routes.USERGROUP_ADD">
+		<input type="submit" value="@Model.Text.Add"/>
+    </form>
+</div>
+@EndSection

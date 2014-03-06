@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>gilt.db</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{ff5f974b-942b-4ff8-b5b5-da2e19522398}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql110DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>giltdb</RootNamespace>
+    <AssemblyName>giltdb</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <GenerateCreateScript>True</GenerateCreateScript>
+    <DefaultSchema>dbo</DefaultSchema>
+    <IncludeSchemaNameInFileName>True</IncludeSchemaNameInFileName>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+    <TargetDatabase>giltdb</TargetDatabase>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <!-- VS10 without SP1 will not have VisualStudioVersion set, so do that here -->
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <!-- Default to the v10.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="Tables" />
+    <Folder Include="Views" />
+    <Folder Include="Functions" />
+    <Folder Include="Procedures" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Tables\dbo.Event.sql" />
+    <Build Include="Tables\dbo.Signature.sql" />
+    <Build Include="Tables\dbo.Reference.sql" />
+    <Build Include="Tables\dbo.Protocols.sql" />
+    <Build Include="Tables\dbo.Services.sql" />
+    <Build Include="Tables\dbo.Flags.sql" />
+    <Build Include="Tables\dbo.ReferenceSystem.sql" />
+    <Build Include="Tables\dbo.SignatureClassification.sql" />
+    <Build Include="Tables\dbo.Data.sql" />
+    <Build Include="Tables\dbo.Detail.sql" />
+    <Build Include="Tables\dbo.TCPHeader.sql" />
+    <Build Include="Tables\dbo.UDPHeader.sql" />
+    <None Include="giltdb.publish.xml" />
+    <Build Include="Tables\dbo.Users.sql" />
+    <Build Include="Tables\dbo.Search.sql" />
+    <Build Include="Procedures\dbo.DeleteEventData.sql" />
+    <Build Include="Tables\dbo.NLog.sql" />
+    <Build Include="Procedures\dbo.DeleteGeoData.sql" />
+    <Build Include="Procedures\dbo.DeleteLogData.sql" />
+    <Build Include="Procedures\dbo.DeleteSnortData.sql" />
+    <Build Include="Views\dbo.EventsBySignature.sql" />
+    <Build Include="Tables\dbo.Roles.sql" />
+    <Build Include="Tables\dbo.UserRoles.sql" />
+    <Build Include="Tables\dbo.UserGroups.sql" />
+    <Build Include="Tables\dbo.UserUserGroups.sql" />
+    <Build Include="Tables\dbo.EventComments.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Tables\dbo.Schema.sql" />
+    <Build Include="Tables\dbo.SignatureReference.sql" />
+    <Build Include="Tables\dbo.LogHistory.sql" />
+    <Build Include="Tables\dbo.LogEntry.sql" />
+    <Build Include="Tables\dbo.GeoIp.sql" />
+    <Build Include="Tables\dbo.GeoLocation.sql" />
+    <Build Include="Views\dbo.EventsByCountry.sql" />
+    <Build Include="Views\dbo.EventsByIp.sql" />
+    <Build Include="Functions\dbo.VarBinaryToIpString.sql" />
+    <Build Include="Tables\dbo.CountryCodes.sql" />
+    <Build Include="Views\dbo.UniqueSourcePorts.sql" />
+    <Build Include="Views\dbo.UniqueDestinationPorts.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Tables\dbo.Encoding.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Tables\dbo.IPHeader.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Tables\dbo.ProtocolOptions.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Tables\dbo.ICMPHeader.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Tables\dbo.Sensor.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="giltdb.refactorlog" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="PostDeploy.sql" />
+  </ItemGroup>
+</Project>

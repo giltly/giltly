@@ -1,0 +1,25 @@
+﻿@If.HasIsAdminUser
+<div class="element place-right">
+  <a class="dropdown-toggle" href="#">
+    <i class="icon-database"></i>
+  </a>
+
+  <ul class="dropdown-menu" id="base-submenu1" data-role="dropdown">
+    <li>
+      <a href="@Model.Routes.ADMIN_DATA_RESET">@Model.Text.Reset @Model.Text.Data</a>
+    </li>
+    <li>
+      <a href="@Model.Routes.ADMIN_EVENT_DELETE">@Model.Text.Delete @Model.Text.EventData</a>
+    </li>
+    <li>
+      <a href="@Model.Routes.ADMIN_GEO_DELETE">@Model.Text.Delete @Model.Text.GeoData</a>
+    </li>
+    <li>
+      <a href="@Model.Routes.ADMIN_SNORT_DELETE">@Model.Text.Delete @Model.Text.SnortData</a>
+    </li>
+    <li>
+      <a href="@Model.Routes.ADMIN_LOG_DELETE">@Model.Text.Delete @Model.Text.LogData</a>
+    </li>
+  </ul>
+</div>
+@EndIf

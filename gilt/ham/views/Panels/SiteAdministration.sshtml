@@ -1,0 +1,18 @@
+﻿<div class="panel">
+  <div class="panel-header">
+    Site Administration
+  </div>
+  <div class="panel-content">
+    <ul>
+      <li>Assign users to groups to inform users of critical alerts.</li>
+      <li>Assign users to any one of three roles:</li>
+      <ul>
+        <li>System Administrator: Can delete event data.</li>
+        <li>Power User: Can create and assign searches.</li>
+        <li>Normal User: Can comment on events.</li>
+        <li>All roles can comment and email alerts.</li>
+      </ul>
+      <li>Email incoming alerts based on customized query.</li>
+    </ul>
+  </div>
+</div>

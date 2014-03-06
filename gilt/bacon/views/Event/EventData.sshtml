@@ -1,0 +1,17 @@
+﻿<fieldset data-bind="visible: null !== $data.Data && $data.Data.length >= 1">
+  <legend>@Model.Text.Event @Model.Text.Data</legend>
+  <table class="table striped bordered">
+    <thead>
+      <tr>
+        <th>@Model.Text.Payload</th>
+      </tr>
+    </thead>
+    <tbody data-bind="foreach: $data.Data">
+      <tr>
+        <td>
+          <div data-bind="text: $data.Payload, css : { wordwrap : true }" style="width: 750px"></div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</fieldset>

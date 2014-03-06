@@ -1,0 +1,31 @@
+﻿<div class="panel">
+  <div class="panel-header">
+    Features
+  </div>
+  <div class="panel-content">
+    <!--<ul >
+      <li>Source and Destination IP.</li>
+      <li>Packet Type: TCP,UDP, ICMP.</li>
+      <li>Source and Destination Port.</li>
+      <li>Signature and Signature Classification.</li>
+      <li>Date Range.</li>
+      <li>Source and Destination Country.</li>
+      <li>Create Personal Searches</li>
+    </ul>-->
+    
+    <ul >
+      <li>Simple Guided MSI Installation</li>
+      <li>Customizable Event Searches</li>
+      <li>Email Event Alerts</li>      
+      <li>Simple Role Based User Administration:</li>
+      <ul>
+        <li>System Administrator: Can delete event data.</li>
+        <li>Power User: Can create and assign searches.</li>
+        <li>Normal User: Can comment on events.</li>
+        <li>All roles can comment and email alerts.</li>
+      </ul>
+      <li>Professional Reports</li>
+      <li>Localized: [En-US, Es-ES]</li>
+    </ul>
+  </div>
+</div>

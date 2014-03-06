@@ -1,0 +1,33 @@
+﻿<div class="carousel" id="carousel1" style="width: 100%; height: 300px;">
+  <div class="slide" >
+    <img src="/images/features/eventByCountry.jpg" />    
+  </div>
+  <div class="slide" >
+    <img src="/images/features/wargames.jpg" />    
+  </div>
+  <div class="slide" >
+    <img src="/images/features/customSearch.jpg" />    
+  </div>
+  <div class="slide" >
+    <img src="/images/features/eventByDestinationPort.jpg" />    
+  </div>
+  <div class="slide" >
+    <img src="/images/features/eventByIp.jpg" />    
+  </div>
+  <div class="slide" >
+    <img class="bd-darkMagenta" src="/images/features/eventBySourcePort.jpg" />    
+  </div>
+  <div class="slide" >
+    <img src="/images/features/eventDetail.jpg" />    
+  </div>
+  <div class="slide" >
+    <img src="/images/features/events.jpg" />    
+  </div>
+  <a class="controls left fg-black">
+    <i class="icon-arrow-left-5"></i>
+  </a>
+  <a class="controls right fg-black">
+    <i class="icon-arrow-right-5"></i>
+  </a>
+
+</div>

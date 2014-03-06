@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{53BFF99B-EA53-48D1-A567-3CE84FB60621}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>gilt.dblinq</RootNamespace>
+    <AssemblyName>giltdblinq</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\giltdblinq.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Linq.Dynamic">
+      <HintPath>..\..\..\packages\System.Linq.Dynamic.1.0.0\lib\net40\System.Linq.Dynamic.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="events\EventCommentsRepository.cs" />
+    <Compile Include="events\IEventCommentsRepository.cs" />
+    <Compile Include="events\IEventDelete.cs" />
+    <Compile Include="events\IGeoEvent.cs" />
+    <Compile Include="events\EventRepository.cs" />
+    <Compile Include="events\IEventRepository.cs" />
+    <Compile Include="ipdata\TcpHeadersRepository.cs" />
+    <Compile Include="ipdata\ITcpHeadersRepository.cs" />
+    <Compile Include="ipdata\UdpHeadersRepository.cs" />
+    <Compile Include="ipdata\IUdpHeadersRepository.cs" />
+    <Compile Include="ipdata\DatasRepository.cs" />
+    <Compile Include="ipdata\IDatasRepository.cs" />
+    <Compile Include="ipdata\IcmpHeadersRepository.cs" />
+    <Compile Include="ipdata\IIcmpHeadersRepository.cs" />
+    <Compile Include="ipdata\IIpHeadersRepository.cs" />
+    <Compile Include="ipdata\IpHeadersRepository.cs" />
+    <Compile Include="logs\LogHistoryRepository.cs" />
+    <Compile Include="logs\ILogHistoryRepository.cs" />
+    <Compile Include="logs\ILogEntryRepository.cs" />
+    <Compile Include="logs\LogEntryRepository.cs" />
+    <Compile Include="proxy\LogHistoryProxy.cs" />
+    <Compile Include="proxy\LogEntryProxy.cs" />
+    <Compile Include="proxy\EventCommentsProxy.cs" />
+    <Compile Include="proxy\ProxyBase.cs" />
+    <Compile Include="proxy\UserUserGroupsProxy.cs" />
+    <Compile Include="proxy\UserGroupsProxy.cs" />
+    <Compile Include="proxy\UserRolesProxy.cs" />
+    <Compile Include="proxy\RolesProxy.cs" />
+    <Compile Include="proxy\UniqueSourcePortProxy.cs" />
+    <Compile Include="proxy\UniqueDestinationPortProxy.cs" />
+    <Compile Include="roles\UserRolesRepository.cs" />
+    <Compile Include="roles\IUserRolesRepository.cs" />
+    <Compile Include="roles\IRolesRepository.cs" />
+    <Compile Include="roles\RolesRepository.cs" />
+    <Compile Include="search\ISearchEvent.cs" />
+    <Compile Include="GenericRepository.cs" />
+    <Compile Include="giltdb.cs">
+      <DependentUpon>giltdb.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="giltdb.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>giltdb.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="IGenericRepository.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="proxy\SearchProxy.cs" />
+    <Compile Include="proxy\GeoDataProxy.cs" />
+    <Compile Include="proxy\EventsByCountryProxy.cs" />
+    <Compile Include="proxy\DataProxy.cs" />
+    <Compile Include="proxy\EventProxy.cs" />
+    <Compile Include="proxy\EventsByIpProxy.cs" />
+    <Compile Include="proxy\FlagProxy.cs" />
+    <Compile Include="proxy\CountryCodeProxy.cs" />
+    <Compile Include="proxy\GeoLocationProxy.cs" />
+    <Compile Include="proxy\IcmpHeaderProxy.cs" />
+    <Compile Include="proxy\IpHeaderProxy.cs" />
+    <Compile Include="proxy\SensorProxy.cs" />
+    <Compile Include="proxy\SignatureClassificationProxy.cs" />
+    <Compile Include="proxy\SignatureProxy.cs" />
+    <Compile Include="proxy\TcpHeaderProxy.cs" />
+    <Compile Include="proxy\UdpHeaderProxy.cs" />
+    <Compile Include="proxy\UsersProxy.cs" />
+    <Compile Include="search\SearchRepository.cs" />
+    <Compile Include="search\ISearchRepository.cs" />
+    <Compile Include="sensor\ISensorRepository.cs" />
+    <Compile Include="sensor\SensorRepository.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="signatures\ISignatureRepository.cs" />
+    <Compile Include="signatures\SignaturesRepository.cs" />
+    <Compile Include="user\UserUserGroupsRepository.cs" />
+    <Compile Include="user\IUserUserGroupsRepository.cs" />
+    <Compile Include="user\IUserGroupsRepository.cs" />
+    <Compile Include="user\IUsersRepository.cs" />
+    <Compile Include="user\UserRepository.cs" />
+    <Compile Include="user\UserGroupsRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="giltdb.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>giltdb.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="giltdb.dbml.layout">
+      <DependentUpon>giltdb.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\util\util\gilt.util.csproj">
+      <Project>{445c080f-31b8-4559-90b7-ce94d3ca8a47}</Project>
+      <Name>gilt.util</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

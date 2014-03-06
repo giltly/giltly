@@ -1,0 +1,26 @@
+﻿<tr data-bind="click: $root.setSelectedRow, attr : { 'class': 'child-' + $data.Id + ' eventDetail' }, visbile : false, style : {display: 'none'}" >
+  <td colspan="9">
+    @Partial['Event/EventTCP.sshtml']
+    @Partial['Event/EventUDP.sshtml']
+    @Partial['Event/EventICMP.sshtml']
+    @Partial['Event/EventInfo.sshtml']
+    @Partial['Event/EventData.sshtml']
+    @Partial['Event/EventComment.sshtml']
+  </td>
+  
+  <!-- the right hand column that contains the export buttons-->
+  <td>
+    <ul class="noBullet">
+      <li>
+        <form>
+          <input type="Submit" value="@Model.Text.Comment" data-bind="click: function(data,event) { GILTY.EventComment.CreateEventComment('EventComment_' + data.Id, data.Id) }"  ></input>
+        </form>
+      </li>
+      <li>
+        <form>
+          <input type="Submit" value="@Model.Text.Assign"></input>
+        </form>
+      </li>
+    </ul>
+  </td>
+</tr>
