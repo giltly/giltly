@@ -1,7 +1,7 @@
 ﻿using System;
-using System.Reflection;
-using System.IO;
 using System.Configuration;
+using System.IO;
+using System.Reflection;
 
 namespace gilt.util
 {
