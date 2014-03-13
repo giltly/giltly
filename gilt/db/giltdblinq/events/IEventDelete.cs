@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using gilt.dblinq.proxy;
-
+﻿
 namespace gilt.dblinq.events
 {
     /// <summary>

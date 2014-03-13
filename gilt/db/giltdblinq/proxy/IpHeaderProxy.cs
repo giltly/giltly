@@ -1,5 +1,5 @@
-﻿using System.Net;
-using System.Data.Linq;
+﻿using System.Data.Linq;
+using System.Net;
 
 namespace gilt.dblinq.proxy
 {

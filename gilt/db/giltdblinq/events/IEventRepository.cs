@@ -1,7 +1,5 @@
-﻿using System;
-using System.Linq;
+﻿using gilt.dblinq.proxy;
 using System.Collections.Generic;
-using gilt.dblinq.proxy;
 
 namespace gilt.dblinq.events
 {

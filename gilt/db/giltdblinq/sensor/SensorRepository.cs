@@ -1,8 +1,6 @@
-﻿using System;
+﻿using gilt.dblinq.proxy;
 using System.Data.Linq;
-using System.Collections.Generic;
 using System.Linq;
-using gilt.dblinq.proxy;
 
 namespace gilt.dblinq.sensor
 {
