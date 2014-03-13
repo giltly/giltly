@@ -1,4 +1,5 @@
 ﻿using gilt.dblinq;
+using gilt.util;
 using NLog;
 using System;
 using System.Collections.Generic;
@@ -7,7 +8,6 @@ using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Transactions;
-using gilt.util;
 
 namespace gilt.geo
 {
