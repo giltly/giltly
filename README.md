@@ -10,7 +10,7 @@ Giltly is simple unified2 log processing for windows.
 
 As [Tim Dailey] describes:
 
-> The overriding design goal for giltly is to be process IDS alerts on windows in a simple to use and easy to install package. 
+> The overriding design goal for giltly is to quickly process IDS alerts on windows with a simple to use, easy to install, and visually modern package. 
 
 Version
 ----
@@ -19,7 +19,7 @@ Version
 
 Open Source
 -----------
-Giltly use all kinds of open source software.  
+Giltly uses all kinds of open source software.  
 Thanks other developers!
 
 #### ASP.NET / Javascript
@@ -45,6 +45,10 @@ Thanks other developers!
 
 #### .NET
 * [PacketDotNet] - packet parsing library
+* [Newtonsoft.Json] - json library
+* [Effortless .Net Encryption] - simple to use encryption library
+* [NLOG] -  logging
+* [Dynamic Linq] - dynamic linq expressions
  
 Installation
 --------------
@@ -83,6 +87,9 @@ GPLv3
 [kosortable]:https://github.com/rniemeyer/knockout-sortable
 [purl]:https://github.com/allmarkedup/purl
 [PacketDotNet]:http://sourceforge.net/projects/packetnet/
-
+[Newtonsoft.Json]:http://json.codeplex.com/
+[Effortless .Net Encryption]:http://effortlessencryption.codeplex.com/
+[NLOG]:http://nlog-project.org/
+[Dynamic Linq]:http://dynamiclinq.codeplex.com/
 
     
