@@ -5,21 +5,16 @@
 	<h1 >@Model.Text.Timeline</h1>
 </div>
 <script>
-
     $(document).ready(function ()
     {
-        //timeline at bottom of page
-        $.when($.ajax({ type: "GET", url: "/Event/TimelineData" })).then(function (data, textStatus, jqXHR)
-        {
-            eval(data);
-        });
+		GILTY.EventTimeline.EventTimeline('EventTimeLineId');
     });
 </script>
 
 <div class="grid">
 	<div class="row" >
 		<div class="span12">
-            <div id="EventTimeLine"></div>
+			<div id="EventTimeLineId" class="timelineDiv"></div>
 		</div>
 	</div>
 </div>

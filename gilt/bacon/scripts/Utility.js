@@ -15,8 +15,6 @@ GILTY.RowHighLighter =
     },
     ClickRow : function ClickRow(Data, Event)
     {
-        //$(".dialogs").dialog().dialog("close");
-
         try
         {
             var rowIndex = $(Event.target).parent("tr")[0].rowIndex - 1;
@@ -232,6 +230,44 @@ GILTY.EventComment =
     CloseEventComment: function (DivId)
     {
         $('#' + DivId).dialog().dialog('close');
+    }
+};
+
+GILTY.EventTimeline =
+{
+    EventTimeline: function EventTimeline(DivId)
+    {
+        var spinnerLoad = new Spinner({}).spin(document.getElementsByTagName('body')[0]);
+        $.when($.ajax({ type: "GET", url: "/Event/TimelineData" })).then(function (data, textStatus, jqXHR)
+        {
+            //create a timeline event source
+            var eventSource = new Timeline.DefaultEventSource();
+            //get the event data from the JSON response
+            var eventData = JSON.parse(data.EventData);
+            //load the events into the event source
+            eventSource.loadJSON(eventData, '.');
+
+            //parse the BandInfo response from dataserver
+            var bandInfos = [];
+            var bandLength = data.BandInfo.length;
+            for (var i = 0; i < bandLength; i++)
+            {
+                var bandData = data.BandInfo[i];
+                var bandI = JSON.parse(bandData);
+                bandI.eventSource = eventSource;
+                bandInfos[i] = Timeline.createBandInfo(bandI);
+                //synchronize all of the event bands with the the top band
+                bandInfos[i].highlight = true;
+                //if you sync 0 with 0 then none of the bands sync up
+                if (0 !== i)
+                {
+                    bandInfos[i].syncWith = 0;
+                }
+            }
+            //create the timeline
+            Timeline.create(document.getElementById(DivId), bandInfos, Timeline.HORIZONTAL);
+            spinnerLoad.stop();
+        });
     }
 };
 

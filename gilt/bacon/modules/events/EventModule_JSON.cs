@@ -11,6 +11,9 @@ namespace gilt.bacon.modules.events
 {
     public partial class EventModule : ModuleBase<IEventRepository, EventProxy>
     {
+        /// <summary>
+        /// JSON responses for event data
+        /// </summary>
         protected override void JsonResponses()
         {
             Get[GiltlyRoutes.EVENT_PAGED] = parameters =>
@@ -143,8 +146,7 @@ namespace gilt.bacon.modules.events
                 List<EventProxy> allEvents = _repository.GetAll().ToList();
                 DateTime minTime = allEvents.Min(x => x.TimeStamp);
                 DateTime maxTime = allEvents.Max(x => x.TimeStamp);
-
-                //List<TimelineEvent> events = _repository.FindBy(a => (a.TimeStamp >=  DateTime.Parse("2011-11-12 00:00:00.000") && a.TimeStamp <= DateTime.Parse("2011-11-13 00:00:00.000"))).Select(b =>
+                
                 List<TimelineEvent> events = _repository.FindBy(a => (a.TimeStamp >= minTime) && (a.TimeStamp <= maxTime)).Select(b =>
                 new TimelineEvent
                 {
@@ -154,9 +156,23 @@ namespace gilt.bacon.modules.events
                     Title = b.SignatureClassification.Name,
                     Description = b.SignatureClassification.Name
                 }).Take(100).ToList<TimelineEvent>();
-                //the response is returned as text -- which is actually a bunch of javascript
-                //the client does an eval() on it to display the graph
-                return Response.AsText(new Timeline(events).GetTimeline());
+
+                //create the bands using the minTime as the start point
+                List<BandInfo> bands = new List<BandInfo>()
+                {
+                    new BandInfo(minTime, 20, DateTimeFormats.MINUTE, 50),
+                    new BandInfo(minTime, 30, DateTimeFormats.HOUR, 200),
+                    new BandInfo(minTime, 20, DateTimeFormats.DAY, 400)
+                };                               
+                //create a timeline class
+                Timeline tl = new Timeline(events, bands);                
+                //return the band information and event data as seperate json strings
+                return Response.AsJson(
+                    new
+                    {
+                        EventData = tl.GetEventDataJson(),
+                        BandInfo = tl.GetBandInfoJson(),                        
+                    });                
             };
         }
     }
