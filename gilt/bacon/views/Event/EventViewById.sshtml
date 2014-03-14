@@ -1,0 +1,38 @@
+﻿@Master['master.sshtml']
+
+@Section['Content']
+<script>
+    $(document).ready(function ()
+    {
+        //get the JSON data for the the event
+        var pagedViewModel = new pageViewModel("/Event/1", "EventListDivId", 0, 1);
+        pagedViewModel.selectedRow.subscribe(function (newValue)
+        {            
+            var arcPaths = [{
+                origin: {
+                    latitude: newValue.GeoLocationSource.Latitude,
+                    longitude: newValue.GeoLocationSource.Longitude
+                },
+                destination: {
+                    latitude: newValue.GeoLocationDestination.Latitude,
+                    longitude: newValue.GeoLocationDestination.Longitude
+                }
+            }];
+            GILTY.D3.ArcMap(arcPaths, 'WorldMapSvg');
+        });
+        //display the arc map on start
+        GILTY.D3.ArcMap([], 'WorldMapSvg');
+        pagedViewModel.bind();
+    });
+</script>
+
+<div id="EventListDivId"  class="page-region-content">
+    
+    @Partial['Tables/GeoLocation.sshtml']
+
+    @Partial['Tables/EventDetail.sshtml']
+
+    @Partial['Pager.sshtml']
+
+</div>
+@EndSection
