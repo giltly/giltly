@@ -7,14 +7,13 @@
     self.pagedViewModel = ko.observable();
     self.selectedPageSize = ko.observable(PageSize || 10);
     self.availablePageSize = ko.observableArray([1, 5, 10, 50, 100]);
-    self.selectedPage = ko.observable(SelectedPage || 1);
+    self.selectedPage = ko.observable(SelectedPage);
     self.totalPages = ko.observable();
     self.selectedRow = ko.observable();
     
     self.columnName = ko.observable("Id");
     self.sortOrder = ko.observable("ASC");
     self.sortOrderClass = ko.observable("icon-arrow-up");
-
 
     self.setSelectedRow = function (row)
     {
@@ -93,12 +92,18 @@
     self.navigate = function ()
     {
         var spinnerLoad = new Spinner({}).spin(document.getElementsByTagName('body')[0]);
-        $.get(self.dataUrl() + (self.selectedPage() - 1) + "/" + self.selectedPageSize() + "?SortName=" + self.columnName() + "&SortDirection=" + self.sortOrder()
-            ,self.pagedViewModel)
+        var url = self.dataUrl() + (self.selectedPage() - 1) + "/" + self.selectedPageSize() + "?SortName=" + self.columnName() + "&SortDirection=" + self.sortOrder();
+        //if the user requested only one item then don't worry about paging, sorting etc        
+        if (0 == self.selectedPage())
+        {
+            url = self.dataUrl();
+        }
+        $.get(url, self.pagedViewModel)
             .always(function ()
             {
                 spinnerLoad.stop();
             });
+
     };
 
     // Function that will subscribe to all the needed events.
@@ -150,7 +155,11 @@
 
             pagerList.append($('<li class="next"><a><i class="icon-next"></i></a></li>'));
             pagerList.append($('<li class="last"><a><i class="icon-last-2"></i></a></li>'));
-            pager.append(pagerList);
+            //show the pager if there is more than one item
+            if (self.selectedPage() > 0)
+            {
+                pager.append(pagerList);
+            }
 
             $(document).ready(function ()
             {
@@ -161,7 +170,14 @@
                         var idOfParent = $(this).parents('tr').attr('Id');
                         $('table.eventlist tbody tr.child-' + idOfParent).toggle('slow');
                     });
-                }, 2000);
+                    if (0 == self.selectedPage())
+                    {
+                        //expand the row
+                        $('table.eventlist tbody tr td:eq(0) i').click();
+                        //highlight the row
+                        $('table.eventlist tbody tr td:gt(0)').click();
+                    }
+                }, 100);
             });
         }, this);
     };

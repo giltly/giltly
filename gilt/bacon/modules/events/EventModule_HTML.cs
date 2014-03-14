@@ -36,6 +36,12 @@ namespace gilt.bacon.modules.events
             {
                 return this.RenderView("EventTimeLine");
             };
+
+            Get[GiltlyRoutes.EVENT_VIEW_BY_ID] = parameters =>
+            {
+                decimal id = parameters.Id;
+                return this.RenderView("EventViewById");
+            };
         }
     }
 }

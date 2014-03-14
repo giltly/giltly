@@ -48,7 +48,12 @@ namespace gilt.bacon.modules.events
             Get[GiltlyRoutes.EVENT_BY_ID] = parameters =>
             {
                 decimal id = parameters.Id;
-                return Response.AsJson(new object[] { _repository.FindBy(a => a.Id == id) });
+                return Response.AsJson(
+                    new
+                    {
+                        Rows = _repository.FindBy(a => a.EventId == id),
+                        NumberPages = 1
+                    });
             };
 
             Get[GiltlyRoutes.EVENT_PREVIOUS] = parameters =>
@@ -154,7 +159,8 @@ namespace gilt.bacon.modules.events
                     End = b.TimeStamp.AddMinutes(1),
                     IsDuration = true,
                     Title = b.SignatureClassification.Name,
-                    Description = b.SignatureClassification.Name
+                    Description = b.SignatureClassification.Name,
+                    Link = String.Format(@"/Event/View/{0}", b.Id)
                 }).Take(100).ToList<TimelineEvent>();
 
                 //create the bands using the minTime as the start point

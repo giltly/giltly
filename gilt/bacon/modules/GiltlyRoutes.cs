@@ -42,6 +42,10 @@ namespace gilt.bacon.modules
         /// </summary>
         public const string EVENT_BY_ID = EVENT_ROOT + @"/(?<Id>[0-9]*)";
         /// <summary>
+        /// /Event/View/(?<Id>[0-9]*)
+        /// </summary>
+        public const string EVENT_VIEW_BY_ID = EVENT_ROOT + @"/View/(?<Id>[0-9]*)";
+        /// <summary>
         /// /Event/PreviousCount
         /// </summary>
         public const string EVENT_PREVIOUS = EVENT_ROOT + @"/PreviousCount/(?<MinutesBackStart>[0-9]*)/(?<MinutesDuration>[0-9]*)";
@@ -261,7 +265,7 @@ namespace gilt.bacon.modules
 
         #endregion
 
-        #region TimeLine        
+        #region TimeLine
         /// <summary>
         /// /Event/TimelineData
         /// </summary>
