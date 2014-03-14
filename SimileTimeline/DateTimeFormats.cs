@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace SimileTimeline
 {
+    /// <summary>
+    /// Time formats for BandInfo
+    /// </summary>
     public enum DateTimeFormats
     {
         MILLISECOND = 0,
