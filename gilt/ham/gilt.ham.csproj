@@ -162,6 +162,9 @@
     <Content Include="assets\metro-ui\js\metro-touch-handler.min.js" />
     <Content Include="assets\metro-ui\js\metro-treeview.min.js" />
     <Content Include="assets\metro-ui\js\README.md" />
+    <Content Include="favicon.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="images\features\customSearch.JPG" />
     <Content Include="images\features\eventByCountry.JPG" />
     <Content Include="images\features\eventByDestinationPort.JPG" />

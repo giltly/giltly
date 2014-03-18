@@ -33,6 +33,9 @@
         <a href="https://twitter.com/intent/user?screen_name=giltly" target="_blank" class="element place-right" title="Twitter">
           <span class="icon-twitter"/>
         </a>
+        <a href="https://github.com/giltly/giltly" target="_blank" class="element place-right" title="GitHub">
+          <span class="icon-github-5"/>
+        </a>
       </div>
 		</nav>
 	</nav>
