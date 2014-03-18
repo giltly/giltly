@@ -851,6 +851,9 @@
                     <Component Win64="$(var.Win64Flag)" Id="cmp83B3C2C74AC84118C23BD621573BCD1C" Guid="*">
                         <File ProcessorArchitecture="$(var.Platform)" Id="filF53FC8CEDD5DB04AD96ECC268F689A04" KeyPath="yes" Source="$(var.GiltlyPackageDir)\views\Event\EventUDP.sshtml" />
                     </Component>
+                    <Component Win64="$(var.Win64Flag)" Id="cmp271D619D95546F8D781610B731DB00E5" Guid="*">
+                        <File ProcessorArchitecture="$(var.Platform)" Id="fil7F892D747CA5A3F75D4B131A620AA835" KeyPath="yes" Source="$(var.GiltlyPackageDir)\views\Event\EventViewById.sshtml" />
+                    </Component>
                 </Directory>
                 <Directory Id="dirB13926D69E0497BD1E42C82243116D2D" Name="HomeTiles">
                     <Component Win64="$(var.Win64Flag)" Id="cmp2016789C115A1325F00D9ACAB7DA73CE" Guid="*">
@@ -1219,6 +1222,7 @@
             <ComponentRef Id="cmp0555BF906D96616770BE1D4CEBAD128F" />
             <ComponentRef Id="cmp5DB580AF6908E7181EA473328959C025" />
             <ComponentRef Id="cmp83B3C2C74AC84118C23BD621573BCD1C" />
+            <ComponentRef Id="cmp271D619D95546F8D781610B731DB00E5" />
             <ComponentRef Id="cmp2016789C115A1325F00D9ACAB7DA73CE" />
             <ComponentRef Id="cmp6BCF474A0691D97C9395CC1DB253022D" />
             <ComponentRef Id="cmp8C56B3227269609236D54CF69DA4822D" />
